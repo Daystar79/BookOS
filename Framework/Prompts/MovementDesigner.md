@@ -36,8 +36,7 @@ Read in order:
 7. `Framework/Prose_Script.md`
 8. `Framework/Mechanics/voices.md` (full)
 9. `Framework/Mechanics/humanity.md`
-10. `Framework/Mechanics/sexuality.md` (Optional, 18+ only — if intimacy / ritual sex in band)
-11. `Framework/psyche_framework.md` and `Framework/Psychology/` directory profiles — Realm profiles and instructions for POV + on-scene characters (behavior only)
+10. `Framework/psyche_framework.md` and `Framework/Psychology/` directory profiles — Realm profiles and instructions for POV + on-scene characters (behavior only)
 
 ### Step 2 — Band + design archive
 - `Framework/TBD/chapter_N_outline.md` (active chapter)

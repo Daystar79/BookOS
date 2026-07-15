@@ -108,7 +108,6 @@ To make navigation between the framework, characters, and drafts seamless, all r
 - **Humanity Protocol:** `[humanity.md](./Mechanics/humanity.md)`
 - **Prose Protocol:** `[prose.md](./Mechanics/prose.md)`
 - **Voices Protocol:** `[voices.md](./Mechanics/voices.md)`
-- **Sexuality Protocol:** `[sexuality.md](./Mechanics/sexuality.md)`
 
 ---
 

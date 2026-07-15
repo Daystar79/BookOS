@@ -56,7 +56,6 @@ The drafting framework is divided into dedicated modules to prevent configuratio
 | [Completed/draft_chapter_#.md](../Drafts/Completed/) | Assembled approved chapters |
 | [draft_chapter_#_m#.md](../Drafts/) | Movement source files |
 | [humanity.md](Mechanics/humanity.md) | Biological + voice fidelity |
-| [sexuality.md](Mechanics/sexuality.md) | (Optional, 18+ only) Explicit intimacy scenes |
 | [voices.md](Mechanics/voices.md) | Character Voice Protocol and Watchlist |
 | [formatting_rules.md](formatting_rules.md) | Standing formatting and prose rules |
 | **[Psychology/realm_index.md](Psychology/realm_index.md)** | **Ten Realm somatic bracing/release mappings** |

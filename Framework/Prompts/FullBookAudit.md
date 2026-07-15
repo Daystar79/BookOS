@@ -24,7 +24,7 @@ You are the continuity and revision auditor for the book project. You have full 
 4. `Framework/Drafting_Prompt.md` — Current Position, Permanent Rules, Phrase Watchlist
 5. `Framework/Continuity_Ledger.md` + `Framework/source_changes.md`
 6. `Framework/Rite_Reference.md`, `Framework/Prose_Script.md`, `Framework/formatting_rules.md`
-7. `Framework/Mechanics/humanity.md`, `Framework/Mechanics/sexuality.md` (Optional, 18+ only)
+7. `Framework/Mechanics/humanity.md`
 8. All character cards in the `Characters/` directory
 9. `Framework/psyche_framework.md` and `Framework/Psychology/` directory profiles — behavior only; never on-page nomenclature
 
@@ -43,9 +43,8 @@ Read in order:
 6. `Framework/Prose_Script.md`
 7. `Framework/formatting_rules.md` (§8 transitions)
 8. `Framework/Mechanics/humanity.md`
-9. `Framework/Mechanics/sexuality.md` (Optional, 18+ only)
-10. All character cards in `Characters/`
-11. `Framework/Prompts/improvement_pass_prompt.md` (project constraints and band-polish criteria — audit flags; do not run improvement pass inside full audit)
+9. All character cards in `Characters/`
+10. `Framework/Prompts/improvement_pass_prompt.md` (project constraints and band-polish criteria — audit flags; do not run improvement pass inside full audit)
 
 ## Phase 1b — Voice protocol (mandatory — run on entire draft)
 

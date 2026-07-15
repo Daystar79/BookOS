@@ -18,6 +18,3 @@ Load this file only if you want extra emphasis. **Do not** load it in addition t
 
 Card voice wins. Archetype templates: [voices.md](./voices.md) when **building** cards. Polarization and bans: Rules_Index §4.
 
-## Intimacy
-
-Pair with [sexuality.md](./sexuality.md) only when every involved card is Canon Adult YES **and** the brief enables heat.

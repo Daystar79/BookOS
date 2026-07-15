@@ -12,7 +12,6 @@
 4. Description & formatting
 5. Dialogue
 6. Pattern frequency
-7. Sexuality gate
 
 ---
 
@@ -50,12 +49,6 @@ The matrix stays **100% off-page**.
 - **Biased Hearing (Bias ACTIVE):** Warp input through Focus + Bias; show in response, never name the warp
 - **Somatic Deflection:** Under pressure on charged memory, change subject or go to body/environment
 
-### Canon Adult / 18+
-
-- Explicit sexual content forbidden if 18+ OFF or Canon Adult NO or age unclear
-- Never age-up to unlock
-- Enable only when Canon Adult YES **and** brief/`/18+ on` says so
-- When on: somatic heat (weight, breath, friction, barriers) — see [sexuality.md](./Mechanics/sexuality.md) if loaded
 
 ---
 
@@ -107,15 +100,6 @@ Applies **within a movement and across the chapter**.
 
 ---
 
-## 7. SEXUALITY (Summary Gate)
-
-| Condition | Explicit sex |
-|:---|:---|
-| 18+ OFF | Forbidden |
-| Canon Adult NO / age unclear | Forbidden |
-| Canon Adult YES + explicit enable | Allowed; somatic, not clinical dump |
-
-Full kinetic rules: load [sexuality.md](./Mechanics/sexuality.md) only when enabled.
 
 ---
 

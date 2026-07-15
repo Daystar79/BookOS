@@ -33,7 +33,6 @@
 |:---|:---|
 | [natural_prose.md](./natural_prose.md) | Style = `natural` only |
 | [Mechanics/prose.md](./Mechanics/prose.md) | Full style catalog / lock machine detail |
-| [Mechanics/sexuality.md](./Mechanics/sexuality.md) | Canon Adult YES **and** brief/`/18+ on` enables heat |
 | [Mechanics/voices.md](./Mechanics/voices.md) | Building a new card (A–F templates) — not every draft |
 | [Mechanics/humanity.md](./Mechanics/humanity.md) | Extra body-pacing detail (Rules_Index already covers core) |
 | Book-local refs | Rites, world bible, continuity ledger — **this book only** |
@@ -66,21 +65,13 @@ There is **no writing mode switch**. If the user is drafting, editing, or has a 
 # 1. CHARACTER LOAD (DRAFTING)
 
 1. **Unit of identity = named character** from `Characters/[slug].md` or a card the user pastes.
-2. Pull into silent live state (never print as a CONFIG block): Name, Age, Canon Adult, Active Focus, Latents, Bias, Somatic, Voice, History Anchors.
-3. **Force 18+ Sexuality = OFF** until the brief or user explicitly enables it **and** Canon Adult = YES.
-4. **Do not** print an opening RP beat on load. Wait for brief / draft instruction, then write the movement or scene.
-5. Archetypes A–F are **build templates only**. Runtime = card.
+2. Pull into silent live state (never print as a CONFIG block): Name, Age, Active Focus, Latents, Bias, Somatic, Voice, History Anchors.
+3. **Do not** print an opening RP beat on load. Wait for brief / draft instruction, then write the movement or scene.
+4. Archetypes A–F are **build templates only**. Runtime = card.
 
 ### Optional: canon synthesis
 
-Only if the user asks to invent a card for a well-documented fictional character (or uses `/create`): synthesize Focus, Latents, Bias, Somatic, Voice, Age, Canon Adult from canon knowledge, then treat it as a normal card. Still no CONFIG dump; still no automatic opening beat.
-
-### Canon Adult gate
-
-| Card field | Sexuality |
-|:---|:---|
-| **Canon Adult: YES** (age ≥ 18) | May enable if brief/session explicitly opts in. Default OFF. |
-| **Canon Adult: NO** / under 18 / unclear | Explicit sexual content **forbidden**. Never age-up. |
+Only if the user asks to invent a card for a well-documented fictional character (or uses `/create`): synthesize Focus, Latents, Bias, Somatic, Voice, Age from canon knowledge, then treat it as a normal card. Still no CONFIG dump; still no automatic opening beat.
 
 ---
 
@@ -288,7 +279,6 @@ When generating or revising a movement/scene:
 | [Psychology/realm_index.md](./Psychology/realm_index.md) | **Required** — realm somatics |
 | [natural_prose.md](./natural_prose.md) | Optional style pack |
 | [Mechanics/prose.md](./Mechanics/prose.md) | Optional style detail |
-| [Mechanics/sexuality.md](./Mechanics/sexuality.md) | Optional heat (gated) |
 | [Mechanics/voices.md](./Mechanics/voices.md) | Card-building templates |
 | [Mechanics/humanity.md](./Mechanics/humanity.md) | Optional body-detail supplement |
 | [psyche_framework.md](./psyche_framework.md) | **Superseded** — stub |

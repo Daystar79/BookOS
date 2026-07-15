@@ -43,7 +43,6 @@ Read in order:
 4. [formatting_rules.md](formatting_rules.md)
 5. **[voices.md](Mechanics/voices.md)** — full (design must not plan voice violations)
 6. [humanity.md](Mechanics/humanity.md)
-7. [sexuality.md](Mechanics/sexuality.md) — (Optional, 18+ only) if Brief/outline touches explicit intimacy or ritual sex
 8. [psyche_framework.md](psyche_framework.md) and [Framework/Psychology/](Psychology/) — Realm profiles and matrix instructions (behavior only; never nomenclature on page)
 
 ### Step 2 — Band + design archive

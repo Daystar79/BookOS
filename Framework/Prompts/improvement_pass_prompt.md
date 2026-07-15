@@ -49,7 +49,6 @@ Do **not** produce findings or fixes until every file below is read for the targ
 ### Load when band touches
 
 - `Framework/Rite_Reference.md` — rites, rank, vestments, training, drugs
-- `Framework/Mechanics/sexuality.md` — (Optional, 18+ only) explicit intimacy / ritual sex
 - `Framework/psyche_framework.md` + `Framework/Psychology/` — behavior only; **never** nomenclature on page
 
 ### On-page prose (target band only)
