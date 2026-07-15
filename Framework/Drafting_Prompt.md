@@ -7,14 +7,29 @@ Invoke in chat: **`/draft`** — or say "draft the next movement" / "continue Ch
 
 ## Workspace Modules
 
-The drafting framework is divided into dedicated modules to prevent configuration drift:
-- **Active Session (This File):** Current position, active brief, fixes queue, and workspace references.
-- **[Main.md](Main.md):** The core cognitive writing instructions.
-- **[Rules_Index.md](Rules_Index.md):** Standing formatting, hard bans, and output hygiene rules.
-- **[Novel_Outline.md](Novel_Outline.md):** Project goals, genre positioning, narrative architecture, and endings.
-- **[World_Architecture.md](World_Architecture.md):** Setting canon, geography, ranks, logistics, and rites.
-- **[humanity.md](Mechanics/humanity.md):** Continuity, somatic focus, and POV constraints.
-- **[voices.md](Mechanics/voices.md):** Character idiolects, conversational asymmetry, and phrase watchlist.
+The drafting framework is divided to prevent configuration drift:
+
+### Always load (honest stack)
+- **Active Session (This File):** Current position, active brief, fixes queue
+- **[Main.md](Main.md):** Core cognitive writing instructions + psyche runtime
+- **[Rules_Index.md](Rules_Index.md):** Hard bans, dialogue, cleanup checklist
+- **[Psychology/realm_index.md](Psychology/realm_index.md):** Ten Realm somatic brace/release
+- **On-scene character cards** in `Characters/`
+- **[Modules.md](Modules.md):** Scan ENABLED modules (usually none)
+
+### Optional / when needed
+- **[Mechanics/voices.md](Mechanics/voices.md):** Card-building templates (not every draft)
+- **[Mechanics/humanity.md](Mechanics/humanity.md):** Extra body-pacing detail
+- **[natural_prose.md](natural_prose.md):** Only when style = `natural`
+- **[formatting_rules.md](formatting_rules.md):** House formatting standards
+
+### Book-local (created by bootstrap — skip if missing)
+- **[Novel_Outline.md](Novel_Outline.md):** Genre, tone, high-level plot (from initialize_novel)
+- **[World_Architecture.md](World_Architecture.md):** Setting canon (from world_builder)
+- **[Rite_Reference.md](Rite_Reference.md):** Rituals / ranks if the book uses them
+- **[Prose_Script.md](Prose_Script.md):** Optional house prose script if defined
+
+**Never load for generation:** [psyche_framework.md](psyche_framework.md), [Drafting_Workflow.md](Drafting_Workflow.md) (stubs).
 
 ---
 
@@ -22,13 +37,13 @@ The drafting framework is divided into dedicated modules to prevent configuratio
 
 | Item | Status |
 |------|--------|
-| Manuscript | [e.g., In Progress — Chapters 1–2 complete] |
+| Manuscript | [e.g., Not started / In Progress — Chapters 1–2 complete] |
 | Locked | [List of chapters/movements already written and approved] |
-| Active Chapter | [e.g., Chapter 3] |
+| Active Chapter | [e.g., Chapter 1] |
 | Remaining | [List of chapters/movements pending] |
 
 > [!NOTE]
-> **Timeline Summary:** [Brief summary of chronology and major plot landmarks]
+> **Timeline Summary:** [Brief summary of chronology and major plot landmarks — fill after bootstrap]
 
 ---
 
@@ -50,19 +65,14 @@ The drafting framework is divided into dedicated modules to prevent configuratio
 
 ## Key Reference Files
 
-| File | Use |
-|------|-----|
-| [master_manuscript.md](../Drafts/master_manuscript.md) | Canonical assembled text |
-| [Completed/draft_chapter_#.md](../Drafts/Completed/) | Assembled approved chapters |
-| [draft_chapter_#_m#.md](../Drafts/) | Movement source files |
-| [humanity.md](Mechanics/humanity.md) | Biological + voice fidelity |
-| [voices.md](Mechanics/voices.md) | Character Voice Protocol and Watchlist |
-| [formatting_rules.md](formatting_rules.md) | Standing formatting and prose rules |
-| **[Psychology/realm_index.md](Psychology/realm_index.md)** | **Ten Realm somatic bracing/release mappings** |
-| **[Rite_Reference.md](Rite_Reference.md)** | **Rite staging details and mechanics** |
-| [World_Architecture.md](World_Architecture.md) | World geography, roster, settings, logistics |
-| [source_changes.md](source_changes.md) | Revision log after approval |
+| File | Use | Required? |
+|:---|:---|:---|
+| [master_manuscript.md](../Drafts/master_manuscript.md) | Canonical assembled text | After drafts exist |
+| [Completed/draft_chapter_#.md](../Drafts/Completed/) | Assembled approved chapters | After approval |
+| [draft_chapter_#_m#.md](../Drafts/) | Movement source files | During drafting |
+| [Continuity_Ledger.md](Continuity_Ledger.md) | Timeline + somatic close map | Fill as you draft |
+| [source_changes.md](source_changes.md) | Revision / lock log | Optional history |
 
 ---
 
-*Last updated: [Date]*
+*Last updated: 2026-07-14 — Honest stack; book-local files optional until bootstrap*

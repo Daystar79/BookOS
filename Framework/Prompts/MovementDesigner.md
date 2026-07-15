@@ -1,5 +1,5 @@
-# Gemini CLI — Movement Design QA Prompt
-*Drop into Gemini CLI from repo root. Design / outline only — no prose.*
+# Movement Design QA Prompt
+*Drop into a long-context design agent from repo root. Design / outline only — no prose.*
 
 ---
 
@@ -25,21 +25,28 @@ Do **not** ask Q1 or propose locks until every step below is complete. Then prin
 ### Step 0 — Confirm target
 Chapter N · Movement M# · title (from user or `Drafting_Prompt.md` Current Position).
 
-### Step 1 — Framework stack (always)
+### Step 1 — Framework stack (always — honest stack)
 Read in order:
 1. `Framework/Design_QA_Protocol.md` (full — including Pre-Q&A load)
-2. `Framework/Drafting_Prompt.md`
-3. `Framework/Continuity_Ledger.md`
-4. `Framework/source_changes.md` (first ~100 lines)
-5. `Framework/Rite_Reference.md` (if band touches rites, rank, vestments, training, drugs)
-6. `Framework/formatting_rules.md`
-7. `Framework/Prose_Script.md`
+2. `Framework/Main.md` (workflow + psyche runtime §3)
+3. `Framework/Rules_Index.md` (hard bans)
+4. `Framework/Psychology/realm_index.md` (somatic brace/release)
+5. `Framework/Drafting_Prompt.md`
+6. `Framework/Continuity_Ledger.md` (if present and filled)
+7. `Framework/source_changes.md` (first ~100 lines, if present)
 8. `Framework/Mechanics/voices.md` (full)
-9. `Framework/Mechanics/humanity.md`
-10. `Framework/psyche_framework.md` and `Framework/Psychology/` directory profiles — Realm profiles and instructions for POV + on-scene characters (behavior only)
+9. `Framework/Modules.md` (ENABLED modules only)
+
+**If present (book-local — skip if missing):**
+- `Framework/formatting_rules.md`
+- `Framework/Mechanics/humanity.md` (optional supplement)
+- `Framework/Novel_Outline.md`, `World_Architecture.md`, `Rite_Reference.md` — only if the band needs them
+- `Framework/Prose_Script.md` — only if the book defines one
+
+**Never load for generation:** `Framework/psyche_framework.md`, `Framework/Drafting_Workflow.md` (stubs).
 
 ### Step 2 — Band + design archive
-- `Framework/TBD/chapter_N_outline.md` (active chapter)
+- `Framework/TBD/chapter_N_outline.md` (if on disk)
 - `Framework/TBD/chapter_N_mM_design.md` for each prior movement in same chapter (if on disk)
 
 ### Step 3 — On-page prose (minimum — non-optional)
@@ -49,7 +56,7 @@ Read in order:
 | **Ch. N, M1** | **Entire preceding chapter** Ch. N−1 — every movement in `Drafts/draft_chapter_{N-1}_m#.md` or `Drafts/Completed/draft_chapter_{N-1}.md` |
 | **Ch. N, M2+** | **All prior movements** in Ch. N (M1 … M#−1) **plus entire preceding chapter** Ch. N−1 |
 
-**Recommended (2M context):** Also read `Drafts/master_manuscript.md` and active `Drafts/Completed/draft_chapter_N.md` if partial.
+**Recommended (large context):** Also read `Drafts/master_manuscript.md` and active `Drafts/Completed/draft_chapter_N.md` if partial.
 
 Verify: timeline, locations, somatic close, parallel lanes, who was on scene.
 
@@ -67,7 +74,7 @@ Print: target movement, files read, last verified on-page close (quote or paraph
 - **Auto guardrails** — After Load manifest, declare merged **Must-not** from chapter outline + `Drafting_Prompt.md` + deferred sibling movements. **Do not ask** the user to pick must-nots; user may override only if explicit.
 - Question spine: **Auto guardrails** → Job → Reader (positive only) → POV → Opens → Characters → Dual arc → Must-land → Close → Checklist.
 - **Multiple-choice format (mandatory):** Every option (A, B, C, …) includes **Pro** and **Con** before the user chooses. Combinations allowed; note interaction tradeoffs.
-- **Character lens (mandatory):** Any question about a named character must be framed and answered through **their** lens — what they would **do**, **think**, and **believe** (card + `voices.md` + `humanity.md` + Guide Realm behavior + prior on-page prose). Not plot convenience. No merged character voices. No internal system nomenclature on the page — behavior only.
+- **Character lens (mandatory):** Any question about a named character must be framed and answered through **their** lens — what they would **do**, **think**, and **believe** (card + `voices.md` + Main §3 / realm_index behavior + prior on-page prose). Not plot convenience. No merged character voices. No internal system nomenclature on the page — behavior only.
 - **Real-person test (mandatory when presenting options):** Every option must pass: *Would this person, in this body, in this room, after the last on-page beat, actually do / say / believe this?* Drop plot-convenience and genre-default options. Prefer capable-adult behavior under high stakes — lean, physical, unforced.
 - **Options prompt (mandatory):** At the end of every option block, always append a clear instruction letting the user know they are not limited to choosing just a single option (e.g., they can select one, combine multiple, or write in their own response).
 - Record each lock in running brief. Character locks: *Locked: [Character] — [believe / want / do]*.
@@ -94,9 +101,9 @@ Chapter / Movement / POV / Timeline slot
 ## Must-land (ordered 1–6)
 ## Must-not
 ## Close + handoff
-## Checklist (rites, vestments, shop rhythm, protocols)
+## Checklist (book-local items only if defined)
 ## Continuity locks (from on-page prose)
-## Reference (Rite_Reference section, Guide Realm)
+## Reference (book-local refs only if present)
 ```
 
 **Do not invent canon** that contradicts on-page prose. Flag conflicts in **Continuity locks** for user resolution before brief is declared complete.

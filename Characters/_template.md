@@ -10,6 +10,7 @@
 | **Name** | [Full name / preferred call-name] |
 | **Aliases** | [Optional] |
 | **Age (canon)** | [Integer years] |
+| **Canon Adult (18+)** | **NO** until explicitly set YES (required for any heat / intimacy gate) |
 | **Physical (no ethnic labels)** | [Coloration, features, bone structure, movement — show, never category-label] |
 | **Voice archetype base** | A / B / C / D / E / F (or custom hybrid) |
 

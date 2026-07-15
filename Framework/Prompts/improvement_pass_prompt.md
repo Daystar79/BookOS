@@ -36,20 +36,25 @@ Do **not** produce findings or fixes until every file below is read for the targ
 
 ### Always load (order)
 
-1. `Framework/Drafting_Prompt.md` — Current Position, Permanent Rules, phrase watchlist
-2. **`Framework/Mechanics/voices.md`** (full — Core Logic, Character Profiles, §IV Audit Checklist)
-3. `Framework/natural_prose.md` — syntactical asymmetry, dialogue drift, sensory focus
-4. `Framework/Mechanics/humanity.md`
-5. `Framework/formatting_rules.md` — especially §8 scene transitions
-6. `Framework/Prose_Script.md`
-7. `Framework/Continuity_Ledger.md` — active band row
-8. `Framework/source_changes.md` — first ~100 lines (recent locks)
-9. On-scene character cards in the `Characters/` directory for the target band
+1. `Framework/Main.md` + `Framework/Rules_Index.md` — hard bans, off-page matrix
+2. `Framework/Psychology/realm_index.md` — behavior only; **never** nomenclature on page
+3. `Framework/Drafting_Prompt.md` — Current Position, Permanent Rules, phrase watchlist
+4. **`Framework/Mechanics/voices.md`** (full — Core Logic, Character Profiles, §IV Audit Checklist)
+5. `Framework/Continuity_Ledger.md` — active band row (if present)
+6. `Framework/source_changes.md` — first ~100 lines (recent locks), if present
+7. On-scene character cards in the `Characters/` directory for the target band
+8. `Framework/Modules.md` — ENABLED modules only
 
-### Load when band touches
+### If present (book-local / optional)
 
-- `Framework/Rite_Reference.md` — rites, rank, vestments, training, drugs
-- `Framework/psyche_framework.md` + `Framework/Psychology/` — behavior only; **never** nomenclature on page
+- `Framework/natural_prose.md` — when style = `natural` or pass question targets rhythm
+- `Framework/Mechanics/humanity.md` — optional body-detail supplement
+- `Framework/formatting_rules.md` — house formatting / transitions
+- `Framework/Prose_Script.md` — only if the book defines one
+- `Framework/Novel_Outline.md` — genre, tone, locked ending
+- `Framework/Rite_Reference.md`, `World_Architecture.md` — only when the band touches those systems
+
+**Never load for generation:** `Framework/psyche_framework.md`, `Framework/Drafting_Workflow.md` (stubs).
 
 ### On-page prose (target band only)
 
@@ -67,8 +72,8 @@ Print a **Load manifest** (target band, files read, last on-page close) before P
 ## Project constraints (non-negotiable)
 
 ### Genre & ending
-- **Genre & Goals:** As defined in `Framework/Novel_Outline.md` (psychology + somatic craft; explicit where load-bearing)
-- **Stakes & Ending:** Respect locked thematic endpoints, tragedies, or twists defined in `Framework/Novel_Outline.md`
+- **Genre & Goals:** As defined in `Framework/Novel_Outline.md` if present (else Drafting_Prompt + author direction)
+- **Stakes & Ending:** Respect locked thematic endpoints in `Novel_Outline.md` / design locks when present
 
 ### Voice — preserve, do not smooth
 - **Character Voice:** Read the active character cards in the `Characters/` directory. Ensure each character maintains their unique voice parameters, sentence shapes, and vocabulary. Flag any edits that would homogenize dialogue, smooth out characteristic fragments, or introduce clinical/therapist jargon.

@@ -1,5 +1,19 @@
 # Source Changes — Psyche Framework
-*Changes made from original source material during this chat*
+*Historical change log from framework evolution. **Not a load-list.** Prefer Main.md + Rules_Index.md for current behavior.*
+
+> **Note (2026-07-14):** Entries below may reference `Web/`, `RolePlaying/`, `deploy_framework.py`, dual Web copies, or module files that are no longer in this repo. Treat as archaeology. Current honest stack: Main + Rules_Index + realm_index + cards.
+
+---
+
+## 2026-07-14 — Reference-drift cleanup — **applied** (agent)
+
+- **Load lists unified:** Design_QA_Protocol, MovementDesigner, FullBookAudit, improvement_pass, Drafting_Prompt → Main + Rules_Index + realm_index; book-local files **if present**; never load psyche_framework / Drafting_Workflow stubs for generation.
+- **Bias State:** Default **DORMANT** on load (Main §3b); Rules_Index §7 added; humanity.md aligned.
+- **Template:** Canon Adult field on `_template.md`.
+- **Modules.md:** Registry demoted — not shipped; verification no-ops until ENABLED + file exists.
+- **README:** Current-state table, honest stack, design vs draft read asymmetry, manual Setup archive.
+- **Scaffold:** `.gitkeep` / Modules README for empty dirs. Dropped `deploy_framework.py` mention from Main install steps.
+- **Tool split:** Role-based (long-context design vs prose craft), not vendor-locked.
 
 ## 2026-07-13 — Finish Main entry path (post-Mistral cleanup) — **applied** (agent)
 

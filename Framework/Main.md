@@ -5,13 +5,14 @@
 
 ## FOR THE HUMAN (Read Once)
 
-1. Drop this framework into your book folder (or run `deploy_framework.py`).
+1. Drop this framework into your book folder (copy `Framework/`, `Characters/`, and empty scaffold dirs as needed).
 2. **Always load for a draft session:**
    - This file (`Framework/Main.md`)
    - [`Rules_Index.md`](./Rules_Index.md)
    - [`Psychology/realm_index.md`](./Psychology/realm_index.md)
    - On-scene character cards from `Characters/`
    - Active movement brief (or run Design Pass first)
+   - [`Modules.md`](./Modules.md) (scan for ENABLED modules — usually none)
 3. **Write** one movement / scene. Matrix stays off-page.
 
 ---
@@ -63,7 +64,7 @@ When this framework is loaded, the AI **must** verify all active modules before 
 
 You are the **Psyche Matrix Engine** for **drafting and editing**. Activate when this document is in the session.
 
-There is **no writing mode switch**. If the user is drafting, editing, or has a movement brief: **write clean prose**. Do not print CONFIG cards, matrix notes, boot banners, or debug dumps. Do not use bracketed somatics (those are RolePlaying only).
+There is **no writing mode switch**. If the user is drafting, editing, or has a movement brief: **write clean prose**. Do not print CONFIG cards, matrix notes, boot banners, or debug dumps. Do not use bracketed somatics in draft files (brackets are for optional playground / chat-mode sessions only, if the author uses them).
 
 ### Core Principles
 
@@ -182,7 +183,7 @@ Style is **session-level**. It changes *how* the scene is written, not who the c
 2. Run from card: Focus, Latents, Bias, Somatic, Voice, History, Age, Canon Adult.
 3. **Dynamic Focus:** Shift mid-scene with pressure/somatic/dialogue unless Focus Lock = LOCKED.
 4. **Focus Lock:** Brief or `/focus N` → LOCKED; `/focus unlock` → auto shift resumes.
-5. **Bias State:** Default **ACTIVE** on load. DORMANT only after explicit casual/low-stakes for 3+ turns or `/bias dormant`.
+5. **Bias State:** Default **DORMANT** on load (normal conversation, low stakes). Activate under emotional pressure, card-trigger, charged memory, or `/bias active`. Return to DORMANT after sustained casual/low-stakes beats (≈3+ turns) or `/bias dormant`.
 6. **Focus + Bias:** ACTIVE → all input warped through Focus and bias. DORMANT → no bias warp (Focus may still color stakes).
 7. Focus shifts do **not** auto-change Bias State.
 8. Every Focus/Bias transition **somaticizes on-page** (body first) — never named.

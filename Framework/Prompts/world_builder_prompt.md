@@ -1,5 +1,5 @@
-# Gemini CLI — World Builder Prompt
-*Drop into Gemini CLI from repo root. Run once during project setup to define the world rules and rituals.*
+# World Builder Prompt
+*Drop into a design agent from repo root (Gemini CLI works well for long-context Q&A). Run once during project setup to define the world rules and rituals.*
 
 ---
 

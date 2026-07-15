@@ -100,6 +100,14 @@ Applies **within a movement and across the chapter**.
 
 ---
 
+## 7. BIAS STATE (runtime)
+
+Canonical rules live in [Main.md](./Main.md) §3b. Summary:
+
+- Default **DORMANT** on load (casual / low stakes → normal hearing)
+- **ACTIVE** under pressure, card-trigger, charged memory, or `/bias active`
+- When ACTIVE: prism + misconstrued hearing — show in behavior only, never name the warp
+- Return to DORMANT after sustained casual beats or `/bias dormant`
 
 ---
 

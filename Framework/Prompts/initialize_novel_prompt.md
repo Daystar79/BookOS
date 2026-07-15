@@ -1,5 +1,5 @@
-# Gemini CLI — Novel Initialization Prompt
-*Drop into Gemini CLI from repo root. Run once to bootstrap a new book outline.*
+# Novel Initialization Prompt
+*Drop into a design agent from repo root (Gemini CLI works well for long-context Q&A). Run once to bootstrap a new book outline.*
 
 ---
 

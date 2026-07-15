@@ -1,5 +1,5 @@
-# Gemini CLI — Full Manuscript Audit Prompt
-*Drop into Gemini CLI from repo root. Read-only audit — all chapters.*
+# Full Manuscript Audit Prompt
+*Drop into a long-context audit agent from repo root. Read-only audit — all chapters.*
 
 ---
 
@@ -20,13 +20,16 @@ You are the continuity and revision auditor for the book project. You have full 
 
 1. On-page prose in `Drafts/master_manuscript.md` and `Drafts/Completed/draft_chapter_#.md`
 2. `Drafts/draft_chapter_#_m#.md` movement files (flag drift vs assembled)
-3. **`Framework/Mechanics/voices.md`** — **mandatory for every check** (see Phase 1b)
-4. `Framework/Drafting_Prompt.md` — Current Position, Permanent Rules, Phrase Watchlist
-5. `Framework/Continuity_Ledger.md` + `Framework/source_changes.md`
-6. `Framework/Rite_Reference.md`, `Framework/Prose_Script.md`, `Framework/formatting_rules.md`
-7. `Framework/Mechanics/humanity.md`
-8. All character cards in the `Characters/` directory
-9. `Framework/psyche_framework.md` and `Framework/Psychology/` directory profiles — behavior only; never on-page nomenclature
+3. `Framework/Main.md` + `Framework/Rules_Index.md` — hard bans, off-page matrix, cleanup
+4. **`Framework/Mechanics/voices.md`** — **mandatory for every check** (see Phase 1b)
+5. `Framework/Drafting_Prompt.md` — Current Position, Permanent Rules, Phrase Watchlist
+6. `Framework/Continuity_Ledger.md` + `Framework/source_changes.md` (if present)
+7. All character cards in the `Characters/` directory
+8. `Framework/Psychology/realm_index.md` — behavior only; never on-page nomenclature
+
+**If present (book-local):** `Framework/formatting_rules.md`, `Rite_Reference.md`, `Prose_Script.md`, `Novel_Outline.md`, `World_Architecture.md`, `Mechanics/humanity.md`
+
+**Never load for generation:** `Framework/psyche_framework.md`, `Framework/Drafting_Workflow.md` (stubs).
 
 **Do not treat as canon:** `Framework/Novel_Master_Outline.md`, `Framework/TBD/`
 
@@ -35,16 +38,17 @@ You are the continuity and revision auditor for the book project. You have full 
 ## Phase 1a — Framework load
 
 Read in order:
-1. `Framework/Drafting_Prompt.md`
-2. **`Framework/Mechanics/voices.md`** (full)
-3. `Framework/Continuity_Ledger.md`
-4. `Framework/source_changes.md` (first 100 lines)
-5. `Framework/Rite_Reference.md`
-6. `Framework/Prose_Script.md`
-7. `Framework/formatting_rules.md` (§8 transitions)
-8. `Framework/Mechanics/humanity.md`
-9. All character cards in `Characters/`
-10. `Framework/Prompts/improvement_pass_prompt.md` (project constraints and band-polish criteria — audit flags; do not run improvement pass inside full audit)
+1. `Framework/Main.md` + `Framework/Rules_Index.md`
+2. `Framework/Psychology/realm_index.md`
+3. `Framework/Drafting_Prompt.md`
+4. **`Framework/Mechanics/voices.md`** (full)
+5. `Framework/Continuity_Ledger.md` (if present)
+6. `Framework/source_changes.md` (first 100 lines, if present)
+7. All character cards in `Characters/`
+8. `Framework/Modules.md` (ENABLED modules)
+9. `Framework/Prompts/improvement_pass_prompt.md` (project constraints and band-polish criteria — audit flags; do not run improvement pass inside full audit)
+
+**If present:** `Framework/formatting_rules.md`, `Rite_Reference.md`, `Prose_Script.md`, `Novel_Outline.md`, `World_Architecture.md`, `Mechanics/humanity.md`
 
 ## Phase 1b — Voice protocol (mandatory — run on entire draft)
 
@@ -83,13 +87,13 @@ Report voice findings in a dedicated **Voice Protocol** section with chapter/mov
 
 ## Phase 3 — Timeline
 
-Build timeline table; cross-check `Framework/Continuity_Ledger.md`. Cross-reference timelines, dates, and settings against the chronological landmarks recorded in `Continuity_Ledger.md` and `World_Architecture.md` (or `Cult_Novel_Architecture.md`).
+Build timeline table; cross-check `Framework/Continuity_Ledger.md` if present. Cross-reference timelines, dates, and settings against the chronological landmarks recorded in `Continuity_Ledger.md` and `World_Architecture.md` (if present).
 
 ---
 
 ## Phase 4 — Per-chapter audit
 
-For each chapter: POV · continuity · **voice_protocol** · never-on-page · vestments · rites · sex protocol · phrase watchlist · transitions · tone
+For each chapter: POV · continuity · **voice_protocol** · never-on-page · phrase watchlist · transitions · tone · book-local checks (rites/props/protocols only if those refs exist)
 
 ---
 
@@ -101,7 +105,7 @@ Trace the development of key character relationships and motivations as defined 
 
 ## Deliverable
 
-**Write to:** `Audits/Gemini_Full_Audit_[date].md`
+**Write to:** `Audits/Full_Audit_[date].md`
 
 ```markdown
 # Full Manuscript Audit

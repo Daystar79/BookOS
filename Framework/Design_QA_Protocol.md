@@ -5,19 +5,28 @@
 
 ## Tool split
 
-| Tool | Role | Why |
-|------|------|-----|
-| **Gemini CLI** | Design QA, band audits, movement outlines | ~2M context — entire manuscript + full rule stack in one pass; strong at structured design docs |
-| **Cursor / Grok** | Prose draft, revision, assembly, merge | On-page voice and somatic craft; does not replace Gemini for band-scale QA |
+| Role | Recommended tool | Why |
+|------|------------------|-----|
+| **Long-context design / audit agent** | Gemini CLI (or equivalent large-context model) | Full manuscript + rule stack in one pass; structured design docs |
+| **Prose craft agent** | Cursor / Grok (or equivalent voice-focused model) | On-page voice and somatic craft; does not replace long-context for band-scale QA |
 
-**Handoff:** Gemini completes QA → author saves output to **`TBD/chapter_N_mM_design.md`** → paste active **Movement Brief** into `Drafting_Prompt.md` → **draft session** here writes `draft_chapter_#_m#.md`.
+**Handoff:** Design agent completes QA → author saves output to **`TBD/chapter_N_mM_design.md`** → paste active **Movement Brief** into `Drafting_Prompt.md` → **draft session** writes `draft_chapter_#_m#.md`.
 
-**Gemini does not draft prose.** Design docs and audits only unless explicitly asked otherwise.
+**Design agents do not draft prose** unless explicitly asked otherwise.
 
-**Gemini prompts on disk:**
-- [MovementDesigner.md](Prompts/MovementDesigner.md) — **per-movement design QA** (new movement design only; manuscript closed)
+**Prompts on disk:**
+- [MovementDesigner.md](Prompts/MovementDesigner.md) — **per-movement design QA** (new movement design only)
 - [FullBookAudit.md](Prompts/FullBookAudit.md) — full-manuscript **integrity audit** (sync, timeline, voice_protocol, release readiness)
 - [improvement_pass_prompt.md](Prompts/improvement_pass_prompt.md) — **scoped band improvement pass** (irony, dread, rhythm, surgical fixes — post-close polish)
+
+### Design vs draft preceding-read (intentional asymmetry)
+
+| Session | Preceding read |
+|---------|----------------|
+| **Design** (this protocol) | Heavier — full prior chapter + in-chapter movements (table below) |
+| **Draft** ([Main.md](Main.md) §2) | Leaner — last movement of prior chapter, or prior movements in this chapter only |
+
+Do not "fix" a draft session by overloading it with the full design stack unless the author asks.
 
 ---
 
@@ -36,20 +45,29 @@
 The design session assistant **must** read all files below before asking Q1 or proposing locks.
 
 ### Step 1 — Framework stack *(always)*
-Read in order:
-1. `Framework/Drafting_Prompt.md`
-2. `Framework/Continuity_Ledger.md`
-3. [source_changes.md](source_changes.md) — first ~100 lines (recent locks)
-4. [formatting_rules.md](formatting_rules.md)
-5. **[voices.md](Mechanics/voices.md)** — full (design must not plan voice violations)
-6. [humanity.md](Mechanics/humanity.md)
-8. [psyche_framework.md](psyche_framework.md) and [Framework/Psychology/](Psychology/) — Realm profiles and matrix instructions (behavior only; never nomenclature on page)
+Read in order (honest stack — same core as [Main.md](Main.md)):
+1. [Main.md](Main.md) — workflow + psyche runtime (§3); do **not** load superseded stubs
+2. [Rules_Index.md](Rules_Index.md) — hard bans + cleanup
+3. [Psychology/realm_index.md](Psychology/realm_index.md) — brace / release / somatic per realm
+4. `Framework/Drafting_Prompt.md` — Current Position + active brief
+5. `Framework/Continuity_Ledger.md` — if present and filled
+6. [source_changes.md](source_changes.md) — first ~100 lines (recent locks), if present
+7. **[voices.md](Mechanics/voices.md)** — full (design must not plan voice violations)
+8. [Modules.md](Modules.md) — scan ENABLED modules only
+
+**If present (book-local — skip if missing):**
+- [formatting_rules.md](formatting_rules.md) — house formatting
+- [humanity.md](Mechanics/humanity.md) — optional body-detail supplement
+- `Framework/Novel_Outline.md`, `World_Architecture.md`, `Rite_Reference.md` — only when the band needs them
+- `Framework/Prose_Script.md` — only if the book defines one
+
+**Never load for generation:** [psyche_framework.md](psyche_framework.md), [Drafting_Workflow.md](Drafting_Workflow.md) (stubs only).
 
 ### Step 2 — Band + design archive
 
 | File | When |
 |------|------|
-| `TBD/chapter_N_outline.md` | Always — active chapter band |
+| `TBD/chapter_N_outline.md` | If on disk — active chapter band |
 | `TBD/chapter_N_mM_design.md` | Prior movements in same chapter already QA'd (M2+ read M1…M−1 saves if on disk) |
 | `TBD/epilogue_outline.md` | Epilogue design only |
 
@@ -60,7 +78,7 @@ Read in order:
 | **Ch. N, M1** | **Entire preceding chapter** Ch. N−1 — every movement: `Drafts/draft_chapter_{N-1}_m#.md` (all on disk) or `Drafts/Completed/draft_chapter_{N-1}.md` |
 | **Ch. N, M2+** | **Every prior movement** in Ch. N (M1 … M#−1) in `Drafts/draft_chapter_N_m#.md` **plus** **entire preceding chapter** Ch. N−1 (same rule as M1) |
 
-**Gemini CLI:** May load `Drafts/master_manuscript.md` and full active `Completed/` band in addition — use when context allows. **Minimum** remains Step 3 table.
+**Long-context agent:** May load `Drafts/master_manuscript.md` and full active `Completed/` band in addition — use when context allows. **Minimum** remains Step 3 table.
 
 Verify before Q1: timeline, locations, somatic close, parallel lanes.
 
@@ -93,7 +111,7 @@ Use this sequence for every movement. Skip only if already locked in band scope 
 | 6 | **Dual arc** — Trace parallel character arcs/motivations if multi-POV or sideplots? | Parallel lanes |
 | 7 | **Must-land** — Ordered beats 1–6 | Draft spine |
 | 8 | **Close** — Last image; who goes where; next movement handoff | Close + handoff |
-| 9 | **Checklist** — World setting rules, vestments, rhythms, thematic tags, protocols | Pre-draft checklist |
+| 9 | **Checklist** — Book-local items only if defined (world rules, props, protocols); skip empty rows | Pre-draft checklist |
 
 Add **movement-specific** questions between 5 and 7 when needed (e.g. after a huge prior movement: *How does X react to Y?*) — still **one per turn**, still **Pro/Con per option**. Any question touching a named character runs through the **character lens** (below).
 
@@ -118,8 +136,8 @@ Any Q&A turn about **who does what, says what, wants what, or carries what** mus
 
 **Required reads before character locks**:
 - On-scene character cards in the `Characters/` directory (POV card first) and active depictions in prior movements. **Always read the character cards and depictions before proposing questions or options that affect them.**
-- **`voices.md`** + **`humanity.md`** — voice split, no blending
-- **`psyche_framework.md`** + **`Framework/Psychology/`** — Realm profiles and rules for each on-scene character
+- **`voices.md`** — voice split, no blending (card wins over archetype)
+- **`Main.md` §3** + **`realm_index.md`** — Focus / Bias / somatic behavior only; never nomenclature on page
 - Prior on-page prose for that character in preceding chapter + current band movements
 
 **Answer format for character turns:** *Locked: [Character] — [believe / want / do]* in one sentence grounded in card + last on-page beat.
@@ -166,4 +184,4 @@ When the spine is complete, paste filled blocks into **Movement Brief** in [Draf
 
 ---
 
-*Last updated: 2026-07-14 — MC Pro/Con mandatory; Must-not auto-compiled (not user Q)*
+*Last updated: 2026-07-14 — Load stack aligned to Main; Bias default DORMANT; tool roles not vendor-locked*

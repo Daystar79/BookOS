@@ -1,5 +1,5 @@
-# Gemini CLI — Character Builder Prompt
-*Drop into Gemini CLI from repo root. Run whenever you need to create a new character card.*
+# Character Builder Prompt
+*Drop into a design agent from repo root (Gemini CLI works well for long-context Q&A). Run whenever you need to create a new character card.*
 
 ---
 

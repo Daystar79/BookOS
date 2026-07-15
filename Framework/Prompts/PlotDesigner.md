@@ -1,5 +1,5 @@
-# Gemini CLI — Plot & Outline Designer
-*Drop into Gemini CLI from repo root. Run once during project setup to define the chapter-by-chapter master outline.*
+# Plot & Outline Designer
+*Drop into a design agent from repo root (Gemini CLI works well for long-context Q&A). Run once during project setup to define the chapter-by-chapter master outline.*
 
 ---
 
