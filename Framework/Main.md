@@ -25,7 +25,8 @@
 | **This file** | Workflow + psyche runtime + bias/archetype tables |
 | **[Rules_Index.md](./Rules_Index.md)** | Hard bans, dialogue, cleanup checklist |
 | **[realm_index.md](./Psychology/realm_index.md)** | Ten realms: brace / release / somatic |
-| **On-scene cards only** | Focus, Latents, Bias, Voice, Age, Canon Adult |
+| **On-scene cards only** | Focus, Latents, Bias, Voice, Age |
+| **[Modules.md](./Modules.md)** | Checked & verified optional modules |
 
 ### Optional (only when needed)
 
@@ -43,6 +44,18 @@
 - Superseded stubs: `psyche_framework.md`, `Drafting_Workflow.md` (pointers only)
 - Demo cast cards unless testing
 - Entire prior chapters when only the last movement is required (see Draft rules)
+
+---
+
+## MODULE VERIFICATION PROTOCOL (Core Supremacy)
+
+When this framework is loaded, the AI **must** verify all active modules before generation:
+1. **Index Scan:** Check the **`Framework/Modules.md`** file to identify all modules marked as `ENABLED`.
+2. **Compatibility Verification:** For each enabled module:
+   - Verify that it does not conflict with the core rules in `Rules_Index.md` (e.g. attempting to override hard bans or output hygiene).
+   - Verify that it does not conflict with other active modules (as documented in their respective files or `Modules.md`).
+   - If any incompatibility or core rule breach is found, the module is declared **unverified** and must be silently disabled (with a short warning to the author in stdout).
+3. **Core Supremacy:** No module instruction is allowed to override or supersede the rules in `Rules_Index.md` or the core logic in `Main.md`. If a conflict occurs, the core system rules take absolute precedence, and the conflicting module rule is ignored.
 
 ---
 
