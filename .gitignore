@@ -1,0 +1,26 @@
+# BookOS Git Ignore Configuration
+
+# System Files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# BookOS Output & Build folders
+# Ignore built files and releases, track only source drafts and framework configs
+Releases/
+Build/
+Audits/
+
+# Temp/Scratch files
+scratch/
+temp/
+tmp/
