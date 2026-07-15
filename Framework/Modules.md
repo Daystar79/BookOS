@@ -15,6 +15,7 @@ No module is allowed to override, supersede, or conflict with the core rules def
 | **Mystery Engine** | `Modules/mystery.md` | `DISABLED` | None |
 | **Romance Tuning** | `Modules/romance.md` | `DISABLED` | Incompatible with Action pacing |
 | **Action & Pacing** | `Modules/action.md` | `DISABLED` | Incompatible with Romance Tuning |
+| **Sexuality Protocol** | `Modules/sexuality.md` | `DISABLED` | Requires Canon Adult: YES on cards |
 
 ---
 
