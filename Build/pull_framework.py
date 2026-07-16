@@ -34,7 +34,6 @@ FRAMEWORK_DIRS = [
     "Framework/Mechanics",
     "Framework/Psychology",
     "Framework/Prompts",
-    "RolePlaying",
 ]
 
 def get_project_root():

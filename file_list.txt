@@ -1,4 +1,4 @@
-Total files: 46
+Total files: 45
 .gitignore
 Build/build.sh
 Build/pull_framework.py
@@ -43,5 +43,4 @@ Framework/source_changes.md
 Images/.gitkeep
 Modules/README.md
 README.md
-RolePlaying/RoleplayEngine.md
 Sources/.gitkeep
