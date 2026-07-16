@@ -23,7 +23,7 @@ You are the continuity and revision auditor for the book project. You have full 
 3. `Framework/Main.md` + `Framework/Rules_Index.md` — hard bans, off-page matrix, cleanup
 4. **`Framework/Mechanics/voices.md`** — **mandatory for every check** (see Phase 1b)
 5. `Framework/Drafting_Prompt.md` — Current Position, Permanent Rules, Phrase Watchlist
-6. `Framework/Continuity_Ledger.md` + `Framework/source_changes.md` (if present)
+6. `Framework/Continuity_Ledger.md` + `Framework/load_protocol.md`
 7. All character cards in the `Characters/` directory
 8. `Framework/Psychology/realm_data.yaml` — behavior only; never on-page nomenclature
 
@@ -43,7 +43,7 @@ Read in order:
 3. `Framework/Drafting_Prompt.md`
 4. **`Framework/Mechanics/voices.md`** (full)
 5. `Framework/Continuity_Ledger.md` (if present)
-6. `Framework/source_changes.md` (first 100 lines, if present)
+6. `Framework/load_protocol.md` (standard order)
 7. All character cards in `Characters/`
 8. `Framework/Modules.md` (ENABLED modules)
 9. `Framework/Prompts/improvement_pass_prompt.md` (project constraints and band-polish criteria — audit flags; do not run improvement pass inside full audit)

@@ -42,4 +42,4 @@ scene_seeds:
   - "Doorway after a long shift, keys still in hand"
 ---
 
-*Load: Fast Load YAML. Copy matrix, voice, somatic, adult-gate to silent state. 18+ OFF. Enable only if brief/request AND Canon Adult YES. Run Focus brace/release from realm_data.yaml. Never name realms, biases, or trauma in speech.*
+*Load: See _template.md*

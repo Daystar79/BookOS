@@ -17,8 +17,6 @@ FRAMEWORK_FILES = [
     "Framework/Main.md",
     "Framework/Rules_Index.md",
     "Framework/natural_prose.md",
-    "Framework/psyche_framework.md",      # stub → Main
-    "Framework/Drafting_Workflow.md",     # stub → Main
     "Framework/formatting_rules.md",
     "Framework/Design_QA_Protocol.md",
     "Framework/Drafting_Prompt.md",
@@ -77,7 +75,7 @@ def update_file_list(root):
     """Automatically rebuild file_list.txt based on tracked files in the repo."""
     print("  Updating file_list.txt...")
     # List files ignoring .git, .venv, etc.
-    ignored_prefixes = ['.git', '.venv', '__pycache__', 'Releases']
+    ignored_prefixes = ['.git', '.venv', '__pycache__', 'Releases', 'Archives']
     files_found = []
     
     for dirpath, dirnames, filenames in os.walk(root):
