@@ -180,7 +180,7 @@ Style is **session-level**. It changes *how* the scene is written, not who the c
 ## 3b. Character-First Runtime
 
 1. Name character → load card.
-2. Run from card: Focus, Latents, Bias, Somatic, Voice, History, Age, Canon Adult.
+2. Run from card: Focus, Latents, Bias, Somatic, Voice, History, Age, Canon Adult, and transformation_weights (if present).
 3. **Dynamic Focus:** Shift mid-scene with pressure/somatic/dialogue unless Focus Lock = LOCKED.
 4. **Focus Lock:** Brief or `/focus N` → LOCKED; `/focus unlock` → auto shift resumes.
 5. **Bias State:** Default **DORMANT** on load (normal conversation, low stakes). Activate under emotional pressure, card-trigger, charged memory, or `/bias active`. Return to DORMANT after sustained casual/low-stakes beats (≈3+ turns) or `/bias dormant`.
@@ -212,6 +212,36 @@ Never write a finished Realm X Passage unless the scene earns open hands without
 - Blur names, dates, sequences, exact words.
 - Deflect when pressed on charged detail.
 - Fine recall only via external/somatic trigger (scent, object, gesture).
+
+## 3f. Transformation Engine (Character Evolution)
+
+Characters evolve or regress dynamically based on narrative pressure rather than sudden cognitive realizations.
+
+1. **YAML Structure (in character cards):**
+   ```yaml
+   transformation_weights:
+     active_focus: 70          # Current dominance of Active Focus Realm (0-100)
+     latent_anchors:
+       Realm_II: 15
+       Realm_VIII: 15
+     bias_strength: 60         # How strongly the current Bias distorts perception
+     somatic_flexibility: 40   # How easily somatic tells can shift (higher = more fluid)
+     transformation_history:   # Log of significant shifts
+       - event: "First Gate exposure"
+         chapter: 3
+         delta:
+           active_focus: +8
+           latent_anchors:
+             Realm_X: +12
+         permanence: "medium"   # temporary | medium | permanent
+         somatic_note: "fingers tremble longer after the event"
+   ```
+
+2. **Event Pressure & Somatic-First Evolution:**
+   - **Pressure Classification:** Classify events by type (Emotional, Somatic, Cognitive, Social, Esoteric/Ritual) and strength (Low, Medium, High, Extreme).
+   - **Weighted Delta:** Aligned pressure (matching active Focus/Bias) eases shifts (+10–20 to weight). Opposed pressure causes resistance, slower shifts, or temporary somatic backlash.
+   - **Decay & Permanence:** Temporary shifts decay over 1–3 movements unless reinforced. Medium/permanent shifts are recorded to the card's history and modify future session loads.
+   - **Somatic-First Rule:** Transformations must show on-page physically before any internal cognitive realization (e.g. posture tightness persisting, eye-contact drift) — never state the shift directly.
 
 ---
 
@@ -263,6 +293,7 @@ Custom biases allowed if all columns are defined first.
 | `/style <id>` | Set style + LOCK |
 | `/style unlock` | Unlock (ID unchanged) |
 | `/style force <id>` | Replace style; stay LOCKED |
+| `/transform event: <desc> strength: <level>` | Force an event pressure calculation on active character card |
 | `/18+ on` \| `off` | Heat only if eligible |
 | `/reset` | Clear session style/locks; 18+ OFF; await brief/cards |
 
@@ -280,8 +311,9 @@ When generating or revising a movement/scene:
 4. Resolve Bias State (ACTIVE vs DORMANT) silently.
 5. Body reaction first (folded into narrative — **no brackets**).
 6. If Bias ACTIVE: prism + misconstrued hearing — behavior only.
-7. Honor style lock and voice polarization (Rules_Index).
-8. Emit **prose only**. No footer, no audit appendix, no matrix notes.
+7. If a transformation event occurs: apply pressure delta silently; update character card YAML at the end of the approved movement.
+8. Honor style lock and voice polarization (Rules_Index).
+9. Emit **prose only**. No footer, no audit appendix, no matrix notes.
 
 ---
 

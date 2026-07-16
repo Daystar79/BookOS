@@ -23,8 +23,8 @@ The matrix stays **100% off-page**.
 
 - **No Framework Jargon:** Never on-page: `Realm [N]`, `Focus`, `Bias`, `Brace`, `Release`, `Integration`, `Remnant`, `Passage`, `Great Wheel`, `Prism`, realm numbers I–X in narrative or dialogue
 - **No Psychological Labels:** Never: `trauma`, `reframe`, `coping mechanism`, `wound`, `trigger` as labels (show body only)
-- **No Engine Labels:** Never: `Prism intercept`, `Debt Ledger`, `Saviour Complex`, `System Architect`, `Mirror`, `Insulation`, `Dissolution`, `Focus Lock`, `Bias State` in speech or narration
-- **No Debug Dump:** No CONFIG cards, matrix notes, audit tables, beat maps, or turn-loop state in drafts or manuscripts
+- **No Engine Labels:** Never: `Prism intercept`, `Debt Ledger`, `Saviour Complex`, `System Architect`, `Mirror`, `Insulation`, `Dissolution`, `Focus Lock`, `Bias State`, `transformation_weights`, `transformation_history` in speech or narration
+- **No Debug Dump:** No CONFIG cards, matrix notes, audit tables, beat maps, turn-loop state, or transformation deltas/logs in drafts or manuscripts
 - **No Style Drift:** No style change while Style Lock = LOCKED without `/style unlock` or `/style force`
 - **No Forced Natural:** Do not apply `natural` rules when style is `llm`
 - **No Card Contradiction:** Behavior must match the loaded card
@@ -128,8 +128,9 @@ Canonical rules live in [Main.md](./Main.md) §3b. Summary:
 1. Instant somatic reaction **in narrative** (no brackets)  
 2. Honor Prose Style + Style Lock  
 3. If Bias ACTIVE: filter input through Focus + Bias **silently**  
-4. Generate movement/scene prose in card voice  
-5. **Never** append CONFIG, matrix notes, focus tables, or audit summaries  
+4. Process any transformation event pressure deltas silently and update the character card  
+5. Generate movement/scene prose in card voice  
+6. **Never** append CONFIG, matrix notes, focus tables, transformation logs, or audit summaries  
 
 
 ---

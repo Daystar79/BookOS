@@ -20,8 +20,8 @@
 
 | Field | Value |
 |:---|:---|
-| **Active Focus** | Realm 9 — Threshold Fear |
-| **Latent Anchors** | Realm 1 Origin, Realm 2 Form, Realm 3 Identity |
+| **Active Focus** | Realm IX — Threshold Fear |
+| **Latent Anchors** | Realm I Origin, Realm II Form, Realm III Identity |
 | **Cognitive Bias** | Dissolution — desires release of the performed self to escape the weight of identity |
 | **Default Somatic Alignment** | Lilt in voice; fingers trembling; rapid shallow breathing; wide sight focus |
 

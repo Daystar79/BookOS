@@ -1,3 +1,11 @@
+---
+title: "Prose Protocol"
+description: "Optional detail pack governing session-level prose styles and selection/lock states."
+type: "supplementary_protocol"
+role: "Prose style catalog and selection lock state machine"
+load_protocol: "Load when styling overrides or catalog auditing are needed"
+---
+
 # Prose Protocol
 *Optional detail pack. Session defaults and lock-on-select also live in [Main.md](../Main.md) §3a. Load this file only when you need the full catalog/state machine.*
 

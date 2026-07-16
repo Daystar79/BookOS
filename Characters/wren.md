@@ -20,8 +20,8 @@
 
 | Field | Value |
 |:---|:---|
-| **Active Focus** | Realm 7 — Presence |
-| **Latent Anchors** | Realm 1 Origin, Realm 2 Form, Realm 6 Compassion |
+| **Active Focus** | Realm VII — Presence |
+| **Latent Anchors** | Realm I Origin, Realm II Form, Realm VI Compassion |
 | **Cognitive Bias** | Mirror — suppresses active wants to act as a silent reflector and avoid collision |
 | **Default Somatic Alignment** | Physical stillness; sight landing without attachment; loose jaw |
 

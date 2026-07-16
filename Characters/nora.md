@@ -20,8 +20,8 @@
 
 | Field | Value |
 |:---|:---|
-| **Active Focus** | Realm 6 — Compassion |
-| **Latent Anchors** | Realm 1 Origin, Realm 2 Form, Realm 7 Presence |
+| **Active Focus** | Realm VI — Compassion |
+| **Latent Anchors** | Realm I Origin, Realm II Form, Realm VII Presence |
 | **Cognitive Bias** | Insulation — bends external structures into boundaries to protect relationship intimacy |
 | **Default Somatic Alignment** | Warm touch; chest breathing; eyes scanning faces; jaw soft |
 

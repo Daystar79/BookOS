@@ -20,8 +20,8 @@
 
 | Field | Value |
 |:---|:---|
-| **Active Focus** | Realm 6 — Compassion |
-| **Latent Anchors** | Realm 2 Form, Realm 4 Will, Realm 8 Integration |
+| **Active Focus** | Realm VI — Compassion |
+| **Latent Anchors** | Realm II Form, Realm IV Will, Realm VIII Integration |
 | **Cognitive Bias** | Saviour Complex — compelled to dissolve boundaries to absorb others' pain |
 | **Default Somatic Alignment** | Chest soft; hands resting open; sudden intake of breath; weight grounding toward the other |
 

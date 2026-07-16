@@ -1,0 +1,136 @@
+#!/usr/bin/env python3
+"""
+Framework Pull Script — BookOS
+------------------------------
+Pulls the latest core framework files and writing mechanics from the upstream 
+CognitiveMiddleware (Authors_Framework) to keep this project in sync.
+"""
+
+import os
+import shutil
+import sys
+
+# Upstream source directory containing the Psyche Matrix Framework
+UPSTREAM_NAME = "Authors_Framework"
+
+FRAMEWORK_FILES = [
+    "Framework/Main.md",
+    "Framework/Rules_Index.md",
+    "Framework/natural_prose.md",
+    "Framework/psyche_framework.md",      # stub → Main
+    "Framework/Drafting_Workflow.md",     # stub → Main
+    "Framework/formatting_rules.md",
+    "Framework/Design_QA_Protocol.md",
+    "Framework/Drafting_Prompt.md",
+    "Framework/Modules.md",
+    "Characters/_template.md",
+    "Characters/README.md",
+    "Characters/Relations.md",
+    ".gitignore",
+    "README.md",
+]
+
+FRAMEWORK_DIRS = [
+    "Framework/Mechanics",
+    "Framework/Psychology",
+    "Framework/Prompts",
+]
+
+def get_project_root():
+    # This script is located in Build/
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def get_upstream_dir(root):
+    parent = os.path.dirname(root)
+    return os.path.join(parent, UPSTREAM_NAME)
+
+def copy_file(src, dst):
+    dst_dir = os.path.dirname(dst)
+    os.makedirs(dst_dir, exist_ok=True)
+    shutil.copy2(src, dst)
+    print(f"  Pulled: {os.path.relpath(dst, get_project_root())}")
+
+def copy_directory(src_dir, dst_dir):
+    if not os.path.exists(src_dir):
+        print(f"  [WARNING] Upstream directory not found: {src_dir}")
+        return
+    os.makedirs(dst_dir, exist_ok=True)
+    for root, dirs, files in os.walk(src_dir):
+        rel_path = os.path.relpath(root, src_dir)
+        target_root = dst_dir if rel_path == '.' else os.path.join(dst_dir, rel_path)
+        os.makedirs(target_root, exist_ok=True)
+        for file in files:
+            src_file = os.path.join(root, file)
+            dst_file = os.path.join(target_root, file)
+            shutil.copy2(src_file, dst_file)
+    print(f"  Pulled directory: {os.path.relpath(dst_dir, get_project_root())}")
+
+def update_file_list(root):
+    """Automatically rebuild file_list.txt based on tracked files in the repo."""
+    print("  Updating file_list.txt...")
+    # List files ignoring .git, .venv, etc.
+    ignored_prefixes = ['.git', '.venv', '__pycache__', 'Releases']
+    files_found = []
+    
+    for dirpath, dirnames, filenames in os.walk(root):
+        rel_dirpath = os.path.relpath(dirpath, root)
+        # Skip ignored directories
+        if rel_dirpath != '.':
+            if any(ignored in rel_dirpath.split(os.path.sep) for ignored in ignored_prefixes) or rel_dirpath.startswith('.'):
+                continue
+        for f in filenames:
+            # Skip hidden files except .gitignore and .gitkeep
+            if f.startswith('.') and f not in ['.gitignore', '.gitkeep']:
+                continue
+            full_path = os.path.join(dirpath, f)
+            rel_path = os.path.relpath(full_path, root)
+            # Skip file_list.txt itself
+            if rel_path == 'file_list.txt':
+                continue
+            files_found.append(rel_path)
+            
+    files_found.sort()
+    file_list_path = os.path.join(root, "file_list.txt")
+    with open(file_list_path, "w") as out:
+        out.write(f"Total files: {len(files_found)}\n")
+        for f in files_found:
+            out.write(f"{f}\n")
+    print(f"  ✓ Updated file_list.txt (Total files: {len(files_found)})")
+
+def main():
+    root = get_project_root()
+    upstream = get_upstream_dir(root)
+    
+    print("==================================================")
+    print("      Pulling Psyche Matrix Framework from Core   ")
+    print("==================================================")
+    print(f"Source: {upstream}")
+    print(f"Target: {root}\n")
+    
+    if not os.path.exists(upstream):
+        print(f"[-] Error: Upstream framework directory '{UPSTREAM_NAME}' not found at: {upstream}")
+        print("Please check that Authors_Framework exists in the same parent directory.")
+        sys.exit(1)
+        
+    # Pull individual files
+    for rel_file in FRAMEWORK_FILES:
+        src = os.path.join(upstream, rel_file)
+        dst = os.path.join(root, rel_file)
+        if os.path.exists(src):
+            copy_file(src, dst)
+        else:
+            print(f"  [WARNING] Upstream file not found: {rel_file}")
+            
+    # Pull directories
+    for rel_dir in FRAMEWORK_DIRS:
+        src = os.path.join(upstream, rel_dir)
+        dst = os.path.join(root, rel_dir)
+        copy_directory(src, dst)
+        
+    # Update file_list.txt to keep tracked files in sync
+    update_file_list(root)
+    
+    print("\n[✓] Framework sync from CognitiveMiddleware completed successfully!")
+
+if __name__ == "__main__":
+    main()

@@ -1,123 +1,119 @@
-# BookOS — AI-Assisted Creative Writing Operating System
-*A modular, rule-bounded framework for planning, designing, drafting, and auditing high-concept fiction.*
+# Cognitive Middleware
+
+**An invisible cognitive matrix for character-driven fiction drafting.**  
+Body-first psychology, bias distortion, and realm-aware somatics — all running silently off-page.
 
 ---
 
-## What is BookOS?
+## What It Is
 
-BookOS is a modular pipeline that acts as a cognitive writing companion. It splits the creative process into clear, isolated layers to prevent configuration drift, combat generic AI-writing tropes, and enforce strict stylistic consistency.
+**CognitiveMiddleware** (formerly PsycheFramework) is a sophisticated runtime engine developed primarily for **"Belief and Love"** (and compatible with related private works such as *A Wanderer’s Guide to the Gates*). It enables consistent, psychologically rich characters through:
 
-Rather than relying on ad-hoc prompts, BookOS runs on a structured folder database, character voice engines, and psychological profiles (the **Psyche Matrix**), keeping all system instructions silent and off-page.
+- **Body Before Insight** — Physical reactions and somatic tells always precede psychological explanation.
+- **Character-First** — Named characters from card files are the single source of truth.
+- **Prism Distortion** — Active biases warp how characters receive and interpret the world (shown through behavior, never labeled).
+- **100% Off-Page** — The entire matrix stays invisible in the final prose. No realm numbers, bias names, or system terms appear on the page.
+- **Great Wheel Integration** — Somatic and bracing/release profiles for all 10 Realms.
 
----
-
-## Current state of this repo
-
-| Layer | Status |
-|:---|:---|
-| **Core runtime** (`Main.md`, `Rules_Index.md`, `realm_index.md`) | Ready — load for every draft |
-| **Design / audit prompts** | Ready — load lists aligned to core |
-| **Optional modules** (`Modules/`) | Registry only — no module files shipped yet |
-| **Book-local files** (outline, world, rites, drafts) | Empty until you run bootstrap |
-| **Demo cast** (`Characters/reed` … `lior`) | Playground tests only — not required for novels |
+The framework is designed to fight common AI writing problems: therapy-speak, perfect recall, symmetric dialogue, pattern repetition, and on-page system leakage.
 
 ---
 
-## Project Directory Map
+## Core Philosophy
 
-```
-├── Characters/
-│   ├── _template.md           # Template for new character cards
-│   ├── Relations.md           # Central dynamics index
-│   ├── README.md
-│   └── [slug].md              # Demo cards (optional) or your cast
-├── Drafts/                    # Movement drafts, Completed/, master manuscript
-├── Framework/
-│   ├── Main.md                # Psyche Matrix runtime + draft workflow
-│   ├── Rules_Index.md         # Hard bans, dialogue, cleanup
-│   ├── Modules.md             # Optional module registry (all DISABLED)
-│   ├── Design_QA_Protocol.md  # Interactive design session rules
-│   ├── Drafting_Prompt.md     # Active brief + session position
-│   ├── Continuity_Ledger.md   # Timeline / somatic close map
-│   ├── Mechanics/             # Optional: voices, humanity, prose
-│   ├── Psychology/
-│   │   └── realm_index.md     # Realms I–X brace / release / somatic
-│   ├── Prompts/               # Bootstrap, design, audit, polish prompts
-│   ├── TBD/                   # Movement design archives
-│   ├── Setup/                 # Archive completed bootstrap prompts here
-│   └── Corrections/           # Pending correction notes
-├── Modules/                   # Future optional packs (empty until shipped)
-├── Sources/                   # Research notes for world-builder
-├── Audits/                    # Audit reports (gitignored by default)
-├── Build/ · Releases/ · Images/
-└── README.md
-```
+- The matrix is a **tool for the writer**, not content for the reader.
+- Characters are not therapists, narrators, or helpful assistants.
+- Memory is imperfect and biased. Recall is triggered somatically, not on command.
+- Style, focus, and bias state are controllable but never visible in the output.
+- Adult/sexual content is strictly gated and never enabled by default.
 
 ---
 
-## Honest load stack (draft session)
+## Quick Start
 
-Always:
+1. Clone or copy this framework into your book project folder ("Belief and Love" or compatible private repo).
+2. Run `deploy_framework.py` (optional but recommended) to set up structure.
+3. For every drafting session, load:
+   - `Framework/Main.md`
+   - `Framework/Rules_Index.md`
+   - `Framework/Psychology/realm_index.md`
+   - Relevant character cards from `Characters/`
 
-1. `Framework/Main.md`
-2. `Framework/Rules_Index.md`
-3. `Framework/Psychology/realm_index.md`
-4. On-scene cards from `Characters/`
-5. Active Movement Brief in `Drafting_Prompt.md`
-6. `Framework/Modules.md` (scan for ENABLED — usually none)
-
-Optional: `natural_prose.md`, Mechanics supplements, book-local outline/world/rites **if present**.
-
-Never for generation: `psyche_framework.md`, `Drafting_Workflow.md` (superseded stubs).
+4. Write movements/scenes using the brief + cards. The matrix runs silently.
 
 ---
 
-## The Creative Pipeline (How to Use)
+## Key Files
 
-### Phase 1: Bootstrapping (Run Once)
+| File | Purpose | Load? |
+|------|---------|-------|
+| `Framework/Main.md` | Core engine, workflow, commands, and principles | **Always** |
+| `Framework/Rules_Index.md` | Hard bans, cleanup protocol, dialogue rules | **Always** |
+| `Framework/Psychology/realm_index.md` | Somatic profiles for all 10 Realms | **Always** |
+| `Characters/` | Individual character cards (Focus, Latents, Bias, Voice, etc.) | Per scene |
+| `Framework/Mechanics/` | Prose styles, sexuality rules, voice templates, humanity details | As needed |
+| `Framework/Prompts/` | Supporting prompt templates | Reference only |
+| `RolePlaying/RoleplayEngine.md` | Self-contained somatic character RP engine (separate from drafting) | RP only |
 
-Run these interactive prompts in order. They **create** book-local files under `Framework/` (they are not shipped empty on purpose).
-
-After you finish a bootstrap prompt, **move it yourself** into `Framework/Setup/` so `Prompts/` stays clean (this is not automatic).
-
-1. **Initialize Novel** (`Prompts/initialize_novel_prompt.md`) → writes `Framework/Novel_Outline.md`
-2. **Build Characters** (`Prompts/character_builder_prompt.md`) → `Characters/[slug].md` + `Relations.md`
-3. **Build World** (`Prompts/world_builder_prompt.md`) → `World_Architecture.md` (+ `Rite_Reference.md` if needed)
-4. **Design Plot** (`Prompts/PlotDesigner.md`) → `Novel_Master_Outline.md`
-
-Until those files exist, design/draft sessions should treat them as **optional / if present**.
-
----
-
-### Phase 2: Recurring Writing Loop
-
-For every individual scene (movement):
-
-```mermaid
-graph LR
-    A[MovementDesigner.md] -->|1. Run Q&A| B(Design Brief)
-    B -->|2. Save to TBD/| C[TBD/chapter_N_mM_design.md]
-    C -->|3. Paste Active Brief| D[Drafting_Prompt.md]
-    D -->|4. Run /draft| E(Prose Generation)
-    E -->|5. Write Draft| F[Drafts/draft_chapter_N_mM.md]
-```
-
-1. **Scene Design:** Run **`Prompts/MovementDesigner.md`** (follow `Design_QA_Protocol.md`). Builds a **Movement Brief**; save full QA to `Framework/TBD/`.
-2. **Scene Setup:** Paste the active brief into **`Framework/Drafting_Prompt.md`**.
-3. **Drafting:** Load the honest stack above + brief; run **`/draft`**. Prefer the **lean draft preceding-read** in Main §2 (not the heavier design load).
-4. **Prose Hygiene:** Only narrative prose goes to draft files. Matrix jargon stays off-page.
-
-**Tool roles (not vendor-locked):** use a long-context agent for design/audit when the whole manuscript must fit; use a prose-focused agent for drafting. Gemini CLI is a common long-context choice; Cursor/Grok are common for craft — either role can use any capable model.
+**Never load into generation context:**
+- `source_changes.md`
+- `formatting_rules.md`
+- Entire `Prompts/` folder
+- Superseded stubs (`psyche_framework.md`, `Drafting_Workflow.md`)
 
 ---
 
-### Phase 3: Auditing & Polish
+## Author Commands (Drafting)
 
-* **Manuscript Integrity Audit:** `Prompts/FullBookAudit.md` — timeline, voice protocol, file sync, release readiness.
-* **Surgical Band Polish:** `Prompts/improvement_pass_prompt.md` — scoped irony / sensory / cadence fixes after the band is closed.
+| Command | Effect |
+|---------|--------|
+| Load character card | Silent state load (name + card) |
+| `/create …` | Build minimal new card |
+| `/focus N` | Lock active Focus to Realm N |
+| `/focus unlock` | Allow dynamic Focus shifts |
+| `/bias active` / `dormant` | Force bias state |
+| `/style <id>` | Lock prose style |
+| `/style unlock` | Allow style change |
+| `/18+ on` / `off` | Enable/disable heat (only if Canon Adult = YES) |
+| `/reset` | Clear session state |
 
 ---
 
-## Bias State (quick)
+## Character Cards
 
-Default **DORMANT** (normal conversation). Becomes **ACTIVE** under pressure, card triggers, or `/bias active` — then Prism + misconstrued hearing apply. See Main §3b and Rules_Index §7.
+Cards live in `Characters/`. Each contains:
+- Name, Age, Canon Adult flag
+- Active Focus + Latents
+- Bias (with state)
+- Somatic profile
+- Voice characteristics
+- History anchors
+
+Use the `_template.md` to create new ones. Archetypes A–F in `Main.md` are starting templates only.
+
+---
+
+## Rules Highlights
+
+- **No system language on page** (Realms, Focus, Bias, Prism, etc.)
+- **Body first** — never psychological summaries or therapy language
+- **Imperfect memory** — blur, deflect, trigger only
+- **Asymmetric dialogue** — characters talk past each other
+- **Pattern rotation** — fight repetitive AI phrasing across movements
+- **Strict cleanup pass** before saving drafts (see Rules_Index §6)
+
+---
+
+## Philosophy in One Line
+
+**The matrix protects the character’s internal logic so the prose can stay honest, embodied, and invisible.**
+
+---
+
+## License & Usage
+
+This framework was built for personal long-form fiction work. Feel free to adapt it for your own projects. Credit appreciated but not required.
+
+---
+
+*Install once. Load for every draft session. Let the matrix run silently. Write clean prose.*

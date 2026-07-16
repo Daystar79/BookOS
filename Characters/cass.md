@@ -20,8 +20,8 @@
 
 | Field | Value |
 |:---|:---|
-| **Active Focus** | Realm 4 — Will |
-| **Latent Anchors** | Realm 1 Origin, Realm 2 Form, Realm 5 Echoes, Realm 8 Integration |
+| **Active Focus** | Realm IV — Will |
+| **Latent Anchors** | Realm I Origin, Realm II Form, Realm V Echoes, Realm VIII Integration |
 | **Cognitive Bias** | System Architect — emotional exchanges treated as design constraints requiring calibration |
 | **Default Somatic Alignment** | Still posture; unhurried movements; level gaze; hands folded loosely |
 

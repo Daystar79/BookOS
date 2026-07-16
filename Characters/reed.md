@@ -20,8 +20,8 @@
 
 | Field | Value |
 |:---|:---|
-| **Active Focus** | Realm 8 — Integration |
-| **Latent Anchors** | Realm 1 Origin, Realm 2 Form, Realm 7 Presence |
+| **Active Focus** | Realm VIII — Integration |
+| **Latent Anchors** | Realm I Origin, Realm II Form, Realm VII Presence |
 | **Cognitive Bias** | Debt Ledger — safety, affection, and rest rewritten as payments on an infinite unpayable debt |
 | **Default Somatic Alignment** | Throat tight; shoulders high; chest breathing; jaw locking |
 
