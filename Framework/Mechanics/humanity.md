@@ -99,3 +99,22 @@ When a character is in a specific Active Focus, their expression of the full emo
 *   **Realm VIII (Integration - Rhythm)**: Expresses transitions and code-switches through rapid clothing and posture adjustments.
 *   **Realm IX (Threshold - Fingers/Breath)**: Expresses panic or dread through finger tremors and gasps; releases by moving while trembling.
 *   **Realm X (Return - Hands/Posture)**: Expresses connection or release by turning palms up and letting the arms hang completely slack.
+
+---
+
+## 5. Physical Pacing, Clumsiness & Cognitive Drift (Biological Realism)
+
+Human bodies operate with physical limitations and imperfect coordination:
+- **The Fumble Rule:** Characters must fumble with keys, trip on thresholds, drop objects under high pressure, or struggle with stuck drawers/heavy doors to ground them in reality.
+- **Vestment Resistance:** Keep clothing barriers active and awkward (heavy boots, sliding sleeves, catching hems).
+- **Dialogue Asymmetry:** Dialogue must drift, with characters talking past each other, trailing off (`...`), or giving oblique answers (answering the subtext rather than literal words).
+- **Imperfect Recall:** Blur dates, names, or sequences; memory recall should rely on external/somatic triggers.
+
+---
+
+## 6. Integration with Transformation Engine (Character Evolution)
+
+A character's physical pacing and somatic tells are not static; they evolve with character transformation:
+- **YAML Alignment:** Check the character's `transformation_weights` and `transformation_history` on card load.
+- **Somatic Tell Decay:** Temporary somatic state changes decay over 1–3 movements. Permanent somatic shifts recorded in history (e.g. *shoulder drop release*) become the character's new baseline tell.
+- **Somatic Flexibility:** A high `somatic_flexibility` (e.g., 70+) allows characters to rotate tells rapidly across body zones and recover from high-tension states quickly, while low flexibility (e.g., 20) results in rigid, persistent tells that lock up the body.

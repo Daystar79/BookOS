@@ -1,4 +1,4 @@
-Total files: 44
+Total files: 45
 .gitignore
 Build/build.sh
 Build/pull_framework.py
@@ -21,6 +21,7 @@ Framework/Drafting_Workflow.md
 Framework/Main.md
 Framework/Mechanics/humanity.md
 Framework/Mechanics/prose.md
+Framework/Mechanics/sexuality.md
 Framework/Mechanics/voices.md
 Framework/Modules.md
 Framework/Prompts/FullBookAudit.md
