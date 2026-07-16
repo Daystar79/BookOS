@@ -1,3 +1,32 @@
+---
+name: "Cass"
+call_name: null
+age: 38
+canon_adult: true
+physical: "Narrow frame, precise posture, trimmed nails, gaze that levels rather than softens"
+voice_archetype: "C — Systems Architect"
+active_focus: "Realm IV — Will"
+latent_anchors: ["Realm I — Origin", "Realm II — Form", "Realm V — Echoes", "Realm VIII — Integration"]
+cognitive_bias: "System Architect — emotional exchanges treated as design constraints requiring calibration"
+default_somatic_alignment: "Still posture; unhurried movements; level gaze; hands folded loosely"
+
+transformation_weights:
+  active_focus: 60
+  latent_anchors:
+    Realm_I: 10
+    Realm_II: 10
+    Realm_V: 10
+    Realm_VIII: 10
+  bias_strength: 70
+  somatic_flexibility: 45
+  transformation_history: []
+
+depth_of_knowledge:
+  general: "Expert in engineering, physics, and structural architectures."
+  esoteric: "Skeptic; relies purely on logical and structural models."
+  personal: "Keeps detailed records of projects; dismisses vague memories."
+---
+
 # Character Card: Cass
 *Generic playground demo — Archetype C base*
 

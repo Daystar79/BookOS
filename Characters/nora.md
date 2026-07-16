@@ -1,3 +1,31 @@
+---
+name: "Nora"
+call_name: null
+age: 36
+canon_adult: true
+physical: "Warm hands, soft jaw, restless eyes that track faces in a room, stands slightly between people and doors"
+voice_archetype: "E — Insulation Anchor"
+active_focus: "Realm VI — Compassion"
+latent_anchors: ["Realm I — Origin", "Realm II — Form", "Realm VII — Presence"]
+cognitive_bias: "Insulation — bends external structures into boundaries to protect relationship intimacy"
+default_somatic_alignment: "Warm touch; chest breathing; eyes scanning faces; jaw soft"
+
+transformation_weights:
+  active_focus: 65
+  latent_anchors:
+    Realm_I: 15
+    Realm_II: 10
+    Realm_VII: 10
+  bias_strength: 65
+  somatic_flexibility: 50
+  transformation_history: []
+
+depth_of_knowledge:
+  general: "Understands domestic layouts, security, and relationship dynamics."
+  esoteric: "No direct occult knowledge; relies on grounded interpersonal intuition."
+  personal: "Highly defensive of shared history; filters out outside facts."
+---
+
 # Character Card: Nora
 *Generic playground demo — Archetype E base*
 

@@ -1,3 +1,31 @@
+---
+name: "Helen"
+call_name: null
+age: 41
+canon_adult: true
+physical: "Soft midsection, strong forearms, silver at the temples, eyes that inventory bodies for cold and hunger"
+voice_archetype: "B — Caregiver"
+active_focus: "Realm VI — Compassion"
+latent_anchors: ["Realm II — Form", "Realm IV — Will", "Realm VIII — Integration"]
+cognitive_bias: "Saviour Complex — compelled to dissolve boundaries to absorb others' pain"
+default_somatic_alignment: "Chest soft; hands resting open; sudden intake of breath; weight grounding toward the other"
+
+transformation_weights:
+  active_focus: 70
+  latent_anchors:
+    Realm_II: 10
+    Realm_IV: 10
+    Realm_VIII: 10
+  bias_strength: 60
+  somatic_flexibility: 50
+  transformation_history: []
+
+depth_of_knowledge:
+  general: "Understands community dynamics, local survival logistics, and household management."
+  esoteric: "No direct occult knowledge, but senses emotional and atmospheric shifts naturally."
+  personal: "Clear memory of people she helped; blurred memories of her own childhood."
+---
+
 # Character Card: Helen
 *Generic playground demo — Archetype B base*
 

@@ -1,3 +1,31 @@
+---
+name: "Lior"
+call_name: null
+age: 27
+canon_adult: true
+physical: "Long fingers that tremble at rest, wide-set eyes, voice that lifts at the ends of sentences, clothes that look chosen then abandoned"
+voice_archetype: "F — Threshold Seeker"
+active_focus: "Realm IX — Threshold Fear"
+latent_anchors: ["Realm I — Origin", "Realm II — Form", "Realm III — Identity"]
+cognitive_bias: "Dissolution — desires release of the performed self to escape the weight of identity"
+default_somatic_alignment: "Lilt in voice; fingers trembling; rapid shallow breathing; wide sight focus"
+
+transformation_weights:
+  active_focus: 80
+  latent_anchors:
+    Realm_I: 10
+    Realm_II: 5
+    Realm_III: 5
+  bias_strength: 55
+  somatic_flexibility: 60
+  transformation_history: []
+
+depth_of_knowledge:
+  general: "Understands art, music, and transient spaces."
+  esoteric: "Possesses moderate sensitivity to threshold spaces, thin zones, and spiritual boundary crossings."
+  personal: "Vague, fluid memories; focuses on emotional impressions rather than facts."
+---
+
 # Character Card: Lior
 *Generic playground demo — Archetype F base*
 

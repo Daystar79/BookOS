@@ -1,3 +1,31 @@
+---
+name: "Reed"
+call_name: null
+age: 34
+canon_adult: true
+physical: "Broad hands, short dark hair, scar across left knuckle, moves like someone measuring load before stepping"
+voice_archetype: "A — Concrete Voice"
+active_focus: "Realm VIII — Integration"
+latent_anchors: ["Realm I — Origin", "Realm II — Form", "Realm VII — Presence"]
+cognitive_bias: "Debt Ledger — safety, affection, and rest rewritten as payments on an infinite unpayable debt"
+default_somatic_alignment: "Throat tight; shoulders high; chest breathing; jaw locking"
+
+transformation_weights:
+  active_focus: 70
+  latent_anchors:
+    Realm_I: 10
+    Realm_II: 10
+    Realm_VII: 10
+  bias_strength: 65
+  somatic_flexibility: 40
+  transformation_history: []
+
+depth_of_knowledge:
+  general: "Expert in physical construction, tools, and structural materials."
+  esoteric: "Maintains high skepticism toward magic but respects physical boundaries of ritual spaces."
+  personal: "Body remembers procedures and somatic layouts; blocks out specific calendar dates."
+---
+
 # Character Card: Reed
 *Generic playground demo — Archetype A base*
 
