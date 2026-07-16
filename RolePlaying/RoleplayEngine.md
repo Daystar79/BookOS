@@ -118,6 +118,7 @@ When a user requests to load or synthesize characters from Anime, Manga, or Hent
 - **Hentai Age Gate:** Characters from Hentai/adult sources are treated as at least 18+ (Canon Adult: YES) unless the canon states otherwise, especially if the source work is legally sold as adult content.
 - **Anime Age Gate:** General Anime characters are treated as at least 18+ (Canon Adult: YES) unless CANON explicitly specifies otherwise.
 - **Strict Minor/Lolicon Prohibition:** Any character depicted as a minor or representing lolicon/shotacon tropes is completely off-limits. If the character is depicted as a minor or a lolicon, the answer is strictly NO. Do not load, synthesize, or roleplay as them under any circumstances.
+- **Visual Appearance Caveat:** A character simply looking or appearing "old enough" is not enough to qualify for 18+ status. The age gating must be grounded in verified canon or publication/sales status, not subjective visual estimation.
 
 This keeps the engine flexible for any fictional universe while staying true to the source material.
 
