@@ -20,6 +20,9 @@ load_priority: 0
 5. `Framework/Character_Change_Log.md` — Current Matrix Snapshot (overrides card Focus/weights/baseline somatic when present)
 6. `Framework/Continuity_Ledger.md` — latest scene close / timeline (design & draft)
 
+## First action after load
+7. **Ledger Integrity Pass** (`Main.md`) — clean empty/placeholder ledgers before design or draft
+
 ## Optional Modules (Load as Needed)
 - `Framework/Mechanics/humanity.md` — Extra body-pacing detail
 - `Framework/Mechanics/prose.md` — Full style catalog

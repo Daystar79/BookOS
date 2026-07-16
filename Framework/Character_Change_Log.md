@@ -6,6 +6,8 @@
 
 Do not write `transformation_history` (or movement-by-movement deltas) onto character cards.
 
+**Session boot:** Main.md **Ledger Integrity Pass** runs first. Honest empty History is valid; empty Snapshot is not (seed from cards). Placeholder Continuity rows must not leave History “pending.”
+
 ---
 
 ## Post-Movement Commit (with Continuity_Ledger)
@@ -24,9 +26,18 @@ On **every approved movement**, write **both** ledgers:
 - Medium / High / Extreme pressure or any permanent shift: **must** update Current Snapshot + append a Movement History row. Missing rows after such pressure = failed commit.
 
 ### Load order (next design/draft)
+0. **Ledger Integrity Pass** (Main.md) — clean empty/placeholder ledgers first
 1. On-scene character cards (identity, voice, bias name, build defaults)
 2. **Current Matrix Snapshot** below (overrides card Focus / weights / baseline somatic / bias_strength when present)
-3. Continuity_Ledger latest row (scene time, props, close body state)
+3. Continuity_Ledger latest **real** row (scene time, props, close body state)
+
+### Integrity notes for this file
+| Condition | Handle |
+|:---|:---|
+| Snapshot empty | Seed from active cards (`As of: build`) |
+| History empty, no Continuity rows | OK — do not invent entries |
+| Continuity has committed rows, History missing those movements | Backfill or block draft |
+| Demo Snapshot on a non-demo book | Replace with novel cast |
 
 ---
 

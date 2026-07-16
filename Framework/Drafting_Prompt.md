@@ -3,6 +3,11 @@
 
 Invoke in chat: **`/draft`** — or say "draft the next movement" / "continue Chapter N."
 
+### Boot (mandatory first)
+1. Load Main + Rules_Index + realm_data + cards + both ledgers  
+2. **Ledger Integrity Pass** (Main.md) — strip placeholder Continuity rows; seed empty Snapshot; backfill or block dual-commit lag  
+3. Only then: Manifest → draft  
+
 ---
 
 ## Workspace Modules
@@ -45,6 +50,12 @@ The drafting framework is divided into dedicated modules to prevent configuratio
 
 **Next up (drafting):** [Drafting goals for current movement]
 **Next up (revision):** [Revision/audit goals]
+
+### Pre-session (Ledger Integrity — first)
+- [ ] Continuity_Ledger: no placeholder rows; honest empty OK if no drafts
+- [ ] Character_Change_Log Snapshot: one row per active cast (seed from cards if needed)
+- [ ] No draft-on-disk without ledger row / no pending dual commit
+- [ ] Status CLEAN or CLEAN (empty) before drafting
 
 ### Post-Movement Commit checklist (after approval)
 - [ ] `Framework/Continuity_Ledger.md` row written (time, scene somatic close, continuity/plot beats)

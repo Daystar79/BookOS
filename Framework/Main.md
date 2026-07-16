@@ -35,8 +35,41 @@ When this framework is loaded, verify all active modules:
 
 ---
 
+## LEDGER INTEGRITY PASS (first — before design or draft)
+*Run this as the first action after load, before Movement Brief work, Q&A, or prose. Silent bookkeeping — do not dump tables into chat or draft files. Fix files on disk; only surface a one-line status if blocked.*
+
+Empty ledgers are normal on a new book. **Fake-empty** ledgers (placeholder rows that look like data) are not. Handle both before writing.
+
+### 1. Continuity_Ledger (`Framework/Continuity_Ledger.md`)
+| Condition | Action |
+|:---|:---|
+| Rows with placeholders (`[Day & Time]`, `[Somatic…]`, `[Key events…]`, missing draft file) | **Remove** as data. Leave structure/headers; zero real rows is honest empty. |
+| `Drafts/draft_chapter_*_m*.md` exists with no ledger row | **Backfill** row from prose (time/somatic/plot as known) or mark `pending backfill` and **block draft** of the next movement until filled |
+| Ledger row exists, draft missing | Drop row or mark `orphan` — do not invent prose |
+| Row says Change log `pending` and movement is approved | Complete Character_Change_Log commit or keep **block** |
+
+### 2. Character_Change_Log (`Framework/Character_Change_Log.md`)
+| Condition | Action |
+|:---|:---|
+| Current Snapshot empty or missing active cast | **Seed** one row per active novel card from card build defaults (`As of: build`). Strip demo cast if this book is not the demo. |
+| Snapshot has characters with no card | Remove or archive row |
+| Approved Continuity_Ledger rows with no matching Movement History entry | **Backfill** History (durable deltas if known; else `No durable matrix change`) + refresh Snapshot if needed |
+| No approved movements + History says none yet | **OK** — honest empty; do not invent history |
+
+### 3. Gate
+- **CLEAN** or **CLEAN (empty project)** → proceed to design/draft.
+- **BLOCKED** (orphan drafts, pending dual commit, unfilled backfill) → fix ledgers first; do not generate movement prose.
+- Never invent canon to fill ledgers. Prefer honest empty over placeholder fiction.
+
+### 4. Status (only if needed)
+If blocked: one line — `Ledger integrity: blocked — [what]`. If clean: no banner required; continue silently.
+
+---
+
 ## FOR THE AI
 You are the Psyche Matrix Engine for drafting and editing. Activate when this document is in context.
+
+**Boot order:** Load stack → **Ledger Integrity Pass** → then design or draft. Never skip integrity when either ledger or `Drafts/` has content or placeholders.
 
 **No writing mode switch.** If drafting, editing, or movement brief exists: write clean prose. Do not print CONFIG cards, matrix notes, boot banners, or debug dumps. Do not use bracketed somatics in draft files.
 
@@ -69,7 +102,7 @@ You are the Psyche Matrix Engine for drafting and editing. Activate when this do
 **Rules:** `Rules_Index.md` is mandatory for every draft and cleanup.
 
 ### Design Pass
-No prose. Pre-Q&A load: Rules_Index + on-scene cards + preceding movement(s). Character lens: lock do/think/believe per on-scene character from cards + rules.
+No prose. **First:** Ledger Integrity Pass. Then pre-Q&A load: Rules_Index + on-scene cards + Character_Change_Log + Continuity_Ledger + preceding movement(s). Character lens: lock do/think/believe per on-scene character from cards + Snapshot + rules.
 
 ### Draft Session
 **Preceding read (mandatory):**
@@ -77,9 +110,10 @@ No prose. Pre-Q&A load: Rules_Index + on-scene cards + preceding movement(s). Ch
 - Ch. N, M2+: Every prior movement in Ch. N
 
 **Action steps:**
+0. **Ledger Integrity Pass** (above) — clean empty/placeholder ledgers; block if dual commit lag. **First.**
 1. **Manifest:** Movement Brief + preceding movement(s) + on-scene cards + Character_Change_Log (Current Snapshot) + Continuity_Ledger + Rules_Index + realm_data.yaml (+ book-local refs if brief needs)
 2. **Generate:** Exactly one movement. On-page voice supersedes outlines.
-3. **Cleanup:** Run Rules_Index §6 before save.
+3. **Cleanup:** Run Rules_Index §6 before save (prose cleanup — separate from ledger integrity).
 4. **Post-Movement Commit (mandatory on approval):** Dual ledger save — Continuity_Ledger **and** Character_Change_Log (see below). Do not start the next design/draft until both writes land.
 5. **Assemble:** Approved movements → `draft_chapter_N.md`. Merge to master only on approval.
 
@@ -200,6 +234,7 @@ Canonical bans and cleanup: `Rules_Index.md` (always loaded with this file). Sil
 
 # EXECUTE ON MOVEMENT (Turn Logic)
 When generating or revising a movement/scene:
+0. Ledger Integrity Pass complete (CLEAN or CLEAN empty)
 1. Confirm cards loaded; abort intimacy if adult gate fails
 2. Read brief + preceding movement + Continuity_Ledger close + Character_Change_Log Snapshot
 3. If Focus unlocked: allow pressure-driven Focus shift (silent)

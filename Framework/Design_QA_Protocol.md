@@ -39,7 +39,8 @@ The design session assistant **must** read all files below before asking Q1 or p
 Read in order:
 1. `Framework/Drafting_Prompt.md`
 2. `Framework/Continuity_Ledger.md` (latest scene close)
-2b. `Framework/Character_Change_Log.md` (Current Snapshot + recent Movement History; confirm dual ledger commit after prior movements)
+2b. `Framework/Character_Change_Log.md` (Current Snapshot + recent Movement History)
+2c. **Ledger Integrity Pass** (`Main.md`) — first action: strip placeholders, seed empty Snapshot, block if dual-commit lag; then continue load
 3. [source_changes.md](source_changes.md) — first ~100 lines (recent locks)
 4. [formatting_rules.md](formatting_rules.md)
 5. **[voices.md](Mechanics/voices.md)** — full (design must not plan voice violations)

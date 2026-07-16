@@ -109,7 +109,14 @@ Applies within a movement and across the chapter.
 - Callbacks = imperfect memory + trigger
 - End on concrete anchor; continue from it; no character "re-entry" reset
 
-Before M(N+1): read M(N) + Continuity_Ledger row for M(N) + Character_Change_Log Snapshot + on-scene cards; note ending somatic/env/props/open loops; durable Focus/weights/somatic from **Change Log Snapshot** (else card defaults); scene close from Continuity_Ledger; no duplicated tells/patterns/staging.
+### Ledger Integrity (first action every session)
+Before design or draft: run Main.md **Ledger Integrity Pass**.
+- Strip placeholder Continuity_Ledger rows; honest empty > fake data
+- Seed Character_Change_Log Snapshot from cards if empty; do not invent Movement History
+- Backfill or **block** when drafts and ledgers disagree
+- Do not draft while dual-commit is pending
+
+Before M(N+1): integrity CLEAN; then read M(N) + Continuity_Ledger row for M(N) + Character_Change_Log Snapshot + on-scene cards; note ending somatic/env/props/open loops; durable Focus/weights/somatic from **Change Log Snapshot** (else card defaults); scene close from Continuity_Ledger; no duplicated tells/patterns/staging.
 
 ### Post-Movement Commit (mandatory dual ledger save)
 On movement approval, before next design/draft:
@@ -140,7 +147,8 @@ On movement approval, before next design/draft:
 | Description | Concrete; anti-synthesis |
 | Dialogue | Asymmetric; polarized voices |
 | Patterns | No bare beats; rotate somatics |
-| Cleanup | §6 before save |
+| Cleanup | §6 before save (prose) |
+| Session start | Ledger Integrity Pass first (§8) |
 | Post-movement | Continuity_Ledger **and** Character_Change_Log (§8) |
 
 ---

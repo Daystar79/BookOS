@@ -92,6 +92,8 @@ The framework is designed to fight common AI writing problems: therapy-speak, pe
 Character cards hold **build defaults** (`transformation_weights`: active_focus dominance, latent anchors, bias_strength, somatic_flexibility).  
 **Runtime evolution** is tracked separately in `Framework/Character_Change_Log.md` (Current Matrix Snapshot + Movement History) — not on the card.
 
+**Session boot:** **Ledger Integrity Pass** first (Main.md) — honest empty ledgers are fine; placeholder rows and dual-commit lag are fixed or block drafting.
+
 **Post-Movement Commit (mandatory dual ledger save):** On each approved movement, update:
 1. `Framework/Continuity_Ledger.md` — timeline, scene somatic close, plot beats  
 2. `Framework/Character_Change_Log.md` — durable Focus/weights/somatic/bias-strength + history rows  
