@@ -1,4 +1,4 @@
-Total files: 46
+Total files: 48
 .gitignore
 Build/build.sh
 Build/pull_framework.py
@@ -32,11 +32,13 @@ Framework/Prompts/create_module_prompt.md
 Framework/Prompts/improvement_pass_prompt.md
 Framework/Prompts/initialize_novel_prompt.md
 Framework/Prompts/world_builder_prompt.md
+Framework/Psychology/realm_data.yaml
 Framework/Psychology/realm_index.md
 Framework/Rules_Index.md
 Framework/Setup/.gitkeep
 Framework/TBD/.gitkeep
 Framework/formatting_rules.md
+Framework/linter.py
 Framework/natural_prose.md
 Framework/psyche_framework.md
 Framework/source_changes.md

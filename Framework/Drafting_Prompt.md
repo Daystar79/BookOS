@@ -58,7 +58,7 @@ The drafting framework is divided into dedicated modules to prevent configuratio
 | [humanity.md](Mechanics/humanity.md) | Biological + voice fidelity |
 | [voices.md](Mechanics/voices.md) | Character Voice Protocol and Watchlist |
 | [formatting_rules.md](formatting_rules.md) | Standing formatting and prose rules |
-| **[Psychology/realm_index.md](Psychology/realm_index.md)** | **Ten Realm somatic bracing/release mappings** |
+| **[Psychology/realm_data.yaml](Psychology/realm_data.yaml)** | **Ten Realm somatic bracing/release mappings** |
 | **[Rite_Reference.md](Rite_Reference.md)** | **Rite staging details and mechanics** |
 | [World_Architecture.md](World_Architecture.md) | World geography, roster, settings, logistics |
 | [source_changes.md](source_changes.md) | Revision log after approval |

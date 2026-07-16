@@ -1,7 +1,7 @@
 # Source Changes — Psyche Framework
 *Historical change log from framework evolution. **Not a load-list.** Prefer Main.md + Rules_Index.md for current behavior.*
 
-> **Note (2026-07-14):** Entries below may reference `Web/`, `RolePlaying/`, `deploy_framework.py`, dual Web copies, or module files that are no longer in this repo. Treat as archaeology. Current honest stack: Main + Rules_Index + realm_index + cards.
+> **Note (2026-07-14):** Entries below may reference `Web/`, `RolePlaying/`, `deploy_framework.py`, dual Web copies, or module files that are no longer in this repo. Treat as archaeology. Current honest stack: Main + Rules_Index + realm_data.yaml + pure-YAML character cards.
 
 ---
 

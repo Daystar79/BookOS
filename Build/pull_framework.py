@@ -26,6 +26,13 @@ FRAMEWORK_FILES = [
     "Characters/_template.md",
     "Characters/README.md",
     "Characters/Relations.md",
+    # Demo cast cards (YAML-only format; optional for novels)
+    "Characters/cass.md",
+    "Characters/helen.md",
+    "Characters/lior.md",
+    "Characters/nora.md",
+    "Characters/reed.md",
+    "Characters/wren.md",
     ".gitignore",
     "README.md",
 ]

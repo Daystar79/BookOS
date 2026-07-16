@@ -30,7 +30,7 @@ Read in order:
 1. `Framework/Design_QA_Protocol.md` (full — including Pre-Q&A load)
 2. `Framework/Main.md` (workflow + psyche runtime §3)
 3. `Framework/Rules_Index.md` (hard bans)
-4. `Framework/Psychology/realm_index.md` (somatic brace/release)
+4. `Framework/Psychology/realm_data.yaml` (somatic brace/release)
 5. `Framework/Drafting_Prompt.md`
 6. `Framework/Continuity_Ledger.md` (if present and filled)
 7. `Framework/source_changes.md` (first ~100 lines, if present)
@@ -74,7 +74,7 @@ Print: target movement, files read, last verified on-page close (quote or paraph
 - **Auto guardrails** — After Load manifest, declare merged **Must-not** from chapter outline + `Drafting_Prompt.md` + deferred sibling movements. **Do not ask** the user to pick must-nots; user may override only if explicit.
 - Question spine: **Auto guardrails** → Job → Reader (positive only) → POV → Opens → Characters → Dual arc → Must-land → Close → Checklist.
 - **Multiple-choice format (mandatory):** Every option (A, B, C, …) includes **Pro** and **Con** before the user chooses. Combinations allowed; note interaction tradeoffs.
-- **Character lens (mandatory):** Any question about a named character must be framed and answered through **their** lens — what they would **do**, **think**, and **believe** (card + `voices.md` + Main §3 / realm_index behavior + prior on-page prose). Not plot convenience. No merged character voices. No internal system nomenclature on the page — behavior only.
+- **Character lens (mandatory):** Any question about a named character must be framed and answered through **their** lens — what they would **do**, **think**, and **believe** (card + `voices.md` + Main §3 / realm_data.yaml behavior + prior on-page prose). Not plot convenience. No merged character voices. No internal system nomenclature on the page — behavior only.
 - **Real-person test (mandatory when presenting options):** Every option must pass: *Would this person, in this body, in this room, after the last on-page beat, actually do / say / believe this?* Drop plot-convenience and genre-default options. Prefer capable-adult behavior under high stakes — lean, physical, unforced.
 - **Options prompt (mandatory):** At the end of every option block, always append a clear instruction letting the user know they are not limited to choosing just a single option (e.g., they can select one, combine multiple, or write in their own response).
 - Record each lock in running brief. Character locks: *Locked: [Character] — [believe / want / do]*.

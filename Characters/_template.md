@@ -1,56 +1,16 @@
-# Character Card: [Full Name]
-*Location: `Characters/[slug].md` — load with [Main.md](../Framework/Main.md) for drafting*
-
----
-
-## Identity
-
-| Field | Value |
-|:---|:---|
-| **Name** | [Full name / preferred call-name] |
-| **Aliases** | [Optional] |
-| **Age (canon)** | [Integer years] |
-| **Physical (no ethnic labels)** | [Coloration, features, bone structure, movement — show, never category-label] |
-| **Voice archetype base** | A / B / C / D / E / F (or custom hybrid) |
-
----
-
-## Psyche Matrix
-
-| Field | Value |
-|:---|:---|
-| **Active Focus** | Realm [N] — [Name] |
-| **Latent Anchors** | Realm [a], [b], [c] |
-| **Cognitive Bias** | [Bias name] — [one-line rewrite rule] |
-| **Default Somatic Alignment** | [throat, breath, jaw, posture, hands…] |
-
----
-
-## Transformation & Knowledge (NEW)
-
-| Field | Value |
-|:---|:---|
-| **Transformation Weights** | See transformation_weights YAML below |
-| **Depth of Knowledge** | See depth_of_knowledge YAML below |
-
----
-
-## YAML Frontmatter (for fast LLM parsing — add at top of card)
-
-```yaml
 ---
 name: "[Full Name]"
 call_name: "[preferred call-name or null]"
 age: [Integer years]
 canon_adult: true
-physical: "[concise description]"
+physical: "[Coloration, features, bone structure, movement — show, never category-label]"
 voice_archetype: "[A-F or hybrid]"
+cultural_bias: "[Belief/Heritage/Era — temporal tracking defaults (e.g. covenant, linear progress, cyclic liturgy)]"
 active_focus: "Realm [N] — [Name]"
 latent_anchors: ["Realm [a]", "Realm [b]", "Realm [c]"]
 cognitive_bias: "[Bias Name] — [one-line rewrite rule]"
-default_somatic_alignment: "[body parts / tells]"
+default_somatic_alignment: "[throat, breath, jaw, posture, hands…]"
 
-# NEW: Transformation
 transformation_weights:
   active_focus: 70
   latent_anchors:
@@ -60,54 +20,31 @@ transformation_weights:
   somatic_flexibility: 40
   transformation_history: []
 
-# NEW: Depth of Knowledge
 depth_of_knowledge:
   general: "[broad understanding]"
   esoteric: "[ritual/occult knowledge level]"
   personal: "[memory clarity vs. blanks]"
----
-```
 
-## Voice Engine
+voice:
+  baseline: "[register summary]"
+  syntactical_engine: "[sentence shape, vocabulary]"
+  hard_bans: ["[what this character never says]"]
+  signature_tics: ["[optional repeated words/gestures]"]
 
-- **Baseline:** [register summary]
-- **Syntactical engine:** [sentence shape, vocabulary]
-- **Hard bans:** [what this character never says]
-- **Signature tics:** [optional repeated words/gestures]
+history_anchors:
+  - "[Anchor 1 — coarse, scene-useful; memories stay vague unless triggered]"
+  - "[Anchor 2]"
+  - "[Anchor 3]"
 
----
+# Optional — also record bonds in Characters/Relations.md
+# relationships:
+#   - other: "[Name]"
+#     dynamic: "[bond type]"
+#     notes: "[how Focus/Bias warps them]"
 
-## History Anchors (imperfect recall)
-
-List only coarse, scene-useful facts. Memories stay vague unless triggered.
-
-- [Anchor 1 — generalized]
-- [Anchor 2]
-- [Anchor 3]
-
----
-
-## Relationships (optional)
-
-| Other | Dynamic | Notes |
-|:---|:---|:---|
-| [Name] | [bond type] | [how Focus/Bias warps them] |
-
+scene_seeds:
+  - "[Place + pressure + object]"
+  - "[Alternate seed]"
 ---
 
-## Scene Seeds (optional)
-
-- [Place + pressure + object]
-- [Alternate seed]
-
----
-
-## Load Protocol
-
-When this character is on-scene for drafting ([Main.md](../Framework/Main.md)):
-
-1. **Fast Load:** Read the YAML frontmatter first for structured data (name, age, focus, bias, transformation_weights, depth_of_knowledge).
-2. Copy matrix, voice, somatic, and adult-gate fields into **silent** live state (do not print CONFIG).
-3. Set **18+ Sexuality** to **OFF**. Enable only if brief/user requests **and** Canon Adult is **YES**.
-4. Run Focus brace/release from [realm_index.md](../Framework/Psychology/realm_index.md).
-5. Never name realms, biases, or "trauma" in character speech.
+*Load: Fast Load YAML. Copy matrix, voice, somatic, adult-gate to silent state. 18+ OFF. Enable only if brief/request AND Canon Adult YES. Run Focus brace/release from realm_data.yaml. Never name realms, biases, or trauma in speech.*

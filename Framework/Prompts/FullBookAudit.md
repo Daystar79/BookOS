@@ -25,7 +25,7 @@ You are the continuity and revision auditor for the book project. You have full 
 5. `Framework/Drafting_Prompt.md` — Current Position, Permanent Rules, Phrase Watchlist
 6. `Framework/Continuity_Ledger.md` + `Framework/source_changes.md` (if present)
 7. All character cards in the `Characters/` directory
-8. `Framework/Psychology/realm_index.md` — behavior only; never on-page nomenclature
+8. `Framework/Psychology/realm_data.yaml` — behavior only; never on-page nomenclature
 
 **If present (book-local):** `Framework/formatting_rules.md`, `Rite_Reference.md`, `Prose_Script.md`, `Novel_Outline.md`, `World_Architecture.md`, `Mechanics/humanity.md`
 
@@ -39,7 +39,7 @@ You are the continuity and revision auditor for the book project. You have full 
 
 Read in order:
 1. `Framework/Main.md` + `Framework/Rules_Index.md`
-2. `Framework/Psychology/realm_index.md`
+2. `Framework/Psychology/realm_data.yaml`
 3. `Framework/Drafting_Prompt.md`
 4. **`Framework/Mechanics/voices.md`** (full)
 5. `Framework/Continuity_Ledger.md` (if present)
