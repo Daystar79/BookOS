@@ -1,4 +1,4 @@
-Total files: 46
+Total files: 48
 .gitignore
 Build/build.sh
 Build/pull_framework.py
@@ -13,8 +13,10 @@ Characters/reed.md
 Characters/wren.md
 Drafts/.gitkeep
 Drafts/Completed/.gitkeep
-Framework/Continuity_Ledger.md
+Drafts/samples/README.md
+Drafts/samples/draft_chapter_1_m1.md
 Framework/Character_Change_Log.md
+Framework/Continuity_Ledger.md
 Framework/Corrections/.gitkeep
 Framework/Design_QA_Protocol.md
 Framework/Drafting_Prompt.md

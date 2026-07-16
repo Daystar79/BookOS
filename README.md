@@ -34,13 +34,15 @@ The framework is designed to fight common AI writing problems: therapy-speak, pe
 
 1. Clone or copy this framework into your book project folder.
 2. Run `deploy_framework.py` (optional but recommended) to set up the directories.
-3. For every drafting session, load:
+3. **Read the sample (optional):** `Drafts/samples/draft_chapter_1_m1.md` — Reed + Helen demo movement with dual ledger commits already filled (`Continuity_Ledger` + `Character_Change_Log`). See `Drafts/samples/README.md`.
+4. For every drafting session, load:
    - `Framework/Main.md`
    - `Framework/Rules_Index.md`
    - `Framework/Psychology/realm_data.yaml`
    - Relevant character cards from `Characters/`
-4. Write movements/scenes using the brief + cards. The matrix runs silently.
-5. Run the linter to ensure no engine terms or banned fillers leaked:
+   - Both ledgers (after **Ledger Integrity Pass**)
+5. Write movements/scenes using the brief + cards. The matrix runs silently.
+6. On approval: dual ledger save. Run the linter:
    ```bash
    ./Framework/linter.py Drafts/
    ```

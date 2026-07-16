@@ -46,14 +46,14 @@ On **every approved movement**, write **both** ledgers:
 
 | Character | Active Focus | Latent weights | Bias strength | Default somatic | Flexibility | As of |
 | :--- | :--- | :--- | :---: | :--- | :---: | :---: |
-| Reed | VIII — Integration | I 10 · II 15 · VII 10 | 75 | Throat tight; shoulders high; jaw lock | 30 | build |
-| Helen | VI — Compassion | II 10 · IV 10 · VIII 15 | 70 | Soft chest; open hands | 45 | build |
+| Reed | VIII — Integration | I 10 · II 15 · VII 10 | 80 | Throat tight; shoulders high; jaw lock; scar-rub under debt pressure | 30 | sample 1 M1 |
+| Helen | VI — Compassion | II 10 · IV 10 · VIII 10 | 80 | Soft chest; open hands; proximity lean; hand withdraws when blocked | 50 | sample 1 M1 |
 | Cass | IV — Will | I 10 · II 15 · V 10 · VIII 10 | 70 | Still posture; folded hands | 25 | build |
 | Wren | VII — Presence | I 10 · II 10 · VI 15 | 65 | Stillness; loose jaw | 40 | build |
 | Nora | VI — Compassion | I 15 · II 10 · VII 10 | 70 | Warm touch; face-scan | 35 | build |
 | Lior | IX — Threshold | I 10 · II 10 · III 15 | 70 | Lilt; tremor; shallow breath | 50 | build |
 
-*When adding a novel cast: replace demo rows with book characters. Keep one row per active character.*
+*Demo cast Snapshot. Replace with novel cast when starting a real book. Keep one row per active character.*
 
 ---
 
@@ -72,4 +72,8 @@ On **every approved movement**, write **both** ledgers:
 
 ### Entries
 
-*(none yet — first approved movement appends here)*
+### 1 M1 — Cold Tea *(sample — demo cast)*
+| Character | Pressure | Delta | Permanence | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| Reed | Emotional/Social · Medium | bias_strength 75→80; default somatic + scar-rub under debt pressure; kindness received as bill due | medium | Offered hinge “no charge” to square; did not put weight down |
+| Helen | Emotional/Social · Medium | Snapshot note: hand-withdraw when care blocked; bias still care-as-assignment (Saturday food) | temporary→carry intent | No weight shift; Saturday return open loop |
