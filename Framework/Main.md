@@ -10,6 +10,8 @@
 - `Framework/Rules_Index.md`
 - `Framework/Psychology/realm_data.yaml`
 - On-scene character cards from `Characters/`
+- `Framework/Character_Change_Log.md` (Current Snapshot — runtime matrix)
+- `Framework/Continuity_Ledger.md` (scene timeline / close)
 - `Framework/Modules.md` (scan for ENABLED modules)
 
 ### Optional (only when needed)
@@ -75,13 +77,30 @@ No prose. Pre-Q&A load: Rules_Index + on-scene cards + preceding movement(s). Ch
 - Ch. N, M2+: Every prior movement in Ch. N
 
 **Action steps:**
-1. **Manifest:** Movement Brief + preceding movement(s) + on-scene cards + Rules_Index + realm_data.yaml (+ book-local refs if brief needs)
+1. **Manifest:** Movement Brief + preceding movement(s) + on-scene cards + Character_Change_Log (Current Snapshot) + Continuity_Ledger + Rules_Index + realm_data.yaml (+ book-local refs if brief needs)
 2. **Generate:** Exactly one movement. On-page voice supersedes outlines.
 3. **Cleanup:** Run Rules_Index §6 before save.
-4. **Assemble:** Approved movements → `draft_chapter_N.md`. Merge to master only on approval.
+4. **Post-Movement Commit (mandatory on approval):** Dual ledger save — Continuity_Ledger **and** Character_Change_Log (see below). Do not start the next design/draft until both writes land.
+5. **Assemble:** Approved movements → `draft_chapter_N.md`. Merge to master only on approval.
+
+### Post-Movement Commit (dual ledger save)
+*Runs after the movement is approved. Silent bookkeeping — never print into the draft file. Evolution is **not** written onto character cards.*
+
+| Write | File | What to record |
+|:---|:---|:---|
+| **1. Story ledger** | `Framework/Continuity_Ledger.md` | Ch/Mov row: draft path, day & time, **scene** somatic close, continuity & plot beats |
+| **2. Character change log** | `Framework/Character_Change_Log.md` | Update **Current Matrix Snapshot** for durable shifts; append **Movement History** rows (pressure, delta, permanence) |
+
+- Continuity_Ledger alone is incomplete. Character_Change_Log alone is incomplete. **Both.**
+- **Character cards stay out of routine commits.** They are identity/load sheets (voice, bias name, build defaults). Do not append movement history or deltas to card YAML.
+- Temporary-only tells: Continuity_Ledger close only.
+- Medium+ pressure or permanent Focus/weight/somatic/bias-strength shift: must update Snapshot + History in Character_Change_Log.
+- If no durable matrix change: still write Continuity_Ledger row; append History note “No durable matrix change.”
+- Rare author retcon of identity (new bias name, rebuilt voice): edit the card deliberately — not as part of the normal dual save.
 
 ### Multi-Movement Consistency
 - Focus/Bias/Somatic persist across movements unless brief or state change
+- Before M(N+1): load Continuity_Ledger (scene close) + Character_Change_Log Current Snapshot (durable matrix) + on-scene cards (identity/voice); Snapshot overrides card Focus/weights/baseline somatic when present
 - No reset: M(N+1) continues accumulated state; open on action/somatic/dialogue — never summary of M(N)
 - Rotate somatic phrasing, dialogue patterns, prop states across movements
 - End N on concrete physical fact; begin N+1 from that anchor
@@ -128,8 +147,23 @@ Never write finished Realm X Passage unless scene earns open hands without perfo
 Characters evolve or regress dynamically based on narrative pressure.
 - Pressure Classification: Emotional, Somatic, Cognitive, Social, Esoteric/Ritual + strength (Low/Medium/High/Extreme)
 - Weighted Delta: Aligned pressure eases shifts (+10-20 to weight). Opposed pressure causes resistance, slower shifts, or temporary somatic backlash.
-- Decay & Permanence: Temporary shifts decay over 1-3 movements unless reinforced. Medium/permanent shifts recorded to card's history.
+- Decay & Permanence: Temporary shifts decay over 1-3 movements unless reinforced. Medium/permanent shifts recorded in **Character_Change_Log** at Post-Movement Commit (not on the card).
 - Somatic-First Rule: Transformations show on-page physically before any internal cognitive realization.
+
+### Character_Change_Log write-back (end of movement — with Continuity_Ledger)
+Record durable evolution in `Framework/Character_Change_Log.md` only:
+
+1. **Current Matrix Snapshot** — update cells when any of these carry forward:
+   - Active Focus, latent weights, bias strength, default somatic, somatic flexibility
+2. **Movement History** — append one row per on-scene character with Medium+ pressure or permanent shift:
+
+| Field | Example |
+|:---|:---|
+| Pressure | `Emotional/High` |
+| Delta | `bias_strength +10; default somatic → jaw lock baseline` |
+| Permanence | `temporary` \| `medium` \| `permanent` |
+
+Card YAML holds build defaults and identity only. Runtime matrix = Snapshot when present, else card defaults. Empty Movement History after Medium+ pressure = failed commit.
 
 ---
 
@@ -167,14 +201,15 @@ Canonical bans and cleanup: `Rules_Index.md` (always loaded with this file). Sil
 # EXECUTE ON MOVEMENT (Turn Logic)
 When generating or revising a movement/scene:
 1. Confirm cards loaded; abort intimacy if adult gate fails
-2. Read brief + preceding movement rules
+2. Read brief + preceding movement + Continuity_Ledger close + Character_Change_Log Snapshot
 3. If Focus unlocked: allow pressure-driven Focus shift (silent)
 4. Resolve Bias State (ACTIVE vs DORMANT) silently
 5. Body reaction first (folded into narrative — no brackets)
 6. If Bias ACTIVE: prism + misconstrued hearing — behavior only
-7. If transformation event occurs: apply pressure delta silently; update character card YAML at end of approved movement
+7. If transformation pressure occurs: apply deltas silently during generation (do not print)
 8. Honor style lock and voice polarization (Rules_Index)
 9. Emit prose only. No footer, no audit appendix, no matrix notes.
+10. **On approval — Post-Movement Commit:** write Continuity_Ledger row **and** Character_Change_Log (Snapshot + History). Both ledgers required. Do not write evolution onto character cards.
 
 ---
 

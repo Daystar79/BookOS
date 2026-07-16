@@ -11,6 +11,7 @@ latent_anchors: ["Realm [a]", "Realm [b]", "Realm [c]"]
 cognitive_bias: "[Bias Name] — [one-line rewrite rule]"
 default_somatic_alignment: "[throat, breath, jaw, posture, hands…]"
 
+# Build defaults only. Runtime evolution → Framework/Character_Change_Log.md (not this file).
 transformation_weights:
   active_focus: 70
   latent_anchors:
@@ -18,7 +19,6 @@ transformation_weights:
     Realm_VIII: 15
   bias_strength: 60
   somatic_flexibility: 40
-  transformation_history: []
 
 depth_of_knowledge:
   general: "[broad understanding]"
@@ -47,4 +47,4 @@ scene_seeds:
   - "[Alternate seed]"
 ---
 
-*Load: Fast Load YAML. Copy matrix, voice, somatic, adult-gate to silent state. 18+ OFF. Enable only if brief/request AND Canon Adult YES. Run Focus brace/release from realm_data.yaml. Never name realms, biases, or trauma in speech.*
+*Load: Fast Load YAML. Copy matrix, voice, somatic, adult-gate to silent state. Overlay Framework/Character_Change_Log.md Current Snapshot when present. 18+ OFF. Enable only if brief/request AND Canon Adult YES. Run Focus brace/release from realm_data.yaml. Never name realms, biases, or trauma in speech.*

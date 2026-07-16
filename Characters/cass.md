@@ -11,6 +11,7 @@ latent_anchors: ["Realm 1 — Origin", "Realm 2 — Form", "Realm 5 — Echoes",
 cognitive_bias: "System Architect — emotional exchanges treated as design constraints requiring calibration"
 default_somatic_alignment: "Still posture; unhurried movements; level gaze; hands folded loosely"
 
+# Build defaults only. Runtime evolution → Framework/Character_Change_Log.md
 transformation_weights:
   active_focus: 75
   latent_anchors:
@@ -20,7 +21,6 @@ transformation_weights:
     Realm_VIII: 5
   bias_strength: 70
   somatic_flexibility: 35
-  transformation_history: []
 
 depth_of_knowledge:
   general: "Supply chain logistics, transport planning, system bottlenecks"

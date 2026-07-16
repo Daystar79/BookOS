@@ -11,6 +11,7 @@ latent_anchors: ["Realm 1 — Origin", "Realm 2 — Form", "Realm 7 — Presence
 cognitive_bias: "Insulation — bends external structures into boundaries to protect relationship intimacy"
 default_somatic_alignment: "Warm touch; chest breathing; eyes scanning faces; jaw soft"
 
+# Build defaults only. Runtime evolution → Framework/Character_Change_Log.md
 transformation_weights:
   active_focus: 70
   latent_anchors:
@@ -19,7 +20,6 @@ transformation_weights:
     Realm_VII: 10
   bias_strength: 65
   somatic_flexibility: 55
-  transformation_history: []
 
 depth_of_knowledge:
   general: "Physical security, threat assessment, lock systems, patrol logs"

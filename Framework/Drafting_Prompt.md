@@ -46,6 +46,12 @@ The drafting framework is divided into dedicated modules to prevent configuratio
 **Next up (drafting):** [Drafting goals for current movement]
 **Next up (revision):** [Revision/audit goals]
 
+### Post-Movement Commit checklist (after approval)
+- [ ] `Framework/Continuity_Ledger.md` row written (time, scene somatic close, continuity/plot beats)
+- [ ] `Framework/Character_Change_Log.md` — Current Snapshot updated if durable change; Movement History appended (or “No durable matrix change”)
+- [ ] Character cards **not** rewritten for routine evolution (identity/load only)
+- [ ] Temporary-only tells: Continuity_Ledger only; Medium+ pressure has a Change Log history row
+
 ---
 
 ## Key Reference Files
@@ -61,6 +67,8 @@ The drafting framework is divided into dedicated modules to prevent configuratio
 | **[Psychology/realm_data.yaml](Psychology/realm_data.yaml)** | **Ten Realm somatic bracing/release mappings** |
 | **[Rite_Reference.md](Rite_Reference.md)** | **Rite staging details and mechanics** |
 | [World_Architecture.md](World_Architecture.md) | World geography, roster, settings, logistics |
+| [Continuity_Ledger.md](Continuity_Ledger.md) | Timeline + scene-close somatic |
+| [Character_Change_Log.md](Character_Change_Log.md) | Matrix Snapshot + evolution history |
 | [source_changes.md](source_changes.md) | Revision log after approval |
 
 ---

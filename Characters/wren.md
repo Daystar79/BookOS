@@ -11,6 +11,7 @@ latent_anchors: ["Realm 1 — Origin", "Realm 2 — Form", "Realm 6 — Compassi
 cognitive_bias: "Mirror — suppresses active wants to act as a silent reflector and avoid collision"
 default_somatic_alignment: "Physical stillness; sight landing without attachment; loose jaw"
 
+# Build defaults only. Runtime evolution → Framework/Character_Change_Log.md
 transformation_weights:
   active_focus: 60
   latent_anchors:
@@ -19,7 +20,6 @@ transformation_weights:
     Realm_VI: 10
   bias_strength: 65
   somatic_flexibility: 60
-  transformation_history: []
 
 depth_of_knowledge:
   general: "Archival preservation, paper chemistry, ink analysis, document restoration"

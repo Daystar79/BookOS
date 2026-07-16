@@ -11,6 +11,7 @@ latent_anchors: ["Realm 2 — Form", "Realm 4 — Will", "Realm 8 — Integratio
 cognitive_bias: "Saviour Complex — compelled to dissolve boundaries to absorb others' pain, using deliberate somatic intimacy and forward physical touch"
 default_somatic_alignment: "Chest soft; hands resting open; sudden intake of breath; weight grounding toward the other; trailing fingers on wrists or neck; close physical proximity"
 
+# Build defaults only. Runtime evolution → Framework/Character_Change_Log.md
 transformation_weights:
   active_focus: 70
   latent_anchors:
@@ -19,7 +20,6 @@ transformation_weights:
     Realm_VIII: 10
   bias_strength: 80
   somatic_flexibility: 50
-  transformation_history: []
 
 depth_of_knowledge:
   general: "Physical therapy, deep-tissue massage, anatomy, sensory calibration"

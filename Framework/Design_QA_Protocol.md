@@ -38,7 +38,8 @@ The design session assistant **must** read all files below before asking Q1 or p
 ### Step 1 — Framework stack *(always)*
 Read in order:
 1. `Framework/Drafting_Prompt.md`
-2. `Framework/Continuity_Ledger.md`
+2. `Framework/Continuity_Ledger.md` (latest scene close)
+2b. `Framework/Character_Change_Log.md` (Current Snapshot + recent Movement History; confirm dual ledger commit after prior movements)
 3. [source_changes.md](source_changes.md) — first ~100 lines (recent locks)
 4. [formatting_rules.md](formatting_rules.md)
 5. **[voices.md](Mechanics/voices.md)** — full (design must not plan voice violations)

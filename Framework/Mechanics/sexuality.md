@@ -26,8 +26,8 @@ Intimacy is a high-cost biological and emotional event. It is deeply governed by
 
 ### Transformation Engine Calculations
 - Intimate encounters act as **Extreme Emotional/Somatic pressure events**.
-- If the scene lands a milestone connection, apply a permanent delta (+10 to +20) to `latent_anchors` or shift `active_focus` in the character card YAML.
-- Somatic changes (e.g. release tells, dropping role partitions) must be logged in the card's `transformation_history`.
+- If the scene lands a milestone connection, apply a permanent delta (+10 to +20) to latent weights or shift active Focus in **Character_Change_Log** Current Snapshot at Post-Movement Commit.
+- Somatic changes (e.g. release tells, dropping role partitions) are logged in Character_Change_Log Movement History — not on the character card.
 
 ---
 

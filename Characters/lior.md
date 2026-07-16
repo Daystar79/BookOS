@@ -11,6 +11,7 @@ latent_anchors: ["Realm 1 — Origin", "Realm 2 — Form", "Realm 3 — Identity
 cognitive_bias: "Dissolution — desires release of the performed self to escape the weight of identity"
 default_somatic_alignment: "Lilt in voice; fingers trembling; rapid shallow breathing; wide sight focus"
 
+# Build defaults only. Runtime evolution → Framework/Character_Change_Log.md
 transformation_weights:
   active_focus: 80
   latent_anchors:
@@ -19,7 +20,6 @@ transformation_weights:
     Realm_III: 5
   bias_strength: 75
   somatic_flexibility: 65
-  transformation_history: []
 
 depth_of_knowledge:
   general: "Classical violist, sheet music reading, orchestral performance"

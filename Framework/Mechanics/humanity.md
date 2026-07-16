@@ -115,6 +115,7 @@ Human bodies operate with physical limitations and imperfect coordination:
 ## 6. Integration with Transformation Engine (Character Evolution)
 
 A character's physical pacing and somatic tells are not static; they evolve with character transformation:
-- **YAML Alignment:** Check the character's `transformation_weights` and `transformation_history` on card load.
-- **Somatic Tell Decay:** Temporary somatic state changes decay over 1–3 movements. Permanent somatic shifts recorded in history (e.g. *shoulder drop release*) become the character's new baseline tell.
+- **YAML Alignment:** Load card `transformation_weights` as defaults; overlay `Framework/Character_Change_Log.md` Current Snapshot when present.
+- **Somatic Tell Decay:** Temporary somatic state changes decay over 1–3 movements. Permanent baseline shifts go to Character_Change_Log Snapshot (e.g. *shoulder drop release*), not onto the card.
 - **Somatic Flexibility:** A high `somatic_flexibility` (e.g., 70+) allows characters to rotate tells rapidly across body zones and recover from high-tension states quickly, while low flexibility (e.g., 20) results in rigid, persistent tells that lock up the body.
+- **Post-Movement Commit:** On approved movement, dual ledger save — Continuity_Ledger (scene close) **and** Character_Change_Log (Snapshot + History). Do not leave Change Log empty when Medium+ pressure fired.

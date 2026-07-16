@@ -89,10 +89,14 @@ The framework is designed to fight common AI writing problems: therapy-speak, pe
 
 ## Transformation & Evolution
 
-Character cards support `transformation_weights` tracking:
-- `active_focus` dominance and `latent_anchors` weights.
-- `bias_strength` and `somatic_flexibility` (rate of physical tell adaptation).
-- `transformation_history` tracking permanence of past events.
+Character cards hold **build defaults** (`transformation_weights`: active_focus dominance, latent anchors, bias_strength, somatic_flexibility).  
+**Runtime evolution** is tracked separately in `Framework/Character_Change_Log.md` (Current Matrix Snapshot + Movement History) — not on the card.
+
+**Post-Movement Commit (mandatory dual ledger save):** On each approved movement, update:
+1. `Framework/Continuity_Ledger.md` — timeline, scene somatic close, plot beats  
+2. `Framework/Character_Change_Log.md` — durable Focus/weights/somatic/bias-strength + history rows  
+
+Cards stay identity/load sheets. Neither ledger alone is enough.
 
 ---
 

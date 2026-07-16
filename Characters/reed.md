@@ -11,6 +11,7 @@ latent_anchors: ["Realm 1 — Origin", "Realm 2 — Form", "Realm 7 — Presence
 cognitive_bias: "Debt Ledger — safety, affection, and rest rewritten as payments on an infinite unpayable debt"
 default_somatic_alignment: "Throat tight; shoulders high; chest breathing; jaw locking"
 
+# Build defaults only. Runtime evolution → Framework/Character_Change_Log.md
 transformation_weights:
   active_focus: 65
   latent_anchors:
@@ -19,7 +20,6 @@ transformation_weights:
     Realm_VII: 10
   bias_strength: 75
   somatic_flexibility: 30
-  transformation_history: []
 
 depth_of_knowledge:
   general: "Structural blacksmithing, industrial welding, metallurgy"

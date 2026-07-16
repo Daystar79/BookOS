@@ -109,7 +109,15 @@ Applies within a movement and across the chapter.
 - Callbacks = imperfect memory + trigger
 - End on concrete anchor; continue from it; no character "re-entry" reset
 
-Before M(N+1): read M(N); note ending somatic/env/props/open loops; confirm Focus/Bias; no duplicated tells/patterns/staging.
+Before M(N+1): read M(N) + Continuity_Ledger row for M(N) + Character_Change_Log Snapshot + on-scene cards; note ending somatic/env/props/open loops; durable Focus/weights/somatic from **Change Log Snapshot** (else card defaults); scene close from Continuity_Ledger; no duplicated tells/patterns/staging.
+
+### Post-Movement Commit (mandatory dual ledger save)
+On movement approval, before next design/draft:
+1. **Continuity_Ledger** — append/update the Ch/Mov row (time, scene somatic close, continuity/plot beats)
+2. **Character_Change_Log** — update Current Matrix Snapshot + append Movement History (Main § Transformation Engine)
+- Do **not** write movement deltas or history onto character cards
+- Never draft-append transformation logs, history dumps, or CONFIG
+- Either ledger alone = incomplete commit
 
 ---
 
@@ -117,9 +125,10 @@ Before M(N+1): read M(N); note ending somatic/env/props/open loops; confirm Focu
 1. Instant somatic reaction in narrative (no brackets)
 2. Honor Prose Style + Style Lock
 3. If Bias ACTIVE: filter input through Focus + Bias silently
-4. Process transformation event pressure deltas silently and update character card
+4. Process transformation pressure deltas silently during generation
 5. Generate movement/scene prose in card voice
 6. Never append CONFIG, matrix notes, focus tables, transformation logs, or audit summaries
+7. On approval: dual ledger save Continuity_Ledger + Character_Change_Log (§8)
 
 ---
 
@@ -132,6 +141,7 @@ Before M(N+1): read M(N); note ending somatic/env/props/open loops; confirm Focu
 | Dialogue | Asymmetric; polarized voices |
 | Patterns | No bare beats; rotate somatics |
 | Cleanup | §6 before save |
+| Post-movement | Continuity_Ledger **and** Character_Change_Log (§8) |
 
 ---
 
