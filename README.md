@@ -1,13 +1,13 @@
-# Cognitive Middleware
+# BookOS — Cognitive Middleware & Writer's OS
 
-**An invisible cognitive matrix for character-driven fiction drafting and somatic roleplay.**  
+**An invisible, token-optimized cognitive matrix for character-driven fiction drafting and somatic roleplay.**  
 Body-first psychology, bias distortion, and realm-aware somatics — running silently off-page.
 
 ---
 
 ## What It Is
 
-**CognitiveMiddleware** is a sophisticated runtime engine developed for character-driven long-form fiction. It enables consistent, psychologically rich characters through:
+**BookOS** is a sophisticated runtime engine developed for character-driven long-form fiction. It enables consistent, psychologically rich characters through:
 
 - **Body Before Insight** — Physical reactions and somatic tells always precede psychological explanation.
 - **Character-First** — Named characters from card files are the single source of truth.
@@ -49,18 +49,21 @@ The framework is designed to fight common AI writing problems: therapy-speak, pe
 
 ---
 
-## Key Files
+## Key Files & Directories
 
-| File | Purpose | Usage / Load |
+| File/Folder | Purpose | Usage / Load |
 |------|---------|--------------|
 | `Framework/Main.md` | Core engine, workflow, commands, and principles | **Always load** |
 | `Framework/Rules_Index.md` | Hard bans, cleanup protocol, dialogue rules | **Always load** |
-| `Framework/Psychology/realm_data.yaml` | Somatic profiles for all 10 Realms | **Always load** |
+| `Framework/Psychology/realm_data.yaml` | Somatic profiles for all 10 Realms (optimized string format) | **Always load** |
 | `Framework/linter.py` | Automated prose linter to check for system leaks | Command-line utility |
-| `Characters/` | Individual character cards (Focus, Latents, Bias, Voice, etc.) | Load per scene |
+| `Characters/` | Active character cards and per-character change logs (`_log.yaml`) | Load per scene |
+| `Characters/Physical/`, `/Somatic/`, `/Aesthetics/` | Subfolders holding genre-specific physical, somatic, and visual templates | Loaded by Character Builder |
+| `Factions/` | Isolated cards for organisations, guilds, and political groups | Load per scene requirements |
+| `Templates/` | Global genre blueprints (Sci-Fi, High Fantasy, Dark Romance, etc.) | Loaded by World/Character Builder |
 | `Framework/Mechanics/` | Prose styles, voice templates, humanity details | Load as needed |
-| `Modules/` | Optional active modules (e.g. sexuality rules) | Load when enabled |
-| `Framework/Prompts/` | Interactive character builder and improvement prompts | Reference only |
+| `Modules/` | Optional active modules (e.g. `sexuality.yaml` in YAML format) | Load when enabled |
+| `Framework/Prompts/` | Interactive novel initializer, world, and character builders | Reference only |
 | `RolePlaying/RoleplayEngine.md` | Self-contained somatic character RP engine. **Designed to be dropped directly into a chat window** (e.g., Gemini CLI, Web interface, or Claude session) to start a live interactive roleplay session. | Drop into Chat |
 
 ---
@@ -85,7 +88,7 @@ The framework is designed to fight common AI writing problems: therapy-speak, pe
 ## Tripartite Filter System
 
 1. **Cultural Bias (Background):** Metaphysical frame, ethical defaults, and **temporal awareness** (how they track time/destiny, e.g., cyclic liturgy vs. linear progress).
-2. **Occupation (Background):** Technical lexicon, prop/tool familiarity, and immediate staging focus.
+2. **Occupation & Species (Background):** Technical lexicon, prop/tool familiarity, and somatic/physical defaults (species defaults to `human` but maps to custom configurations like Elves, Dwarves, or aliens).
 3. **Cognitive Bias (Triggered):** Wound-based perception warp. Stays **DORMANT** during casual beats, intercepting inputs only when emotional pressure activates it.
 
 ---
