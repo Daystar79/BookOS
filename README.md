@@ -58,7 +58,8 @@ The framework is designed to fight common AI writing problems: therapy-speak, pe
 | `Framework/Psychology/realm_data.yaml` | Somatic profiles for all 10 Realms | **Always load** |
 | `Framework/linter.py` | Automated prose linter to check for system leaks | Command-line utility |
 | `Characters/` | Individual character cards (Focus, Latents, Bias, Voice, etc.) | Load per scene |
-| `Framework/Mechanics/` | Prose styles, sexuality rules, voice templates, humanity details | Load as needed |
+| `Framework/Mechanics/` | Prose styles, voice templates, humanity details | Load as needed |
+| `Modules/` | Optional active modules (e.g. sexuality rules) | Load when enabled |
 | `Framework/Prompts/` | Interactive character builder and improvement prompts | Reference only |
 | `RolePlaying/RoleplayEngine.md` | Self-contained somatic character RP engine. **Designed to be dropped directly into a chat window** (e.g., Gemini CLI, Web interface, or Claude session) to start a live interactive roleplay session. | Drop into Chat |
 

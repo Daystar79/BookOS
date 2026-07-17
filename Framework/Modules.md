@@ -17,7 +17,7 @@ Module files are loaded according to status. Registry entries below indicate loc
 | **Mystery Engine** | `Modules/mystery.md` | `DISABLED` (not shipped) | None |
 | **Romance Tuning** | `Modules/romance.md` | `DISABLED` (not shipped) | Incompatible with Action pacing |
 | **Action & Pacing** | `Modules/action.md` | `DISABLED` (not shipped) | Incompatible with Romance Tuning |
-| **Sexuality Protocol** | `Modules/sexuality.md` | `DISABLED` (not shipped) | Requires Canon Adult: YES on cards |
+| **Sexuality Protocol** | `Modules/sexuality.md` | `ENABLED` | Requires Canon Adult: YES on cards |
 
 To enable a module later: add the file under `Modules/`, document compatibility in that file, set **Status** to `ENABLED` in this table, then re-run verification on the next session load.
 
