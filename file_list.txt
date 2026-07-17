@@ -1,4 +1,4 @@
-Total files: 124
+Total files: 128
 .gitignore
 Build/build.sh
 Build/pull_framework.py
@@ -7,6 +7,7 @@ Build/reset.sh
 Characters/Aesthetics/README.md
 Characters/Aesthetics/cozy_mystery.yaml
 Characters/Aesthetics/cyberpunk.yaml
+Characters/Aesthetics/dark_romance.yaml
 Characters/Aesthetics/dystopian_speculative.yaml
 Characters/Aesthetics/erotic_horror.yaml
 Characters/Aesthetics/erotic_thriller.yaml
@@ -23,6 +24,7 @@ Characters/Aesthetics/urban_fantasy.yaml
 Characters/Physical/README.md
 Characters/Physical/cozy_mystery.yaml
 Characters/Physical/cyberpunk.yaml
+Characters/Physical/dark_romance.yaml
 Characters/Physical/dystopian_speculative.yaml
 Characters/Physical/erotic_horror.yaml
 Characters/Physical/erotic_thriller.yaml
@@ -41,6 +43,7 @@ Characters/Relations.md
 Characters/Somatic/README.md
 Characters/Somatic/cozy_mystery.yaml
 Characters/Somatic/cyberpunk.yaml
+Characters/Somatic/dark_romance.yaml
 Characters/Somatic/dystopian_speculative.yaml
 Characters/Somatic/erotic_horror.yaml
 Characters/Somatic/erotic_thriller.yaml
@@ -110,6 +113,7 @@ RolePlaying/RoleplayEngine.md
 Sources/.gitkeep
 Templates/cozy_mystery.yaml
 Templates/cyberpunk.yaml
+Templates/dark_romance.yaml
 Templates/dystopian_speculative.yaml
 Templates/erotic_horror.yaml
 Templates/erotic_thriller.yaml

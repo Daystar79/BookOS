@@ -1,0 +1,55 @@
+---
+genre: "Dark Romance"
+outline_defaults:
+  subgenres:
+    - "Morally Gray / Anti-Hero"
+    - "Obsessive / Captive Dynamics"
+    - "Underworld / High-Stakes Rivalry"
+  tone_anchors:
+    - "Moral ambiguity, heavy psychological stakes, and obsessive attachment"
+    - "High proximity pressure, intense power struggles, and blurred boundaries"
+    - "Somatic focus on thermal changes, throat catches, and breathing synchrony"
+  tonal_pacing: "Intense, slow-burning sentence structure with sharp dialogues; detailed physical descriptions highlighting touch boundaries."
+world_defaults:
+  setting_type: "Private Sanctuary / Crime Empire"
+  regions:
+    - name: "The Compound / Estate"
+      description: "Gated estate, dark wood corridors, private libraries, heavy locking oak doors, dim security lights."
+      access_level: "Approved residents or owner invitation."
+    - name: "The Safehouse / Penthouse"
+      description: "Glass windows overlooking rain-swept city, isolated, secure servers, dim accent lights."
+      access_level: "Keycard clearance."
+  factions:
+    - name: "The Syndicate / Family"
+      type: "Criminal Faction / Underworld Order"
+      doctrine_summary: "Absolute loyalty to the hierarchy; family bonds are blood oaths; protect assets at all costs."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Soldier / Asset"
+          privileges: "Basic protection; weapons allowance."
+        - rank: 5
+          title: "Underboss / Enforcer"
+          privileges: "Command of local sectors; authority to interrogate."
+        - rank: 10
+          title: "Sovereign / Don"
+          privileges: "Total family override; ownership of estate assets."
+      protocol_template:
+        name: "Intimate Interrogation"
+        staging: "Dim room, single leather chair, rain tapping glass, scent of cedar and gunpowder."
+        somatic_keys: "Subject A is standing close, hands in pockets, gaze locked, chest breathing slow; Subject B is sitting, head tilted back, throat exposed, shoulders tensed."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: Clichéd romance metaphors (e.g. no 'heart skipped a beat', show the chest freeze/catch)."
+      - "Safety: Strictly adult cast required (Canon Adult = YES on all cards)."
+    pov_constraints: "Dual POV (alternating chapters) or tight third-person limited; focus on power dynamics and the somatic tension of proximity."
+character_defaults:
+  voice_archetypes:
+    - type: "C (The Possessive Controller)"
+      description: "Low register, slow paced, highly deliberate syntax, commands framed as statements."
+    - type: "A (The Defiant Rebel)"
+      description: "Sharp, fast-paced dialogue, defensive sarcasm, short sentences hiding panic."
+  somatic_tell_templates:
+    - "Tracing a collarbone or jawline with a slow, heavy finger"
+    - "Holding breath to count a partner's pulse under touch"
+    - "Swallowing hard as proximity drops below arm's length"
+...
