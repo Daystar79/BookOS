@@ -23,13 +23,15 @@ To enable a module later: add the file under `Modules/`, document compatibility 
 
 ---
 
-## 3. Module Verification Rules (For AI Agents)
-Before applying any module instructions:
-1. Scan the registry above for modules marked as `ENABLED`.
-2. If none are `ENABLED`, skip the rest of this protocol (no module files to load).
-3. For each ENABLED module: locate and read the module file at the specified path. If the file is missing, treat as **unverified** and skip with a short stdout warning.
-4. Perform the **Compatibility Check**:
-   - Verify that the module's instructions do not contradict any hard bans or output hygiene rules in `Rules_Index.md` (e.g. no engine labels on page, silent execution).
-   - Verify that the module is not listed as incompatible with other currently enabled modules.
-   - If verification fails, print to stdout: `[Warning] Module [Name] failed verification: incompatible with [System/Module]. Skipping.`
-5. Apply verified module instructions as subordinate parameters only.
+## 3. Module Verification & Kernel-Style Loading Protocol
+
+Agents must enforce a strict, Linux-kernel-style module loading and dependency system to prevent runtime state corruption.
+
+### Rules of Loading & Conflict Resolution:
+1. **Precedence (First-Staged Lock):** Modules are resolved in top-to-bottom order of their entry in the Active Modules Registry table above. The first module marked `ENABLED` is loaded into active memory and holds a session lock.
+2. **Strict Lockout on Conflicts:** If a subsequently scanned module has a compatibility constraint or conflict with an already-loaded module:
+   - The second module **cannot be loaded**. Its status is treated as `BLOCKED (conflict lock)`.
+   - The agent must fail the load and print: `[Error] Module load failed: [Second Module] conflicts with already-loaded [First Module]. You must unload (set to DISABLED) [First Module] before loading [Second Module].`
+3. **No Hot-Swapping Collision:** A conflicting module cannot overwrite or hot-swap into a running session. The active module must be explicitly set to `DISABLED` by the author first to clear the session lock.
+4. **Dependency Resolution:** If a module requires another module as a prerequisite, the prerequisite module must be marked `ENABLED` and resolved first, or the dependent module will fail to load with: `[Error] Module load failed: [Module B] requires missing dependency [Module A].`
+5. **Output Hygiene & Subordination:** Once a module is verified and loaded without conflict, its instructions apply as subordinate parameters only. It must never contradict the core rules in `Rules_Index.md` (e.g. no engine labels on page, silent execution).
