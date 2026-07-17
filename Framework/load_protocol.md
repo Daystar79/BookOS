@@ -47,4 +47,36 @@ load_priority: 0
 
 ---
 
+# Reference: Continuity Ledger Protocol
+
+### Dual Ledger Save
+On **every approved movement**, write the story ledger, update the individual character logs, and sync the consolidated visual reference log:
+*   **Story Ledger (`Framework/Continuity_Ledger.md`):** Owns day/time, draft path, scene somatic close, continuity & plot beats, open loops.
+*   **Character Change Log (`Characters/[slug]_log.yaml`):** Owns durable matrix snapshot + append-only history (primary data load source).
+*   **Consolidated Log (`Framework/Character_Change_Log.md`):** Human-readable quick-reference snapshot and history for all characters.
+
+### Somatic State on Close Guidelines
+Per on-scene character, write one compact clause representing their close-of-scene bodily state — e.g. `Reed: jaw locked, high shoulders; Helen: open hands, soft chest`. Scene-close body only. If baseline permanently changed, update the character's `_log.yaml` snapshot and the consolidated log (not the card).
+
+### Empty vs Placeholder States
+*   **Honest Empty:** Headers only; no movement rows. Correct when no movement is approved yet.
+*   **Placeholder (invalid as data):** Cells like `[Day & Time]` or links to drafts that do not exist. Integrity Pass deletes these as rows.
+*   **Committed:** Real time, real somatic close, existing draft path, Change log: yes.
+
+---
+
+# Reference: Character Change Log Protocol
+
+### Load Order (Next Design/Draft)
+1. On-scene character cards (identity, voice, bias name, build defaults)
+2. **Current Matrix Snapshot** in `Framework/Character_Change_Log.md` (overrides card Focus / weights / baseline somatic / bias_strength when present)
+3. `Framework/Continuity_Ledger.md` latest real row (scene time, props, close body state)
+
+### Integrity Mapping
+*   **Snapshot Empty:** Seed from active cards (`As of: build`)
+*   **History Empty (no Continuity rows):** OK — do not invent entries.
+*   **Continuity has committed rows, History missing those movements:** Backfill or block draft.
+
+---
+
 *Use this file as a reference. Do not load it as a runtime file.*
