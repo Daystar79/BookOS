@@ -1,5 +1,7 @@
 ---
 genre: "Erotic Horror"
+enabled_modules:
+  - "Sexuality Protocol"
 outline_defaults:
   subgenres:
     - "Gothic Obsession"

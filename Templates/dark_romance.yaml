@@ -1,5 +1,7 @@
 ---
 genre: "Dark Romance"
+enabled_modules:
+  - "Sexuality Protocol"
 outline_defaults:
   subgenres:
     - "Morally Gray / Anti-Hero"
