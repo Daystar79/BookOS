@@ -1,0 +1,19 @@
+---
+genre: "Cyberpunk"
+builds:
+  - "Wiry and hollow-chested, showing rib outlines under thin skin"
+  - "Compact and muscular, dense posture built for high-gravity or heavy load carrying"
+  - "Stretched and long-limbed, moving with awkward, mechanical leverage"
+facial_features:
+  - "Hollow cheeks, sharp jawline, eyelids red-rimmed from screen glare"
+  - "Asymmetrical features, a surgical scar line tracing the left temple"
+  - "Flat, expressionless face, lips dry and cracked"
+coloration:
+  - "Pale, UV-starved skin with a faint blueish tint from display glare"
+  - "Mottled skin with uneven tan lines from industrial deck lighting"
+  - "Sallow complexion, dark circles beneath the eyes like oil smudges"
+marks:
+  - "A round, chrome-rimmed socket at the base of the skull"
+  - "Chemical-burned skin patches along the forearms"
+  - "Parallel vertical scars behind the left ear from interface ports"
+...

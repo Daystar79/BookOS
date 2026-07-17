@@ -4,8 +4,8 @@
 Invoke in chat: **`/draft`** — or say "draft the next movement" / "continue Chapter N."
 
 ### Boot (mandatory first)
-1. Load Main + Rules_Index + realm_data + cards + both ledgers  
-2. **Ledger Integrity Pass** (Main.md) — strip placeholder Continuity rows; seed empty Snapshot; backfill or block dual-commit lag  
+1. Load Main + Rules_Index + realm_data + cards + continuity ledger + character logs
+2. **Ledger Integrity Pass** (Main.md) — strip placeholder Continuity rows; seed empty logs; backfill or block dual-commit lag  
 3. Only then: Manifest → draft  
 
 ---
@@ -53,15 +53,15 @@ The drafting framework is divided into dedicated modules to prevent configuratio
 
 ### Pre-session (Ledger Integrity — first)
 - [ ] Continuity_Ledger: no placeholder rows; honest empty OK if no drafts
-- [ ] Character_Change_Log Snapshot: one row per active cast (seed from cards if needed)
+- [ ] Character logs (_log.yaml): active on-scene logs present (seed from cards if needed)
 - [ ] No draft-on-disk without ledger row / no pending dual commit
 - [ ] Status CLEAN or CLEAN (empty) before drafting
 
 ### Post-Movement Commit checklist (after approval)
 - [ ] `Framework/Continuity_Ledger.md` row written (time, scene somatic close, continuity/plot beats)
-- [ ] `Framework/Character_Change_Log.md` — Current Snapshot updated if durable change; Movement History appended (or “No durable matrix change”)
+- [ ] `Characters/[slug]_log.yaml` — snapshot updated if durable change; history entry appended (if any changes)
 - [ ] Character cards **not** rewritten for routine evolution (identity/load only)
-- [ ] Temporary-only tells: Continuity_Ledger only; Medium+ pressure has a Change Log history row
+- [ ] Temporary-only tells: Continuity_Ledger only; Medium+ pressure has a character log history entry
 
 ---
 
@@ -79,7 +79,7 @@ The drafting framework is divided into dedicated modules to prevent configuratio
 | **[Rite_Reference.md](Rite_Reference.md)** | **Rite staging details and mechanics** |
 | [World_Architecture.md](World_Architecture.md) | World geography, roster, settings, logistics |
 | [Continuity_Ledger.md](Continuity_Ledger.md) | Timeline + scene-close somatic |
-| [Character_Change_Log.md](Character_Change_Log.md) | Matrix Snapshot + evolution history |
+| [Characters/](Characters/) | Character cards and individual logs (`*_log.yaml`) |
 | [source_changes.md](source_changes.md) | Revision log after approval |
 
 ---

@@ -1,0 +1,18 @@
+---
+snapshot:
+  active_focus: "VIII — Integration"
+  latent_weights:
+    I: 10
+    II: 15
+    VII: 10
+  bias_strength: 80
+  default_somatic: "Throat tight; shoulders high; jaw lock; scar-rub under debt pressure"
+  flexibility: 30
+  as_of: "sample 1 M1"
+history:
+  - movement: "1 M1 — Cold Tea"
+    pressure: "Emotional/Social · Medium"
+    delta: "bias_strength 75→80; default somatic + scar-rub under debt pressure; kindness received as bill due"
+    permanence: "medium"
+    notes: "Offered hinge 'no charge' to square; did not put weight down"
+...

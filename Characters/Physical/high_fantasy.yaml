@@ -1,0 +1,69 @@
+---
+genre: "High Fantasy"
+races:
+  human:
+    builds:
+      - "Thick-boned and broad-shouldered, posture showing manual labor or shield work"
+      - "Lean, wiry build, quick-footed and agile"
+    facial_features:
+      - "Strong brow, rugged jawline, windburned skin"
+      - "Soft features, expressive eyes, mouth prone to grins"
+    coloration:
+      - "Warm, sun-bronzed skin with freckled cheeks"
+      - "Ruddy complexion with wind-chapped lips"
+    marks:
+      - "A diagonal scar across the left cheekbone"
+      - "Calloused palms from rope or weapon handles"
+  elf:
+    builds:
+      - "Tall, slender, and long-limbed, moving with effortless poise"
+      - "Wisp-thin and light, posture straight as an arrow"
+    facial_features:
+      - "Angled, high cheekbones, large almond-shaped eyes, pointed ears"
+      - "Sharp, elegant chin, eyes that seem to hold a faint inner light"
+    coloration:
+      - "Fair, porcelain skin that seems unaffected by wind or sun"
+      - "Pale skin with a subtle silver or gold undertone"
+    marks:
+      - "Delicate runic tattoos circling the wrists"
+      - "Perfect skin, completely devoid of mundane scars or blemishes"
+  dwarf:
+    builds:
+      - "Stocky and broad-framed, extremely low center of gravity, dense musculature"
+      - "Thick-chested and square, arms disproportionately strong"
+    facial_features:
+      - "Heavy, blocky jaw, nose wide and flat, thick eyebrows"
+      - "Deep-set eyes, cheeks covered by a long, well-groomed beard"
+    coloration:
+      - "Earthy, weather-beaten skin resembling cut granite"
+      - "Dark, ruddy skin from forge heat exposure"
+    marks:
+      - "Heavy soot staining on the hands and arms"
+      - "Old scars from smithy sparks along the forearms"
+  orc:
+    builds:
+      - "Towering and massively muscled, thick neck, posture forward-leaning"
+      - "Broad-backed and heavy, moving with intimidating physical weight"
+    facial_features:
+      - "Prominent underbite showing tusk tips, flat nose, heavy brow ridge"
+      - "Angular, scarred jaw, eyes small and intensely focused"
+    coloration:
+      - "Gray-green or ash-colored skin, thick and calloused"
+      - "Dull slate skin with dark vein patterns visible at the temples"
+    marks:
+      - "Heavy ritual scarring patterns along the shoulders and back"
+      - "Jagged combat scars across the chest and forearms"
+  halfling:
+    builds:
+      - "Diminutive and round-faced, moving with silent, light steps"
+      - "Plump and sturdy, low-slung posture, quick hands"
+    facial_features:
+      - "Soft, friendly features, button nose, rosy cheeks"
+      - "Bright, wide eyes, ears slightly pointed at the tips"
+    coloration:
+      - "Sun-warmed, golden skin from outdoor agricultural life"
+      - "Freckled nose and cheeks, healthy pink complexion"
+    marks:
+      - "Tough, leathery soles on the feet, covered in thick curly hair"
+      - "Small burn scar from a kitchen hearth on the hand"
+...

@@ -1,0 +1,19 @@
+---
+genre: "Noir Mystery"
+builds:
+  - "Broad-shouldered and heavy-set, moving with slow, deliberate weight"
+  - "Lean and wiry, shoulders hunched to ward off the cold rain"
+  - "Flabby and soft-bellied, carrying the weight of desk work and cheap beer"
+facial_features:
+  - "Heavy brow, dark circles under the eyes, stubble-darkened jaw"
+  - "Sharp, narrow eyes, nose slightly crooked from an old precinct fight"
+  - "Puffy under the eyes, mouth sloped downward in a permanent grimace"
+coloration:
+  - "Sallow, smoke-cured skin from indoor desk shifts and bars"
+  - "Ruddy, windburn-reddened cheeks from street patrol"
+  - "Pale and sweaty under harsh precinct bulbs"
+marks:
+  - "A faded surgical scar across the left knuckle"
+  - "Nicotine-stained yellow patches on the index and middle fingers"
+  - "A small jagged scar beneath the left eye"
+...

@@ -1,0 +1,19 @@
+---
+genre: "Gothic Fantasy"
+fabrics:
+  - "Heavy, scratchy wool that holds dampness"
+  - "Stiff, oil-tanned leather that smells of old tallow"
+  - "Faded, dusty velvet that clings to the limbs"
+clothing_styles:
+  - "High-collared cowl or robe with deep sleeves"
+  - "Layered tunics fastened with iron buckles and leather straps"
+  - "Apprentice scribe's ink-stained apron over a rough linen shirt"
+colors:
+  - "Deep ash gray, charcoal, and soot black"
+  - "Burgundy and tarnished gold"
+  - "Bleached bone white and mildew green"
+accessories:
+  - "A ring of heavy iron keys hanging from the waist"
+  - "A small horn containing black ink strapped to the belt"
+  - "A wax-sealed parchment scroll tucked into the vest"
+...

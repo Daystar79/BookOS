@@ -1,0 +1,52 @@
+---
+genre: "Psychological Thriller"
+outline_defaults:
+  subgenres:
+    - "Domestic Suspense"
+    - "Unreliable Narrator"
+    - "Medical/Legal Conspiracy"
+  tone_anchors:
+    - "Paranoid suspicion and creeping claustrophobia"
+    - "Perception warps and gaslighting dynamics"
+    - "Somatic tells of panic: throat closure, cold extremities, hyper-vigilance"
+  tonal_pacing: "Fast, tense sentence pacing; focus on domestic details that feel slightly wrong or misplaced."
+world_defaults:
+  setting_type: "Localized / Domestic"
+  regions:
+    - name: "The Suburb / Household"
+      description: "Quiet, manicured lawns, sterile interiors, hidden compartments, locking doors."
+      access_level: "Unrestricted, but socially gated."
+    - name: "The Clinic / Asylum"
+      description: "White-washed halls, humming fluorescent lamps, heavy glass observation panes."
+      access_level: "Medical staff or security credentials required."
+  factions:
+    - name: "The Caregivers / Keepers"
+      type: "Faction/Familiar Unit"
+      doctrine_summary: "Protection masquerading as control; keeping the subject isolated 'for their own good'."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Dependent"
+          privileges: "Limited movement; scheduled meals/medications."
+        - rank: 5
+          title: "Guardian / Doctor"
+          privileges: "Control of locks, phone lines, medication schedules."
+      protocol_template:
+        name: "Medication Compliance Check"
+        staging: "Dim kitchen, fluorescent hum, clean glass of water, single pill on a ceramic plate."
+        somatic_keys: "Subject is swallowing hard, hand trembling slightly as they lift the glass; Guardian is watching the throat, posture erect, breathing slow."
+  narrative_rules:
+    linguistic_taboos:
+      - "Do not name the character's mental illness directly (show the perception warp)."
+      - "Avoid clinical terms in on-page thoughts (show visceral dread)."
+    pov_constraints: "Tight first-person or close third-person; focus on sensory details that suggest surveillance or deceit (creaking floors, phone clicks)."
+character_defaults:
+  voice_archetypes:
+    - type: "A (Unreliable Narrator)"
+      description: "Fragmented memory recall, rapid shifts in certainty, sensory-obsessed."
+    - type: "B (Calculated Gaslighter)"
+      description: "Soothing, slow rhythm, overly rational dialogue, quiet corrections of others' memories."
+  somatic_tell_templates:
+    - "Counting breaths to stop hyperventilation"
+    - "Checking lock states multiple times"
+    - "Wiping sweaty palms on denim"
+...

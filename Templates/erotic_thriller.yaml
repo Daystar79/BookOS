@@ -1,0 +1,55 @@
+---
+genre: "Erotic Thriller"
+outline_defaults:
+  subgenres:
+    - "Neo-Noir Obsession"
+    - "Corporate Betrayal"
+    - "Marital Suspense"
+  tone_anchors:
+    - "Charged glances, high-stakes deception, and dangerous attraction"
+    - "Wealthy, slick urban environments contrasting with sweaty, visceral bedroom staging"
+    - "Somatic tells of arousal, guilt, and fear: rapid pulse, flushed skin, dry throat"
+  tonal_pacing: "Sleek, fast-paced dialogue full of double entendres; lingering descriptions of clothing, gaze, and skin temperature."
+world_defaults:
+  setting_type: "Metropolitan Corporate / High Society"
+  regions:
+    - name: "The Penthouse / Estate"
+      description: "Glass walls overlooking the city skyline, silk sheets, expensive whiskey, dim lighting."
+      access_level: "Private invitation."
+    - name: "The Executive Office Suite"
+      description: "Polished mahogany, locking doors, leather chairs, blinds drawn against the sun."
+      access_level: "Keycard access."
+  factions:
+    - name: "The Syndicate / Blackmail Ring"
+      type: "Criminal Faction"
+      doctrine_summary: "Leverage secrets and sexual indiscretions to extort assets and political power."
+      hierarchy_ranks:
+        - rank: 1
+          title: "The Asset"
+          privileges: "Access to wealthy targets; basic expenses paid."
+        - rank: 5
+          title: "The Handler"
+          privileges: "Control of audio/video surveillance, distribution networks."
+        - rank: 10
+          title: "The Broker"
+          privileges: "Direct connection to buyers; handles asset liquidations."
+      protocol_template:
+        name: "The Setup"
+        staging: "Hotel room, hidden camera behind mirror, open liquor cabinet, dim amber lighting."
+        somatic_keys: "Target is laughing, collar loosened, skin flushed from alcohol; Asset is maintaining steady gaze, shifting weight closer to target, hand resting on target's thigh."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: Plain romance clichés (use tension-based somatic descriptions)."
+      - "Safety: Strictly adult cast required (Canon Adult = YES on all cards)."
+    pov_constraints: "Tight third-person; focus on dramatic irony, lies, and the contrast between public posture and private intimacy."
+character_defaults:
+  voice_archetypes:
+    - type: "B (The Seductive Manipulator)"
+      description: "Low, husky register, slow pacing, uses touch to interrupt the target's sentences."
+    - type: "A (The Paranoid Partner)"
+      description: "Defensive, rapid speech, accusatory dialogue tags, somatic tics of guilt."
+  somatic_tell_templates:
+    - "Loosening a necktie or collar under sweat-inducing pressure"
+    - "Running a finger along the rim of a glass while maintaining eye contact"
+    - "Adjusting clothing to hide a racing heartbeat"
+...

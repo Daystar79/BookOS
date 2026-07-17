@@ -1,0 +1,19 @@
+---
+genre: "Gothic Fantasy"
+builds:
+  - "Tall and angular, moving with a severe, aristocratic stiffness"
+  - "Stooped and hollowed out by fasting or archival work"
+  - "Thick-boned and heavy, shoulders permanently sloped from wearing armor or wool"
+facial_features:
+  - "Sunken eyes, sharp cheekbones, skin tight over the temples"
+  - "Austere features, mouth locked in a thin, unforgiving line"
+  - "Wide, dark eyes that seem fixed on invisible shadows"
+coloration:
+  - "Pale, bloodless complexion, looking like aged parchment"
+  - "Sallow skin with gray undertones from cellar dampness"
+  - "Flushed cheeks from cold drafts, contrasted with pale forehead"
+marks:
+  - "A branding mark of a chained sun on the left collarbone"
+  - "Ink stains permanently dyed into the knuckles and fingertips"
+  - "Thin, parallel scars from ritual bloodletting on the inner forearm"
+...

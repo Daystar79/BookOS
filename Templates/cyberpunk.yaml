@@ -1,0 +1,55 @@
+---
+genre: "Cyberpunk & Tech Noir"
+outline_defaults:
+  subgenres:
+    - "Corporate Dystopia"
+    - "Post-Industrial Street Grit"
+    - "Technological Transhumanism"
+  tone_anchors:
+    - "High-tech, low-life juxtaposition"
+    - "Neon-stained cynicism mixed with desperate romanticism"
+    - "Bodily alienation and cybernetic detachment"
+  tonal_pacing: "Sharp, fragmented sentences during action; dense, sensory staging describing synthetic environments and rain-washed alleyways."
+world_defaults:
+  setting_type: "Megacity"
+  regions:
+    - name: "The Gridwork (Municipal Core)"
+      description: "Neon-choked corporate towers, towering holos, heavy private security presence, climate-controlled clean air."
+      access_level: "Citizenship Grade 3 or corporate clearance required."
+    - name: "The Rust-Belt (Under-City)"
+      description: "Industrial runoff zones, makeshift market alleys, pirate server farms, steam vents, and rain-diluted street food stalls."
+      access_level: "Unrestricted (high threat level)."
+  factions:
+    - name: "Nexus-Corp Global"
+      type: "Megacorporation"
+      doctrine_summary: "Technological advancement and market monopoly at any cost; humanity is a resource to be optimized."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Contractor / Asset"
+          privileges: "Temp access to corporate districts; basic medical/tech allowance."
+        - rank: 5
+          title: "Director of Security / Operations"
+          privileges: "Command of tactical strike teams; access to private database servers."
+        - rank: 10
+          title: "Board member"
+          privileges: "Diplomatic immunity; executive override on municipal grid power."
+      protocol_template:
+        name: "Neural Uplink Sync"
+        staging: "Clean room, chrome-framed reclined deck, cold blue overhead light, hum of cooling fans, scent of ozone."
+        somatic_keys: "Subject shows jaw slackness, rapid eye movements (REM), fingers twitching as input registers; supervisor is rigid, hand hovering over manual disconnect lever."
+  narrative_rules:
+    linguistic_taboos:
+      - "Do not use the word 'magic' (use 'tech', 'exploit', or 'anomaly')."
+      - "Do not use narrative summaries of hacking (show physical somatic ticks: eye tremors, dry lips, skin temp drops)."
+    pov_constraints: "Limited third-person; focus sensory descriptions on synthetic textures (vinyl, glass, metal, chemical smells) and interface overlays."
+character_defaults:
+  voice_archetypes:
+    - type: "A (Minimalist Pragmatist)"
+      description: "Jaded street runner; uses technical slang, short commands, and noun-heavy fragments."
+    - type: "C (Intellectual Architect)"
+      description: "Corporate executive; precise, polite, cold syntax; uses business-speak to mask threats."
+  somatic_tell_templates:
+    - "Tapping the neural port at the base of the neck under stress"
+    - "Rubbing eyes dry from virtual display fatigue"
+    - "Adjusting synthetic skin edges that are peeling or irritating"
+...

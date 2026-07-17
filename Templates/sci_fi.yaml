@@ -1,0 +1,55 @@
+---
+genre: "Hard Science Fiction"
+outline_defaults:
+  subgenres:
+    - "First Contact"
+    - "Technological Singularity"
+    - "Orbital Logistics"
+  tone_anchors:
+    - "The cold mechanical logic of physics and survival"
+    - "Sensory staging: hum of recycling scrubbers, sterile plastic, cold vacuum behind composite glass"
+    - "Somatic tells of orbital life: inner ear disorientation, bone density ache, dry skin from filtered air"
+  tonal_pacing: "Precise, clinical, and tech-heavy vocabulary; objective descriptions of systems, distances, and orbits."
+world_defaults:
+  setting_type: "Space Station / Deep Space Vessel"
+  regions:
+    - name: "The Command Ring"
+      description: "Quiet displays, padded floors, filtered oxygen, quiet clicks of keyboards."
+      access_level: "Officer grade keycard."
+    - name: "The Reactor Hab / Engineering"
+      description: "Constant low vibration, smell of hot grease, heavy insulation pads, warning paint."
+      access_level: "Technician certification."
+  factions:
+    - name: "The Orbital Logistics Consortium"
+      type: "Corporation / Sovereign Guild"
+      doctrine_summary: "Sustain human habitation in deep space through strict trade schedules and resource rationing."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Deckhand"
+          privileges: "Access to common deck, standard food paste ration."
+        - rank: 5
+          title: "Pilot / Navigator"
+          privileges: "Access to flight deck, direct thrust override, premium water ration."
+        - rank: 10
+          title: "Station Commander"
+          privileges: "Control over station air valves, docking gates, communications laser."
+      protocol_template:
+        name: "Airlock Cycle"
+        staging: "Composite metal chamber, emergency yellow lights, hiss of pressure equalizer, heavy rubber seal."
+        somatic_keys: "Subject is swallowing to equalize ear pressure, knuckles white on handrail, breathing short; Operator is typing on console, shoulders set, eyes on the pressure dials."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: Fanciful soft-sci-fi jargon (no 'warp drive' or 'shields', use 'fusion torch' or 'magnetic deflector')."
+      - "Never ignore physics (no artificial gravity without spin/thrust, no sound in space)."
+    pov_constraints: "Limited third-person; focus on metrics, system readouts, spatial measurements, and mechanical feedback."
+character_defaults:
+  voice_archetypes:
+    - type: "C (Pragmatic Engineer)"
+      description: "Technical, direct syntax; uses acronyms, structural references, and diagnostic logic."
+    - type: "A (Jaded Pilot)"
+      description: "Minimalist speech; short commands, casual references to fatal orbital mechanics."
+  somatic_tell_templates:
+    - "Massaging temples to relieve low-gravity sinus pressure"
+    - "Checking oxygen level gauge on wrist console under stress"
+    - "Tapping a magnetic boot against the deck to verify lock status"
+...

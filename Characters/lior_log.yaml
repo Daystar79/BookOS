@@ -1,0 +1,13 @@
+---
+snapshot:
+  active_focus: "IX — Threshold"
+  latent_weights:
+    I: 10
+    II: 10
+    III: 15
+  bias_strength: 70
+  default_somatic: "Lilt; tremor; shallow breath"
+  flexibility: 50
+  as_of: "build"
+history: []
+...

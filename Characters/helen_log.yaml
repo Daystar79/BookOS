@@ -1,0 +1,18 @@
+---
+snapshot:
+  active_focus: "VI — Compassion"
+  latent_weights:
+    II: 10
+    IV: 10
+    VIII: 10
+  bias_strength: 80
+  default_somatic: "Soft chest; open hands; proximity lean; hand withdraws when blocked"
+  flexibility: 50
+  as_of: "sample 1 M1"
+history:
+  - movement: "1 M1 — Cold Tea"
+    pressure: "Emotional/Social · Medium"
+    delta: "Snapshot note: hand-withdraw when care blocked; bias still care-as-assignment (Saturday food)"
+    permanence: "temporary→carry intent"
+    notes: "No weight shift; Saturday return open loop"
+...

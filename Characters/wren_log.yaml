@@ -1,0 +1,13 @@
+---
+snapshot:
+  active_focus: "VII — Presence"
+  latent_weights:
+    I: 10
+    II: 10
+    VI: 15
+  bias_strength: 65
+  default_somatic: "Stillness; loose jaw"
+  flexibility: 40
+  as_of: "build"
+history: []
+...

@@ -1,0 +1,55 @@
+---
+genre: "Cozy Mystery"
+outline_defaults:
+  subgenres:
+    - "Amateur Sleuth"
+    - "Small-Town Scandal"
+    - "Culinary/Bookshop Mystery"
+  tone_anchors:
+    - "Charming, low-stakes communities with hidden dark secrets"
+    - "Warm staging: crackling fireplaces, teacups, rain on windowpanes, dusty bookshelves"
+    - "Somatic tells of domesticity: sipping tea, adjusting glasses, folding laundry"
+  tonal_pacing: "Brisk but relaxed; dialogue is polite, gossip-laden, and full of social cues."
+world_defaults:
+  setting_type: "Small Town / Village"
+  regions:
+    - name: "The Village Green / Bookshop"
+      description: "Cozy book alcoves, scent of old paper and fresh tea, rain tapping the glass, comfortable armchairs."
+      access_level: "Unrestricted (open to public)."
+    - name: "The Vicarage / Manor Library"
+      description: "Polished wood, fireplace warmth, ticking grandfather clock, velvet drapes."
+      access_level: "By invitation or community status."
+  factions:
+    - name: "The Village Historical Society"
+      type: "Community Group"
+      doctrine_summary: "Preserve local heritage and gossip; keep outsiders from disrupting the town's quiet facade."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Member"
+          privileges: "Access to weekly tea meetings; permission to help with bake sales."
+        - rank: 5
+          title: "Archivist"
+          privileges: "Access to local registry and historical land deeds; controls gossip distribution."
+        - rank: 10
+          title: "Society President"
+          privileges: "Organizes town festivals; holds keys to the church records room; dictates local social status."
+      protocol_template:
+        name: "Tea Interrogation / Gossip Extract"
+        staging: "Cozy parlor, porcelain tea set, plate of lemon scones, grandfather clock ticking."
+        somatic_keys: "Sleuth is pouring tea, head tilted, eyes warm and encouraging; Witness is holding cup, fingers tight on handle, looking at the window."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: Explicit gore or graphic violence on the page (focus on puzzle and character quirks)."
+      - "Do not use clinical forensic jargon (sleuth solves using observation and local knowledge)."
+    pov_constraints: "Tight third-person or first-person; focus on village geography, community relationships, and physical clues."
+character_defaults:
+  voice_archetypes:
+    - type: "D (Polite Inquirer)"
+      description: "Amateur sleuth; conversational, asks disarming questions, uses self-deprecating humor."
+    - type: "B (Village Gossip)"
+      description: "Shopkeeper or neighbor; fast-paced, talks in whispers and leading statements."
+  somatic_tell_templates:
+    - "Polishing spectacles with a handkerchief under stress"
+    - "Sipping tea slowly to hide a sharp reaction"
+    - "Smoothing an apron or sweater when embarrassed"
+...

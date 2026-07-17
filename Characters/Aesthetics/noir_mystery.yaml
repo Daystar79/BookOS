@@ -1,0 +1,19 @@
+---
+genre: "Noir Mystery"
+fabrics:
+  - "Heavy, wet-smelling wool gabardine"
+  - "Stiff, creaking leather that has lost its polish"
+  - "Threadbare cotton shirt with yellowed collar margins"
+clothing_styles:
+  - "Double-breasted trench coat, belt tied rather than buckled"
+  - "Rumpled suit jacket with pockets sagging from notebooks and tools"
+  - "Patrolman's wool uniform with brass buttons dulled by rain"
+colors:
+  - "Drab olive, slate gray, and muddy brown"
+  - "Faded navy blue and charcoal"
+  - "Off-white and tea-stained yellow"
+accessories:
+  - "A silver-plated pocket watch with a scratched crystal"
+  - "A leather shoulder holster worn under the left arm"
+  - "A silver-plated flask containing cheap whiskey tucked in the breast pocket"
+...

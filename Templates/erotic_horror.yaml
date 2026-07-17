@@ -1,0 +1,55 @@
+---
+genre: "Erotic Horror"
+outline_defaults:
+  subgenres:
+    - "Gothic Obsession"
+    - "Flesh & Metal Integration"
+    - "Eldritch Intimacy"
+  tone_anchors:
+    - "Subverting safety rules to explore taboo psychological draw"
+    - "Vibrant somatic descriptions of heat, breath, skin contact, and physical invasion"
+    - "The juxtaposition of desire, pain, and loss of boundaries"
+  tonal_pacing: "Intense, slow-burning rhythmic sentences; heavy focus on tactile, olfactory, and thermal staging."
+world_defaults:
+  setting_type: "Private Sanctuary / Chamber"
+  regions:
+    - name: "The Velvet Salon"
+      description: "Draped dark tapestries, heavy scent of musk and rot, flickering firelight, low-set furniture."
+      access_level: "Invitation only."
+    - name: "The Flesh-Forge / Laboratory"
+      description: "Surgical steel, leather restraints, blood gutters, scent of rubbing alcohol and sweat."
+      access_level: "Initiate rank required."
+  factions:
+    - name: "The Guild of Carnal Transmutation"
+      type: "Religious Order / Secret Society"
+      doctrine_summary: "Physical form is a barrier to be broken through ecstatic pain and communion."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Supplicant"
+          privileges: "Permission to witness public rites; basic sensory trials."
+        - rank: 5
+          title: "Officiant"
+          privileges: "Conducts standard sacraments; right to select partners for rites."
+        - rank: 10
+          title: "Sovereign / Hierophant"
+          privileges: "Dictates doctrinal law; exempt from physical bounds."
+      protocol_template:
+        name: "Ecstatic Binding"
+        staging: "Stone altar, iron rings, silk ropes, heavy incense, warm oil burners."
+        somatic_keys: "Subject shows flushed skin, rapid chest rises, arching spine, pupil dilation; Officiant is slow-moving, tracing skin with cold steel, breath hot against subject's neck."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: Clinical anatomical terms (use sensory metaphors of texture/temperature)."
+      - "Requires strict compliance with the safety rules in Rules_Index.md (Lolicon/Shotacon strictly banned; Canon Adult = YES)."
+    pov_constraints: "Tight first-person or close third-person; focus entirely on somatic feedback (heat, weight, skin friction, breath)."
+character_defaults:
+  voice_archetypes:
+    - type: "C (The Dominant Architect)"
+      description: "Quiet, low register, command-driven sentences, absolute certainty."
+    - type: "E (The Overwhelmed Submissive)"
+      description: "Gasping cadence, fragmented responses, sensory-reactive dialogue."
+  somatic_tell_templates:
+    - "Trembling fingers tracing a partner's jawline"
+    - "Swallowing hard as breath is held under touch"
+    - "Shifting body weight closer to a heat source"
+...

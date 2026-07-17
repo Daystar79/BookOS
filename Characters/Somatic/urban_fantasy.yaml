@@ -1,0 +1,36 @@
+---
+genre: "Urban Fantasy"
+races:
+  human:
+    tics:
+      - "Checking the smartphone battery level when nervous"
+      - "Massaging the temples during head strain"
+    breathing_patterns:
+      - "Shallow, fast breathing under city noise"
+    posture_shifts:
+      - "Hunching shoulders in crowded subway cars"
+  vampire:
+    tics:
+      - "Tracing the canine tooth with the tongue when hungry"
+      - "Adjusting a high coat collar to block sunlight"
+    breathing_patterns:
+      - "Minimal chest movement; holding breath to listen"
+    posture_shifts:
+      - "Standing perfectly still in shadows; head tilt"
+  werewolf:
+    tics:
+      - "Sniffing the air discreetly near exhausts or drains"
+      - "Flexing hands into claws under anger pressure"
+    breathing_patterns:
+      - "Deep, heavy chest respiration; low growls"
+    posture_shifts:
+      - "Leaning forward on the balls of feet, ready to spring"
+  fae:
+    tics:
+      - "Fiddling with iron keys or silver coins"
+      - "Blinking slowly when reading modern text"
+    breathing_patterns:
+      - "Inhaling deeply to smell magical residues"
+    posture_shifts:
+      - "Standing with hands folded behind the back, chin high"
+...

@@ -1,0 +1,55 @@
+---
+genre: "Space Opera"
+outline_defaults:
+  subgenres:
+    - "Galactic Empire"
+    - "Military Fleet Operations"
+    - "Alien Diplomatic Intrigue"
+  tone_anchors:
+    - "Epic scope, grand battles, and galactic diplomacy"
+    - "Vibrant staging: massive viewports displaying starfields, gilded senate halls, hum of hyperdrives"
+    - "Somatic tells of command pressure, alien environmental reaction, and gravitational forces"
+  tonal_pacing: "Sweeping, cinematic pacing; dramatic dialogue and formal diplomatic register."
+world_defaults:
+  setting_type: "Galactic Alliance / Star System"
+  regions:
+    - name: "The Grand Senate Canopy"
+      description: "Towering white-domed auditorium, floating representative pods, translation arrays."
+      access_level: "Senator or Envoy credential."
+    - name: "The Capital Cruiser Bridge"
+      description: "Glass viewport showing orbital battlefronts, officer consoles, holographic starchart."
+      access_level: "Naval Officer clearance."
+  factions:
+    - name: "The Imperial Star Fleet"
+      type: "Military Faction / Government"
+      doctrine_summary: "Maintain order across thousand worlds through military dominance and administrative trade control."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Fleet Cadet"
+          privileges: "Access to training deck, basic uniform."
+        - rank: 5
+          title: "Lieutenant Commander"
+          privileges: "Command of fighter squadron; access to tactical data."
+        - rank: 10
+          title: "Admiral of the Fleet"
+          privileges: "Sovereign fleet command; direct authority to bomb orbital facilities."
+      protocol_template:
+        name: "Hyperspace Transition"
+        staging: "Naval bridge, warning red alarm, low throb of hyperdrive, crew buckled into chairs."
+        somatic_keys: "Commander is clutching chair arms, chest tight, staring straight ahead; Helmsman has hand flat on thrust lever, sweat on brow, waiting for countdown."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: Modern terrestrial slang (use galactic units, formal alien/naval address)."
+      - "Do not make space travel feel routine (show the massive gravity shifts, light distortions)."
+    pov_constraints: "Third-person limited across multiple viewpoints (Senators, Pilots, Admirals); focus on grand scale and political conflict."
+character_defaults:
+  voice_archetypes:
+    - type: "D (Galactic Senator)"
+      description: "Orator; formal, persuasive syntax, uses historical galactic anecdotes."
+    - type: "F (Hardened Officer)"
+      description: "Minimalist naval speech; standard commands, technical status updates."
+  somatic_tell_templates:
+    - "Massaging the neck where gravity harness rubs during maneuvers"
+    - "Squinting as the hyperdrive flare bends starlight"
+    - "Clasping hands behind the back in standard parade rest"
+...

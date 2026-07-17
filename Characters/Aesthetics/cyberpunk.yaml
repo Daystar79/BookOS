@@ -1,0 +1,19 @@
+---
+genre: "Cyberpunk"
+fabrics:
+  - "Slick, waterproof vinyl that squeaks with movement"
+  - "Threadbare, oily synthetic weave that clings to the skin"
+  - "Heavy, insulated ballistic nylon with reinforced stitching"
+clothing_styles:
+  - "Oversized utility coat with multiple interior pockets, collar turned up"
+  - "Sleek, close-fitting corporate suit with concealed seams"
+  - "Makeshift street gear: patched trousers, tech vest, and fingerless gloves"
+colors:
+  - "Matte black, charcoal gray, with single slashes of electric cyan"
+  - "Oily iridescent green and bruised violet"
+  - "High-vis hazard orange faded by acid rain"
+accessories:
+  - "Concealed optical filter glasses that reflect a copper sheen"
+  - "A diagnostic cable looped around the wrist like a bracelet"
+  - "A portable server deck strapped to the thigh"
+...

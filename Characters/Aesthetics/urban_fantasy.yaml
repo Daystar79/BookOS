@@ -1,0 +1,40 @@
+---
+genre: "Urban Fantasy"
+races:
+  human:
+    fabrics:
+      - "Denim, cotton fleece, synthetic windbreaker nylon"
+    clothing_styles:
+      - "Hoodie over jeans, sneakers, casual street jacket"
+    colors:
+      - "Gray, navy blue, beige"
+    accessories:
+      - "Smartphone, earbuds, keychain with house keys"
+  vampire:
+    fabrics:
+      - "Slick leather, heavy silk, dark velvet"
+    clothing_styles:
+      - "Double-breasted trench coat, tailored dark suit, sunglasses"
+    colors:
+      - "Deep black, blood red, charcoal gray"
+    accessories:
+      - "Antique silver signet ring, dark umbrella"
+  werewolf:
+    fabrics:
+      - "Heavy canvas, flannel, distressed denim"
+    clothing_styles:
+      - "Plaid button-down shirt, work boots, heavy leather belt"
+    colors:
+      - "Earth brown, pine green, faded blue"
+    accessories:
+      - "A bone tooth pendant, utility knife, heavy watch"
+  fae:
+    fabrics:
+      - "Iridescent silk, soft leather, gossamer wool"
+    clothing_styles:
+      - "Asymmetrical long coat, embroidered tunic, boots"
+    colors:
+      - "Emerald green, twilight violet, copper"
+    accessories:
+      - "A runic coin, a small silver vial of honeyed water"
+...

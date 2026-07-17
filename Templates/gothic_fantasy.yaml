@@ -1,0 +1,55 @@
+---
+genre: "Gothic Fantasy"
+outline_defaults:
+  subgenres:
+    - "Dark Academia"
+    - "Eldritch Cults"
+    - "Feudal Decay"
+  tone_anchors:
+    - "Ancient secrets decaying under institutional corruption"
+    - "Visceral dread, cold stone, and candlelight shadow staging"
+    - "Somatic focus on cold sweat, rapid breathing, and heavy velvet textures"
+  tonal_pacing: "Slower, lyrical sentence structures; heavy focus on architecture, smell of old paper, damp mold, and candle wax."
+world_defaults:
+  setting_type: "Realm / Cathedral Province"
+  regions:
+    - name: "The High Archives"
+      description: "Towering stone halls, spiraling iron staircases, hundreds of thousands of chained leather-bound scrolls."
+      access_level: "Scribe Rank 3 or Archon's wax seal required."
+    - name: "The Shadowed Crypts"
+      description: "Cold sepulchers beneath the city where bloodline ancestors are entombed; scent of damp stone and dry flowers."
+      access_level: "High Priest or Inquisitor rank only."
+  factions:
+    - name: "The Order of the Chained Sun"
+      type: "Religious Order / Inquisition"
+      doctrine_summary: "Light must be preserved through strict containment of forbidden knowledge; penance through physical trials."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Novitiate / Scribe"
+          privileges: "Access to common library; permission to copy standard texts."
+        - rank: 5
+          title: "Inquisitor"
+          privileges: "Right to demand entry to private quarters; authority to conduct trials."
+        - rank: 10
+          title: "Archon / Grand Master"
+          privileges: "Sole access to the Sealed Reliquary; authority to declare heretical banishment."
+      protocol_template:
+        name: "Blood Sacrament"
+        staging: "Stone chamber, central altar, brass bowl filled with dried lavender, flickering candlelight, shadow-draped walls."
+        somatic_keys: "Presider is calm, chest movements slow, hands steady holding the silver knife; Subject is trembling, shoulders hunched, throat swallowing repeatedly."
+  narrative_rules:
+    linguistic_taboos:
+      - "Do not use modern colloquialisms (e.g. use 'hour' or 'liturgy' instead of 'schedule/timing')."
+      - "Do not describe monsters as abstract ideas (show physical somatic panic: skin prickling, muscle lock, shallow panting)."
+    pov_constraints: "Tight third-person; focus sensory descriptions on shadow play, chill air, heavy materials (wool, velvet, stone), and rhythmic church bell bells."
+character_defaults:
+  voice_archetypes:
+    - type: "D (Archaic Scholar)"
+      description: "Acolyte or librarian; uses formal, slightly convoluted syntax, Latinate words, and respectful titles."
+    - type: "F (Esoteric Inquisitor)"
+      description: "Severe, short sentences, sharp consonants, commands framed as inevitable duties."
+  somatic_tell_templates:
+    - "Trimming finger nails with a small bone knife during interrogation"
+    - "Clutching an iron sun pendant when fear spikes"
+    - "Shivering as the cold air drafts through stone corridors"
+...

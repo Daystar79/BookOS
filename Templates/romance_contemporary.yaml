@@ -1,0 +1,52 @@
+---
+genre: "Contemporary Romance"
+outline_defaults:
+  subgenres:
+    - "Enemies to Lovers"
+    - "Workplace Romance"
+    - "Small Town Reunion"
+  tone_anchors:
+    - "Emotional vulnerability, hyper-awareness of proximity, and dynamic tension"
+    - "Staging: bustling coffee shops, crowded elevators, quiet rain-shelters, warm apartments"
+    - "Somatic tells of emotional stakes: breath catches, stomach drops, skin temperature changes near the love interest"
+  tonal_pacing: "Lively dialogue with emotional subtext; slow-burning physical proximity descriptions; rapid pacing during emotional conflict."
+world_defaults:
+  setting_type: "Modern Urban / Small Town"
+  regions:
+    - name: "The Shared Workspace / Office"
+      description: "Glass partitions, coffee machine hum, bright lighting, physical proximity barriers."
+      access_level: "Employee card."
+    - name: "The Sanctuary (Apartment)"
+      description: "Warm lighting, soft fabric textures, personal photos, sound of rain outside."
+      access_level: "Private invitation."
+  factions:
+    - name: "The Peer Network / Friend Group"
+      type: "Social Unit"
+      doctrine_summary: "Provide unsolicited dating advice and emotional intervention; force proximity when necessary."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Friend"
+          privileges: "Access to group chats; right to ask probing emotional questions."
+        - rank: 5
+          title: "Best Friend / Confidant"
+          privileges: "Access to private apartment keys; authority to initiate emergency intervention."
+      protocol_template:
+        name: "Proximity Trap"
+        staging: "Bustling cafe, single small table, shared umbrella under rain, brushing shoulders."
+        somatic_keys: "Subject A is looking down, cheeks slightly flushed, breathing shallowly; Subject B is leaning in, voice dropping in pitch, gaze locked on Subject A's eyes."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: Clichéd romance metaphors (e.g. no 'heart skipped a beat', describe the somatic catch in the throat)."
+      - "Never skip the somatic build-up (focus on eye contact, touch boundaries, thermal changes)."
+    pov_constraints: "Dual POV (alternating chapters) or single close third-person; focus heavily on the character's internal interpretation of the other's body language."
+character_defaults:
+  voice_archetypes:
+    - type: "A (Defensive Wit)"
+      description: "Enemies-to-lovers lead; fast, sarcastic banter used to hide emotional vulnerability."
+    - type: "E (Sincere Communicator)"
+      description: "Direct, warm syntax; uses honest, vulnerable statements to disarm the partner."
+  somatic_tell_templates:
+    - "Fidgeting with a collar or cuff when proximity increases"
+    - "Clearing the throat to break a heavy silence"
+    - "Brushing a stray lock of hair behind the ear when flustered"
+...

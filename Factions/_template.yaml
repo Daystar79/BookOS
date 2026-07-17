@@ -1,0 +1,34 @@
+---
+name: "Faction Name"
+slug: "faction-slug"
+type: "Religious Order / Political Party / Corporation / Guild"
+doctrine:
+  purpose: "Core objective or mission statement"
+  beliefs:
+    - "Belief, principle, or policy stance 1"
+    - "Belief, principle, or policy stance 2"
+hierarchy:
+  structure: "Brief description of power distribution"
+  ranks:
+    - rank: 1
+      title: "Title for Rank 1"
+      privileges: "Access rights or duties for this rank"
+    - rank: 2
+      title: "Title for Rank 2"
+      privileges: "Access rights or duties for this rank"
+logistics:
+  headquarters: "Primary location/base"
+  revenue_model: "How they sustain themselves financially/resource-wise"
+  assets:
+    - "Asset or resources owned 1"
+  recruitment: "How new members join or are inducted"
+protocols:
+  rites:
+    - name: "Ritual or Ceremony Name"
+      purpose: "Goal of the procedure"
+      staging: "Location, equipment, vestments required"
+      actions: "Step-by-step physical procedure"
+      somatic_keys: "Somatic alignments/states of participants"
+  linguistic_taboos:
+    - "Banned phrase or jargon specific to this group"
+...

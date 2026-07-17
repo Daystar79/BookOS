@@ -1,0 +1,14 @@
+---
+genre: "Noir Mystery"
+tics:
+  - "Fumbling with a book of matches or checking a lighter spark"
+  - "Massaging the temples or bridge of the nose to ward off fatigue"
+  - "Checking the pocket for a notepad or checking the cylinder of a revolver"
+breathing_patterns:
+  - "Heavy, sighing exhalations, smelling of tobacco and stale coffee"
+  - "Short, guarded breathing when trailing a suspect in the dark"
+posture_shifts:
+  - "Hunching the neck down into the collar of a trench coat"
+  - "Leaning against doorframes with thumbs tucked into the belt"
+  - "Shifting weight from one foot to the other on wet pavement"
+...

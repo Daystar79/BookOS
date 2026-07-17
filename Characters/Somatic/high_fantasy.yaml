@@ -1,0 +1,44 @@
+---
+genre: "High Fantasy"
+races:
+  human:
+    tics:
+      - "Resting a hand flat on the sword pommel or dagger hilt"
+      - "Cracking knuckles when planning or anticipating conflict"
+    breathing_patterns:
+      - "Steady, paced breathing during focus; rapid chest-rises under emotional strain"
+    posture_shifts:
+      - "Shifting weight to a defensive stance; standing tall to address authority"
+  elf:
+    tics:
+      - "Slightly tilting the head to catch distant, quiet sounds"
+      - "Tracing the edge of a ring or bracelet with index finger"
+    breathing_patterns:
+      - "Incredibly slow, silent nose-breathing that barely moves the chest"
+    posture_shifts:
+      - "Standing perfectly still without shifting weight; fluid proximity lean"
+  dwarf:
+    tics:
+      - "Stroking or braiding the beard when calculating/planning"
+      - "Adjusting a heavy belt or harness buckle"
+    breathing_patterns:
+      - "Deep, grunting breaths, throat clearing before speaking"
+    posture_shifts:
+      - "Crossing arms over a broad chest, planting feet wide apart"
+  orc:
+    tics:
+      - "Flaring nostrils when smelling scent changes or magic residue"
+      - "Grinding the teeth, showing tusk movements"
+    breathing_patterns:
+      - "Heavy, audible breathing; deep growling chest respirations"
+    posture_shifts:
+      - "Hunching the back, neck muscles tensing to project physical dominance"
+  halfling:
+    tics:
+      - "Fumbling with a small coin, key, or pocket trinket"
+      - "Wiggling the toes in the dirt under stress"
+    breathing_patterns:
+      - "Quick, light breathing; soft gasping when startled"
+    posture_shifts:
+      - "Tucking the head down to blend into shadows; quick, low shifts behind covers"
+...

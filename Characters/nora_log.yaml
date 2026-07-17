@@ -1,0 +1,13 @@
+---
+snapshot:
+  active_focus: "VI — Compassion"
+  latent_weights:
+    I: 15
+    II: 10
+    VII: 10
+  bias_strength: 70
+  default_somatic: "Warm touch; face-scan"
+  flexibility: 35
+  as_of: "build"
+history: []
+...

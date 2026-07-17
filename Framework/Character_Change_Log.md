@@ -1,8 +1,8 @@
 # Character Change Log
-*Matrix evolution ledger — companion to Continuity_Ledger. Separate from character cards.*
+*Matrix evolution ledger — consolidated quick reference for the author.*
 
-**Cards** (`Characters/[slug].md`) stay identity/load sheets: voice, cultural bias, bias *name*, history anchors, build defaults.  
-**This file** tracks how the matrix moves over the book: current runtime snapshot + append-only movement deltas.
+**Individual Logs** (`Characters/[slug]_log.yaml`) are the primary technical runtime data source loaded by agents during drafting. 
+**This file** serves as a consolidated, human-readable quick reference for the author to view all character snapshots and history in one place. Routine post-movement saves should update both the individual log files (for data loading) and this unified log (for visual reference).
 
 Do not write `transformation_history` (or movement-by-movement deltas) onto character cards.
 

@@ -1,0 +1,55 @@
+---
+genre: "Psychological Horror"
+outline_defaults:
+  subgenres:
+    - "Cosmic Dread"
+    - "Isolation Horror"
+    - "Body/Mind Dissolution"
+  tone_anchors:
+    - "Total loss of agency and creeping madness"
+    - "Sensory distortion and surreal environments"
+    - "Somatic tells of absolute terror: muscle freezing, nausea, derealization"
+  tonal_pacing: "Slower, suffocating buildup followed by sudden, visceral syntactic collapse during panic."
+world_defaults:
+  setting_type: "Decaying Environment"
+  regions:
+    - name: "The Abandoned Ward / Complex"
+      description: "Damp walls, mold scent, flickering amber lights, corridors that seem to lengthen."
+      access_level: "Forbidden."
+    - name: "The Liminal Space"
+      description: "Non-Euclidean rooms, static-filled screens, scent of dry dust and iron."
+      access_level: "Unconscious threshold entry."
+  factions:
+    - name: "The Hive / Collective Voice"
+      type: "Eldritch / Psychological entity"
+      doctrine_summary: "Dissolution of individual ego into a unified, silent consensus."
+      hierarchy_ranks:
+        - rank: 1
+          title: "The Unaware"
+          privileges: "Normal sensory range; unaware of the entity."
+        - rank: 5
+          title: "The Hollowed"
+          privileges: "Auditory leak; can see into liminal spaces."
+        - rank: 10
+          title: "The Vessel"
+          privileges: "Total integration; acts as the entity's physical anchor."
+      protocol_template:
+        name: "Sensory Evacuation"
+        staging: "Dark room, single mirror, slow drip of water, absolute silence."
+        somatic_keys: "Subject is staring without blinking, pupils fully dilated, cold sweat coating the collarbone; the entity's presence somaticizes as an icy pressure at the base of the skull."
+  narrative_rules:
+    linguistic_taboos:
+      - "Never explain the supernatural mechanics (keep it viscerally somatic)."
+      - "Banned words: 'terror', 'madness', 'horror' (show the physical decay)."
+    pov_constraints: "Close first-person or unstable third-person; focus on shifting spatial layouts and somatic feedback loops."
+character_defaults:
+  voice_archetypes:
+    - type: "A (The Deteriorating Mind)"
+      description: "Repetitive phrasing, stuttered rhythms, sensory lapses, dialogue that trails off."
+    - type: "E (The Entrapping Guide)"
+      description: "Hypnotic, rhythmic, flat affect; describes horrific events with cold, technical detachment."
+  somatic_tell_templates:
+    - "Scratching skin where it feels foreign or artificial"
+    - "Biting lips until blood pools to check if awake"
+    - "Staring at hands as if they belong to someone else"
+...

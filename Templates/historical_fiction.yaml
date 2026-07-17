@@ -1,0 +1,55 @@
+---
+genre: "Historical Fiction"
+outline_defaults:
+  subgenres:
+    - "Biographical Drama"
+    - "War / Military History"
+    - "Social / Class Realism"
+  tone_anchors:
+    - "Meticulous period accuracy and immersive historical texture"
+    - "Staging: open hearths, oil lamps, smell of horse manure, drafty brick structures"
+    - "Somatic tells of physical labor, cold, period-accurate diseases, and heavy textiles"
+  tonal_pacing: "Measured and deliberate; dialogue reflective of period register and social class constraints."
+world_defaults:
+  setting_type: "Historical Era"
+  regions:
+    - name: "The Guild Hall / Manor House"
+      description: "Oak beams, wax candles, wool tapestries, stone fireplaces, scent of roasted game."
+      access_level: "Guild member or aristocratic standing required."
+    - name: "The Tenement / Fields"
+      description: "Muddy lanes, open cesspits, drafty timber frames, straw bedding, coal smoke."
+      access_level: "Unrestricted (commoners)."
+  factions:
+    - name: "The Merchant Guild"
+      type: "Corporation / Trade Guild"
+      doctrine_summary: "Protect trade monopolies and regulate prices/apprenticeships within the municipal borders."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Apprentice"
+          privileges: "Lodging in master's attic; basic food; right to learn trade."
+        - rank: 5
+          title: "Journeyman"
+          privileges: "Permission to sell goods at market; basic guild voting rights."
+        - rank: 10
+          title: "Guild Master"
+          privileges: "Seat on the town council; right to seal trade agreements; controls guild funds."
+      protocol_template:
+        name: "Indenture Oath"
+        staging: "Dim guild hall, oak table, single candle, ledger open on table, wax seal stamp ready."
+        somatic_keys: "Master is sitting tall, fingers flat on the ledger, mouth set in a firm line; Apprentice is holding the quill, hand shaking, head bowed."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: Modern terminology, idioms, or psychological jargon (no 'stress', 'mindset', 'efficiency')."
+      - "Never allow characters access to knowledge, inventions, or historical foresight beyond their active era."
+    pov_constraints: "Tight third-person or first-person; focus on the limited information speed (letters, messengers) and physical realities of the era (lack of sanitation, manual work)."
+character_defaults:
+  voice_archetypes:
+    - type: "D (Educated Merchant)"
+      description: "Master or clerk; formal, slightly archaic syntax, uses period measurements and legal idioms."
+    - type: "E (Common Laborer)"
+      description: "Apprentice or soldier; dialect-driven fragments, concrete descriptions of physical work."
+  somatic_tell_templates:
+    - "Blowing on hands to warm them in a drafty winter room"
+    - "Scratching under a wool collar irritated by sweat"
+    - "Scraping mud from boots with a wooden tool at the threshold"
+...

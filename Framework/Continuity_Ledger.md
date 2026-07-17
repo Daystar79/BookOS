@@ -7,22 +7,23 @@ This ledger is the source of truth for **narrative timeline, locations, and scen
 
 ---
 
-## Dual ledger save (with Character Change Log)
+## Dual ledger save (with Character Logs)
 
-On **every approved movement**, write **both** ledgers — not the character cards:
+On **every approved movement**, write this story ledger, update the individual character logs, and sync the consolidated visual reference log:
 
 | Save | Where | Owns |
 |:---|:---|:---|
 | **Story ledger** | This file | Day/time, draft path, **scene** somatic close, continuity & plot beats, open loops |
-| **Character change log** | `Framework/Character_Change_Log.md` | Durable matrix Snapshot + append-only Movement History (Focus, weights, bias strength, baseline somatic) |
+| **Character change log** | `Characters/[slug]_log.yaml` | Durable matrix snapshot + append-only history (primary data load source) |
+| **Consolidated log** | `Framework/Character_Change_Log.md` | Human-readable quick-reference snapshot and history for all characters |
 
-- Scene close lives here; matrix evolution lives in Character_Change_Log.
+- Scene close lives here; matrix evolution lives in the character's `_log.yaml` and is summarized in `Framework/Character_Change_Log.md`.
 - Character cards stay identity/load sheets — do not append movement history to card YAML.
-- Temporary tells: this ledger only. Medium+ / permanent matrix shifts: Character_Change_Log required.
-- Next session: Ledger Integrity Pass → this ledger (latest real row) + Character_Change_Log Snapshot + on-scene cards.
+- Temporary tells: this ledger only. Medium+ / permanent matrix shifts: `Characters/[slug]_log.yaml` (and `Framework/Character_Change_Log.md`) required.
+- Next session: Ledger Integrity Pass → this ledger (latest real row) + active character logs + on-scene cards.
 
 ### Somatic State on Close (column guide)
-Per on-scene character, one compact clause — e.g. `Reed: jaw locked, high shoulders; Helen: open hands, soft chest`. Scene-close body only. If baseline permanently changed, update Character_Change_Log Snapshot (not the card).
+Per on-scene character, one compact clause — e.g. `Reed: jaw locked, high shoulders; Helen: open hands, soft chest`. Scene-close body only. If baseline permanently changed, update the character's `_log.yaml` snapshot and the consolidated log (not the card).
 
 ### Empty vs placeholder
 | State | Meaning |

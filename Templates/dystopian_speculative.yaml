@@ -1,0 +1,55 @@
+---
+genre: "Dystopian Speculative"
+outline_defaults:
+  subgenres:
+    - "Resource Scarcity"
+    - "Bureaucratic Surveillance"
+    - "Post-Collapse Reconstruction"
+  tone_anchors:
+    - "Systemic oppression, quiet rebellion, and bleak survival stakes"
+    - "Staging: gray concrete yards, humming wire gates, dust storms, sterile ration depots"
+    - "Somatic tells of hunger, exposure to elements, and the constant fear of surveillance"
+  tonal_pacing: "Spare, minimalist prose; characters speak in quiet, guarded tones; descriptions highlight decay and systemic control."
+world_defaults:
+  setting_type: "Regulated Sector"
+  regions:
+    - name: "The Ration Depot / Square"
+      description: "Concrete walls, chain-link fences, megaphone announcements, dust wind blowing."
+      access_level: "Unrestricted, but monitored by guards."
+    - name: "The Industrial Habitation Block"
+      description: "Sterile communal dorms, flickering yellow tubes, metallic bunk frames, scent of cheap soap."
+      access_level: "Assigned sector ID card required."
+  factions:
+    - name: "The Ministry of Allocation"
+      type: "Government Faction"
+      doctrine_summary: "Maintain stability through total regulation of food, water, movement, and language."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Registrant"
+          privileges: "Daily food bar allotment; sector bunk assignment."
+        - rank: 5
+          title: "Sector Warden"
+          privileges: "Authority to search quarters; right to revoke rations."
+        - rank: 10
+          title: "Director of Allocation"
+          privileges: "Directs resource distribution curves; dictates quarantine codes."
+      protocol_template:
+        name: "Security Inspection"
+        staging: "Bunk room, metal lockers, searchlights sweeping window, wind howling outside."
+        somatic_keys: "Warden is searching drawers, movements mechanical and cold; Bunk owner is standing at attention, shoulders locked, chest breathing fast and shallow."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: Words suggesting excessive optimism or emotional ease."
+      - "Do not describe rebellious actions as grand gestures (show quiet, physical acts of defiance: hiding a seed, passing a note)."
+    pov_constraints: "Tight third-person; focus on spatial details of control (cameras, fences, checkpoints) and physical discomforts (chill, dust)."
+character_defaults:
+  voice_archetypes:
+    - type: "A (Guarded Survivor)"
+      description: "Monosyllabic speech; says only what is safe, uses code words, alerts are physical."
+    - type: "F (Bureaucratic Enforcer)"
+      description: "Severe, cold register; talks in policy numbers and direct commands."
+  somatic_tell_templates:
+    - "Avoiding direct eye contact with security cameras"
+    - "Checking the pocket for hidden contraband cards"
+    - "Rubbing joints that ache from damp, unheated sectors"
+...

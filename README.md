@@ -98,7 +98,8 @@ Character cards hold **build defaults** (`transformation_weights`: active_focus 
 
 **Post-Movement Commit (mandatory dual ledger save):** On each approved movement, update:
 1. `Framework/Continuity_Ledger.md` — timeline, scene somatic close, plot beats  
-2. `Framework/Character_Change_Log.md` — durable Focus/weights/somatic/bias-strength + history rows  
+2. `Characters/[slug]_log.yaml` — the individual YAML change log for each on-scene character who experienced matrix pressure or durable shifts (for data loading).
+3. `Framework/Character_Change_Log.md` — the consolidated, human-readable change log (for quick reference).
 
 Cards stay identity/load sheets. Neither ledger alone is enough.
 
@@ -122,3 +123,13 @@ Run `Framework/linter.py` on your drafts to scan for:
 ---
 
 *Install once. Load for every session. Let the matrix run silently. Write clean prose.*
+
+---
+
+## License
+
+BookOS uses a hybrid open-source license model:
+* Software components (such as [linter.py](file:///mnt/Book/BookOS/Framework/linter.py)) are licensed under the **MIT License**.
+* Creative content, manuals, character card formats, and YAML schemas are licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**.
+
+See [LICENSE.md](file:///mnt/Book/BookOS/LICENSE.md) for full license details.

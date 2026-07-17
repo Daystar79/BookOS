@@ -1,0 +1,55 @@
+---
+genre: "Urban Fantasy"
+outline_defaults:
+  subgenres:
+    - "Supernatural Noir"
+    - "Hidden World Intrigue"
+    - "Modern Magic Realism"
+  tone_anchors:
+    - "Contrast between modern city grit and hidden magical underground"
+    - "Staging: rain-slick asphalt, brick walls with invisible runes, basement alchemical bars"
+    - "Somatic tells of double-life stress: checking pockets for iron tokens, smelling sulfur under car exhaust"
+  tonal_pacing: "Fast, punchy dialogue; mix of modern slang and ancient lore; quick scene transitions."
+world_defaults:
+  setting_type: "Modern City (Dual Layer)"
+  regions:
+    - name: "The Velvet Lounge (Mundane)"
+      description: "Upscale neon-lit cocktail bar catering to human business executives."
+      access_level: "Unrestricted."
+    - name: "The Alchemical Bazaar (Hidden)"
+      description: "Basement market beneath the subway tracks; smells of dry sage, wet fur, and copper coins."
+      access_level: "Mark of the Hidden required (tattoo or token)."
+  factions:
+    - name: "The Warden Guild"
+      type: "Supernatural Police / Faction"
+      doctrine_summary: "Enforce the Veil of Secrecy; prevent conflicts between supernatural clans from spilling into mundane news."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Sentry"
+          privileges: "Access to municipal database, basic warding chalk."
+        - rank: 5
+          title: "Warden / Investigator"
+          privileges: "Authority to execute rogues; access to magical containment vault."
+        - rank: 10
+          title: "Overseer"
+          privileges: "Direct channel to mundane police commissioner; command of local wardens."
+      protocol_template:
+        name: "Veil Sweep / Mind Wipe"
+        staging: "Dim alleyway, brick wall, street lamp overhead, soft hum of subway below."
+        somatic_keys: "Warden is tracing a sigil in the air, fingers glowing blue, breath steam-like; Human witness is staring blankly, posture loose, eyes glassy."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: High-fantasy speech in modern settings (use urban slang, tech terms for magic)."
+      - "Never let human bystanders notice magical events without consequences."
+    pov_constraints: "Tight first-person or close third-person; focus on the sensory intersection of modern technology (smartphones, cars) and ancient magic."
+character_defaults:
+  voice_archetypes:
+    - type: "A (Streetwise Half-Breed)"
+      description: "Detective or rogue mage; sarcastic, uses modern tech terms for spells, short sentences."
+    - type: "B (Vampiric Aristocrat)"
+      description: "Ancient politician; slow, rhythmic syntax, dated vocabulary, polite but threatening register."
+  somatic_tell_templates:
+    - "Checking a silver coin in the pocket when an entity is near"
+    - "Flicking a lighter to smell the sulfur when checking for magic"
+    - "Tracing a scar on the palm that tingles near wards"
+...

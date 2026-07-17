@@ -1,0 +1,55 @@
+---
+genre: "High Fantasy"
+outline_defaults:
+  subgenres:
+    - "Epic Quest"
+    - "Courtly Intrigue"
+    - "Magical Cataclysm"
+  tone_anchors:
+    - "Vast scope, ancient legacies, and epic stakes"
+    - "Vibrant staging: wind-swept mountain paths, roaring castle hearths, magical residue"
+    - "Somatic tells of awe, magical exhaustion, and heavy armor fatigue"
+  tonal_pacing: "Stately, rhythmic sentence structures; rich, formal dialogue; descriptive weight given to nature, heraldry, and sensory magic effects."
+world_defaults:
+  setting_type: "Sovereign Realm"
+  regions:
+    - name: "The High Citadel"
+      description: "White granite walls, towering banners, marble thrones, smell of beeswax and ozone."
+      access_level: "Noble lineage or Royal summons required."
+    - name: "The Whispering Woods"
+      description: "Ancient canopy, bioluminescent moss, soft pine-needle floor, air thick with damp earth."
+      access_level: "Unrestricted, but dangerous."
+  factions:
+    - name: "The Arch-Mage Council"
+      type: "Guild / Order"
+      doctrine_summary: "Preserve the flow of magic and protect the realm from planar collapse; magic is a sacred geometry."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Apprentice / Initiate"
+          privileges: "Access to low-level spellbooks; laboratory clean-up duties."
+        - rank: 5
+          title: "Spell-Smith / Inquisitor"
+          privileges: "Right to forge magical items; authority to arrest rogue practitioners."
+        - rank: 10
+          title: "Grand Magus"
+          privileges: "Seat on the High Council; access to the planemapping chambers."
+      protocol_template:
+        name: "Planar Attunement"
+        staging: "Stone circle on mountain peak, central obsidian crystal, air crackling with lightning, silver runes glowing."
+        somatic_keys: "Magus is raising hands, eyes glowing white, posture rigid, skin cold to touch; Apprentice is kneeling, shoulders trembling under gravity pressure."
+  narrative_rules:
+    linguistic_taboos:
+      - "Banned: Modern terminology (use 'messenger' instead of 'communication', 'mount' instead of 'transport')."
+      - "Never explain magic as a video-game system (no mana bars, show physical cost: bleeding nose, joint locking)."
+    pov_constraints: "Third-person omniscient or multiple third-person limited; focus on geography, weather, and ancestral artifacts."
+character_defaults:
+  voice_archetypes:
+    - type: "D (Royal Diplomat)"
+      description: "Noble or councilor; uses complex sentence structures, formal register, and ancestral honorifics."
+    - type: "F (Solemn Guardian)"
+      description: "Knight or guide; minimalist, heavy syntax, talks in vows and concrete sensory alerts."
+  somatic_tell_templates:
+    - "Resting a hand on the pommel of a sword under tension"
+    - "Closing eyes to sense the current of magic in the air"
+    - "Adjusting heavy leather straps that are chafing"
+...

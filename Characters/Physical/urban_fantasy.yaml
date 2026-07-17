@@ -1,0 +1,44 @@
+---
+genre: "Urban Fantasy"
+races:
+  human:
+    builds:
+      - "Average build, slightly slouched from city life"
+      - "Wiry and compact, moving with defensive alertness"
+    facial_features:
+      - "Tired eyes, expressionless municipal face, dry lips"
+    coloration:
+      - "Pale skin from office jobs, tinted by street lighting"
+    marks:
+      - "Faint scar on the index finger from kitchen knife work"
+  vampire:
+    builds:
+      - "Tall and lean, moving with fluid, hunting stillness"
+      - "Aristocratic posture, shoulders set, chin high"
+    facial_features:
+      - "Sunken cheeks, sharp jaw, eyes that catch light in the dark"
+    coloration:
+      - "Ashen, bloodless complexion, looking like cold marble"
+    marks:
+      - "Faint, faded puncture marks on the inner wrist"
+  werewolf:
+    builds:
+      - "Broad-backed and muscular, moving with animal grace"
+      - "Dense posture, chest expanded, arms strong"
+    facial_features:
+      - "Heavy jaw, thick eyebrows, nose flared to track scents"
+    coloration:
+      - "Sun-tanned skin, looking healthy and flushed"
+    marks:
+      - "Thick claw-like scars along the ribs or arms"
+  fae:
+    builds:
+      - "Slight, fragile build, moving with floating lightness"
+      - "Intricate posture, tilting head at unnatural angles"
+    facial_features:
+      - "Sharp, elongated features, eyes that change shade in light"
+    coloration:
+      - "Skin with a pearlescent sheen under direct lighting"
+    marks:
+      - "Intricate runic tattoos that shimmer faintly near magic"
+...

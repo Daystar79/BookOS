@@ -10,7 +10,7 @@
 - `Framework/Rules_Index.md`
 - `Framework/Psychology/realm_data.yaml`
 - On-scene character cards from `Characters/`
-- `Framework/Character_Change_Log.md` (Current Snapshot — runtime matrix)
+- `Characters/[slug]_log.yaml` (Individual Character Logs — runtime matrix)
 - `Framework/Continuity_Ledger.md` (scene timeline / close)
 - `Framework/Modules.md` (scan for ENABLED modules)
 
@@ -46,15 +46,14 @@ Empty ledgers are normal on a new book. **Fake-empty** ledgers (placeholder rows
 | Rows with placeholders (`[Day & Time]`, `[Somatic…]`, `[Key events…]`, missing draft file) | **Remove** as data. Leave structure/headers; zero real rows is honest empty. |
 | `Drafts/draft_chapter_*_m*.md` exists with no ledger row | **Backfill** row from prose (time/somatic/plot as known) or mark `pending backfill` and **block draft** of the next movement until filled |
 | Ledger row exists, draft missing | Drop row or mark `orphan` — do not invent prose |
-| Row says Change log `pending` and movement is approved | Complete Character_Change_Log commit or keep **block** |
+| Row says Change log `pending` and movement is approved | Complete `_log.yaml` commit for on-scene characters or keep **block** |
 
-### 2. Character_Change_Log (`Framework/Character_Change_Log.md`)
+### 2. Character Logs (`Characters/[slug]_log.yaml`)
 | Condition | Action |
 |:---|:---|
-| Current Snapshot empty or missing active cast | **Seed** one row per active novel card from card build defaults (`As of: build`). Strip demo cast if this book is not the demo. |
-| Snapshot has characters with no card | Remove or archive row |
-| Approved Continuity_Ledger rows with no matching Movement History entry | **Backfill** History (durable deltas if known; else `No durable matrix change`) + refresh Snapshot if needed |
-| No approved movements + History says none yet | **OK** — honest empty; do not invent history |
+| Log missing or snapshot empty | **Seed** snapshot from the character card's build defaults (`as_of: build`). |
+| Approved Continuity_Ledger rows with no matching log history entry | **Backfill** the character's `_log.yaml` history (durable deltas if known; else empty/none) + refresh snapshot if needed |
+| No approved movements + history empty | **OK** — honest empty; do not invent history |
 
 ### 3. Gate
 - **CLEAN** or **CLEAN (empty project)** → proceed to design/draft.
@@ -123,13 +122,14 @@ No prose. **First:** Ledger Integrity Pass. Then pre-Q&A load: Rules_Index + on-
 | Write | File | What to record |
 |:---|:---|:---|
 | **1. Story ledger** | `Framework/Continuity_Ledger.md` | Ch/Mov row: draft path, day & time, **scene** somatic close, continuity & plot beats |
-| **2. Character change log** | `Framework/Character_Change_Log.md` | Update **Current Matrix Snapshot** for durable shifts; append **Movement History** rows (pressure, delta, permanence) |
+| **2. Character log** | `Characters/[slug]_log.yaml` | Update **snapshot** for durable shifts; append **history** entry (pressure, delta, permanence, notes) |
+| **3. Consolidated log** | `Framework/Character_Change_Log.md` | Sync snapshots/history across all characters for a human-readable visual reference |
 
-- Continuity_Ledger alone is incomplete. Character_Change_Log alone is incomplete. **Both.**
+- Continuity_Ledger alone is incomplete. Individual character logs and the consolidated reference log must be updated in sync.
 - **Character cards stay out of routine commits.** They are identity/load sheets (voice, bias name, build defaults). Do not append movement history or deltas to card YAML.
 - Temporary-only tells: Continuity_Ledger close only.
-- Medium+ pressure or permanent Focus/weight/somatic/bias-strength shift: must update Snapshot + History in Character_Change_Log.
-- If no durable matrix change: still write Continuity_Ledger row; append History note “No durable matrix change.”
+- Medium+ pressure or permanent Focus/weight/somatic/bias-strength shift: must update snapshot + history in the character's `_log.yaml` and sync the changes to `Framework/Character_Change_Log.md`.
+- If no durable matrix change: still write Continuity_Ledger row; no need to append log history entries unless a durable change occurred.
 - Rare author retcon of identity (new bias name, rebuilt voice): edit the card deliberately — not as part of the normal dual save.
 
 ### Multi-Movement Consistency
@@ -181,23 +181,21 @@ Never write finished Realm X Passage unless scene earns open hands without perfo
 Characters evolve or regress dynamically based on narrative pressure.
 - Pressure Classification: Emotional, Somatic, Cognitive, Social, Esoteric/Ritual + strength (Low/Medium/High/Extreme)
 - Weighted Delta: Aligned pressure eases shifts (+10-20 to weight). Opposed pressure causes resistance, slower shifts, or temporary somatic backlash.
-- Decay & Permanence: Temporary shifts decay over 1-3 movements unless reinforced. Medium/permanent shifts recorded in **Character_Change_Log** at Post-Movement Commit (not on the card).
+- Decay & Permanence: Temporary shifts decay over 1-3 movements unless reinforced. Medium/permanent shifts recorded in `Characters/[slug]_log.yaml` at Post-Movement Commit (not on the card).
 - Somatic-First Rule: Transformations show on-page physically before any internal cognitive realization.
 
-### Character_Change_Log write-back (end of movement — with Continuity_Ledger)
-Record durable evolution in `Framework/Character_Change_Log.md` only:
+### Character Log write-back (end of movement — with Continuity_Ledger)
+Record durable evolution in `Characters/[slug]_log.yaml` only:
 
-1. **Current Matrix Snapshot** — update cells when any of these carry forward:
-   - Active Focus, latent weights, bias strength, default somatic, somatic flexibility
-2. **Movement History** — append one row per on-scene character with Medium+ pressure or permanent shift:
+1. **snapshot** — update values when any of these carry forward:
+   - active_focus, latent_weights, bias_strength, default_somatic, flexibility
+2. **history** — append an entry per on-scene character with Medium+ pressure or permanent shift:
+   - pressure: e.g., `Emotional/High`
+   - delta: e.g., `bias_strength +10; default somatic → jaw lock baseline`
+   - permanence: `temporary` | `medium` | `permanent`
+   - notes: [optional detail]
 
-| Field | Example |
-|:---|:---|
-| Pressure | `Emotional/High` |
-| Delta | `bias_strength +10; default somatic → jaw lock baseline` |
-| Permanence | `temporary` \| `medium` \| `permanent` |
-
-Card YAML holds build defaults and identity only. Runtime matrix = Snapshot when present, else card defaults. Empty Movement History after Medium+ pressure = failed commit.
+Card YAML holds build defaults and identity only. Runtime matrix = Snapshot when present, else card defaults. Empty history after Medium+ pressure = failed commit.
 
 ---
 

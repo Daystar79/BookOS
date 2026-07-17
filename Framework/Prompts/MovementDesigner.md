@@ -33,7 +33,7 @@ Read in order:
 4. `Framework/Psychology/realm_data.yaml` (somatic brace/release)
 5. `Framework/Drafting_Prompt.md`
 6. `Framework/Continuity_Ledger.md` (if present and filled)
-6b. `Framework/Character_Change_Log.md` (Current Snapshot + history)
+6b. `Characters/[slug]_log.yaml` (Current Snapshot + history for on-scene characters)
 7. `Framework/load_protocol.md` (standard order)
 8. `Framework/Mechanics/voices.md` (full)
 9. `Framework/Modules.md` (ENABLED modules only)

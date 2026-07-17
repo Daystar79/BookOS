@@ -1,0 +1,49 @@
+---
+genre: "High Fantasy"
+races:
+  human:
+    fabrics:
+      - "Rough linen, coarse wool, oiled leather"
+    clothing_styles:
+      - "Belted tunic over trousers, high boots, simple cloak"
+    colors:
+      - "Forest green, muddy brown, sky blue"
+    accessories:
+      - "Iron belt buckle, leather coin pouch, utility dagger"
+  elf:
+    fabrics:
+      - "Fine spun silk, delicate silverweave, leaf-patterned brocade"
+    clothing_styles:
+      - "Flowing high-collared robes, elegant lightweight vestment, tunic with embroidery"
+    colors:
+      - "Silver, starlight blue, pale green, autumn gold"
+    accessories:
+      - "A thin silver circlet, runic wrist bracers, bow strap of white leather"
+  dwarf:
+    fabrics:
+      - "Heavy canvas, thick pigskin leather, iron-mesh mail"
+    clothing_styles:
+      - "Double-buckled leather jerkin, reinforced trousers, steel-toed boots"
+    colors:
+      - "Deep earth brown, coal black, copper, and iron gray"
+    accessories:
+      - "A heavy tool harness, brass beard rings, blacksmith tongs at the belt"
+  orc:
+    fabrics:
+      - "Raw animal hides, coarse fur liners, thick boiled hide"
+    clothing_styles:
+      - "Harness of leather straps, fur-lined pauldrons, metal plate accents"
+    colors:
+      - "Crimson, dark brown, ash gray, dried blood red"
+    accessories:
+      - "Bone necklaces, iron wrist rings, heavy war horn"
+  halfling:
+    fabrics:
+      - "Soft flannel, warm tweed, corduroy"
+    clothing_styles:
+      - "Short-cut trousers, suspenders, button-down vest with brass buttons"
+    colors:
+      - "Meadow green, mustard yellow, warm amber"
+    accessories:
+      - "A wooden smoking pipe, a brass pocketwatch, a small leather satchel for herbs"
+...

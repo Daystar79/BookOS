@@ -17,7 +17,7 @@ load_priority: 0
 
 ## Character Data
 4. On-scene character cards from `Characters/` directory
-5. `Framework/Character_Change_Log.md` — Current Matrix Snapshot (overrides card Focus/weights/baseline somatic when present)
+5. `Characters/[slug]_log.yaml` — individual character logs for on-scene characters (overrides card Focus/weights/baseline somatic when present)
 6. `Framework/Continuity_Ledger.md` — latest scene close / timeline (design & draft)
 
 ## First action after load

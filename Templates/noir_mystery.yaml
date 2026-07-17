@@ -1,0 +1,55 @@
+---
+genre: "Noir Mystery & Hardboiled Detective"
+outline_defaults:
+  subgenres:
+    - "Municipal Crime"
+    - "Political Conspiracy"
+    - "Underworld Syndicate"
+  tone_anchors:
+    - "Cynical detective perspective where everyone has a motive"
+    - "Rain-slick streets, streetlamps cutting through heavy fog, smoke-filled rooms"
+    - "Somatic tells of nicotine dependency, alcohol burn, and physical exhaustion"
+  tonal_pacing: "Short, punching sentences; dry, ironic dialogue; visceral descriptions of physical damage and dirty urban settings."
+world_defaults:
+  setting_type: "Municipal City"
+  regions:
+    - name: "The Gold Coast"
+      description: "Wealthy municipal center, clean streets, private police cruisers, marble facades, scent of expensive cologne."
+      access_level: "Unrestricted, but high police suspicion for lower-class dress."
+    - name: "The Docks & Warehouses"
+      description: "Fog-shrouded harbor, rotting wood, shipping containers, diesel engine smoke, sound of foghorns."
+      access_level: "High risk; controlled by dock unions and syndicate muscle."
+  factions:
+    - name: "The Municipal Police Department"
+      type: "Government Agency"
+      doctrine_summary: "Keep the peace by protecting the wealthy; turn a blind eye to syndicate operations as long as they pay their dues."
+      hierarchy_ranks:
+        - rank: 1
+          title: "Patrolman / Beat Officer"
+          privileges: "Access to squad cars, basic precinct cells, standard revolver."
+        - rank: 5
+          title: "Detective"
+          privileges: "Access to active case files, interrogation rooms, crime scene entry."
+        - rank: 10
+          title: "Chief of Police"
+          privileges: "Direct budget control, authority to close active investigations, political immunity."
+      protocol_template:
+        name: "Precinct Interrogation"
+        staging: "Small windowless room, metal table, single overhead lamp casting harsh shadows, stale cigarette smoke, green-painted walls."
+        somatic_keys: "Detective is leaning forward, forearm resting on the table, jaw chewing toothpick; Suspect is sweating, hands cuffed to chair ring, eyes tracking the door lock."
+  narrative_rules:
+    linguistic_taboos:
+      - "Do not use clean, sanitized speech (use period-accurate slang: 'the fuzz', 'copper', 'dime', 'sheave')."
+      - "Do not describe emotional reactions as feelings (show the body: tight throat, lighting a cigarette to hide trembling hands, wiping sweat from forehead)."
+    pov_constraints: "First-person (classic noir) or tight third-person; focus sensory descriptions on smells (stale beer, cheap perfume, gunpowder, damp paper) and sounds (distant sirens, footsteps on wet pavement)."
+character_defaults:
+  voice_archetypes:
+    - type: "A (Hardboiled Cynic)"
+      description: "Detective or street informant; talks in metaphors, quick retorts, and short, dry statements."
+    - type: "B (Smooth operator)"
+      description: "Syndicate boss or corrupt politician; slow, rhythmic pacing, uses professional politeness as a threat."
+  somatic_tell_templates:
+    - "Fumbling with a book of matches under emotional stress"
+    - "Checking the cylinder of a snub-nosed revolver"
+    - "Massaging the bridge of the nose to stave off a hangover headache"
+...
