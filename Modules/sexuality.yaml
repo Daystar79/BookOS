@@ -1,0 +1,27 @@
+---
+module: "Sexuality Protocol"
+dependencies: []
+conflicts: []
+eligibility_gate:
+  age_requirement: 18
+  canon_adult_required: true
+  allow_age_up: false
+  default_status: "DISABLED"
+psyche_integration:
+  focus_warps:
+    Realm_III: "Creates high somatic guards, rigid posture, or need for control/performance."
+    Realm_IV: "Creates high somatic guards, rigid posture, or need for control/performance."
+    Realm_IX: "Somatics show as trembling fingers, shallow rapid breathing, and hesitation before physical touch."
+  bias_activation: "Intimate scenes trigger high emotional pressure; dormant biases shift to ACTIVE instantly, warping touch/affection perception."
+  transformation_delta:
+    pressure_class: "Extreme Emotional / Somatic"
+    milestone_impact: "Apply permanent +10 to +20 weight to latents or shift active Focus in snapshot; somatic release tells logged in history."
+kinetic_laws:
+  thermal_pacing: "Describe skin temperature, sweat, flushed skin, goosebumps, and cold drafts on bare skin."
+  kinetic_mass: "Emphasize physical weight, resistance, muscle contraction, friction, and the force of grip."
+  last_barrier_rule: "Keep clothing barriers active and awkward as long as possible (tugging boots, zippers, fabric sliding) before full exposure."
+  output_hygiene: "Use precise, concrete somatic language; never use abstract romance cliches/euphemisms; never name Realms or biases on-page."
+interruption_protocols:
+  tripwire_activation: "Bias trigger causes immediate somatic freeze, muscle lock, or sudden withdrawal."
+  somatic_glitches: "Show physical retreat and body tension; do not allow characters to explain the glitch aloud."
+...
