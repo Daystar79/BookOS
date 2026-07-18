@@ -59,11 +59,42 @@ def get_upstream_dir(root):
     parent = os.path.dirname(root)
     return os.path.join(parent, UPSTREAM_NAME)
 
+def merge_gitignore(src, dst):
+    if not os.path.exists(dst):
+        shutil.copyfile(src, dst)
+        print(f"  Pulled (new): .gitignore")
+        return
+    with open(src, "r", encoding="utf-8") as f:
+        src_lines = f.readlines()
+    with open(dst, "r", encoding="utf-8") as f:
+        dst_lines = f.readlines()
+        
+    dst_cleaned = [line.strip() for line in dst_lines]
+    dst_set = set(line for line in dst_cleaned if line and not line.startswith("#"))
+    
+    lines_to_add = []
+    for line in src_lines:
+        cleaned = line.strip()
+        if cleaned and not cleaned.startswith("#") and cleaned not in dst_set:
+            lines_to_add.append(cleaned)
+            
+    if lines_to_add:
+        with open(dst, "a", encoding="utf-8") as f:
+            f.write("\n# Merged from upstream framework\n")
+            for line in lines_to_add:
+                f.write(f"{line}\n")
+        print(f"  Merged upstream rules into: .gitignore")
+    else:
+        print(f"  Up to date (no rules to merge): .gitignore")
+
 def copy_file(src, dst):
     dst_dir = os.path.dirname(dst)
     os.makedirs(dst_dir, exist_ok=True)
-    shutil.copyfile(src, dst)
-    print(f"  Pulled: {os.path.relpath(dst, get_project_root())}")
+    if os.path.basename(dst) == ".gitignore":
+        merge_gitignore(src, dst)
+    else:
+        shutil.copyfile(src, dst)
+        print(f"  Pulled: {os.path.relpath(dst, get_project_root())}")
 
 def copy_directory(src_dir, dst_dir):
     if not os.path.exists(src_dir):

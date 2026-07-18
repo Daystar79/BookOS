@@ -12,12 +12,15 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 WORD_DIR="$ROOT/Build"
 BUILD_DIR="$ROOT/Releases"
 VENV_PYTHON="python3"
+if [[ -d "$ROOT/.venv-docx" ]] && [[ -f "$ROOT/.venv-docx/bin/python" ]]; then
+  VENV_PYTHON="$ROOT/.venv-docx/bin/python"
+fi
 MD_TO_DOCX="$WORD_DIR/md_to_docx.py"
 EPUB_CSS="$WORD_DIR/epub.css"
 
 # Step 1: Pull framework to keep in sync
 echo "=== Step 1: Syncing Framework from CognitiveMiddleware ==="
-python3 "$ROOT/Build/pull_framework.py"
+"$VENV_PYTHON" "$ROOT/Build/pull_framework.py"
 
 # Step 2: Assemble chapter drafts into master manuscript
 echo -e "\n=== Step 2: Assembling Master Manuscript ==="
@@ -54,9 +57,13 @@ TITLE_SAFE="${TITLE// /_}"
 echo -e "\n=== Step 3: Compiling Book Formats for: '$TITLE' ==="
 
 # Verify python dependencies
-if ! python3 -c "import docx; import smartypants" 2>/dev/null; then
+if ! "$VENV_PYTHON" -c "import docx; import smartypants" 2>/dev/null; then
   echo "Installing python dependencies (python-docx, smartypants)..."
-  python3 -m pip install --user --break-system-packages python-docx smartypants || python3 -m pip install --user python-docx smartypants || true
+  if [[ "$VENV_PYTHON" == *".venv-docx"* ]]; then
+    "$VENV_PYTHON" -m pip install python-docx smartypants || true
+  else
+    python3 -m pip install --user --break-system-packages python-docx smartypants || python3 -m pip install --user python-docx smartypants || true
+  fi
 fi
 
 # Preprocess Markdown files for EPUB and PDF separately
