@@ -9,5 +9,11 @@ snapshot:
   default_somatic: "Warm touch; face-scan"
   flexibility: 35
   as_of: "build"
+skills:
+  active: []
+  latent: []
+memories:
+  detailed: []
+  footnote: []
 history: []
 ...

@@ -69,7 +69,7 @@ Per on-scene character, write one compact clause representing their close-of-sce
 
 ### Load Order (Next Design/Draft)
 1. On-scene character cards (identity, voice, bias name, build defaults)
-2. **Current Matrix Snapshot** in `Framework/Character_Change_Log.md` (overrides card Focus / weights / baseline somatic / bias_strength when present)
+2. **Canonical mutable runtime state:** per-slug `_log.yaml` snapshot (overrides card Focus / weights / baseline somatic / bias_strength when present)
 3. `Framework/Continuity_Ledger.md` latest real row (scene time, props, close body state)
 
 ### Integrity Mapping

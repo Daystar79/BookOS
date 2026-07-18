@@ -4,7 +4,7 @@ This directory holds the individual profile files for factions, religious orders
 
 ## Design Philosophy
 
-To keep the system modular and context-efficient, the overarching world geography and setting laws are defined in `Framework/World_Architecture.md`, while individual factions are split into separate YAML cards in this directory. 
+To keep the system modular and context-efficient, the overarching world geography and setting laws are defined in `../World_Architecture.md`, while individual factions are split into separate YAML cards in this directory. 
 
 Factions are only loaded by the drafting/editing agents when the scene actively requires or references them.
 

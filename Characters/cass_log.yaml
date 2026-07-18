@@ -10,5 +10,11 @@ snapshot:
   default_somatic: "Still posture; folded hands"
   flexibility: 25
   as_of: "build"
+skills:
+  active: []
+  latent: []
+memories:
+  detailed: []
+  footnote: []
 history: []
 ...

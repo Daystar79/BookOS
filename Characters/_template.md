@@ -1,16 +1,13 @@
 ---
 name: "[Full Name]"
 call_name: "[preferred call-name or null]"
-species: "human"
-gender: "[Gender]"
 age: [Integer years]
-occupation: "[Occupation]"
 canon_adult: true
 physical: "[Coloration, features, bone structure, movement — show, never category-label]"
 voice_archetype: "[A-F or hybrid]"
 cultural_bias: "[Belief/Heritage/Era — temporal tracking defaults (e.g. covenant, linear progress, cyclic liturgy)]"
 active_focus: "Realm [N] — [Name]"
-latent_anchors: ["Realm [a]", "Realm [b]", "Realm [c]"]
+latent_anchors: ["Realm [a] — [Name]", "Realm [b] — [Name]", "Realm [c] — [Name]"]
 cognitive_bias: "[Bias Name] — [one-line rewrite rule]"
 default_somatic_alignment: "[throat, breath, jaw, posture, hands…]"
 
@@ -50,4 +47,4 @@ scene_seeds:
   - "[Alternate seed]"
 ---
 
-*Load: Fast Load YAML. Copy matrix, voice, somatic, adult-gate to silent state. Overlay Characters/[slug]_log.yaml Current Snapshot when present. 18+ OFF. Enable only if brief/request AND Canon Adult YES. Run Focus brace/release from realm_data.yaml. Never name realms, biases, or trauma in speech.*
+*Load: Fast Load YAML. Copy matrix, voice, somatic, adult-gate to silent state. Overlay Characters/[slug]_log.yaml snapshot when present. 18+ OFF. Enable only if brief/request AND Canon Adult YES. Run Focus brace/release from realm_data.yaml. Never name system terms in speech.*

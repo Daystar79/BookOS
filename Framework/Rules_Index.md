@@ -1,4 +1,4 @@
-# Rules Index — Psyche Matrix Framework
+# Rules Index — CognitiveMiddleware (Psyche Matrix)
 *Canonical "do not" rules and cleanup for drafting. Load with Main.md.*
 
 ---
@@ -39,7 +39,8 @@
 ## 2. CHARACTER BEHAVIOR
 - Body Before Insight: Physical sensations only; no self-psychology summaries
 - No Therapy Dumps: No analysis, therapy language, insight monologues
-- No Perfect Recall: Blur detail; deflect when pressed; triggered recall only
+- Epistemic Memory: Check memories.detailed for sharp subjective recall and somatic triggers; check memories.footnote for vague/blurred recollection prompting deflection or somatic triggers; otherwise treat as forgotten/undefined.
+- Skill Competence: Execute active skills cleanly with release tells and precise lexicon; execute latent skills with physical fumbles (dropping tools, double-checking) and bracing tells; express helplessness for untrained skills.
 - No Mind Reading: Never state other characters' internal states
 - No Future Certainty: No predictive certainty
 - Voice Fidelity: Distinct idiolects; no register borrowing
@@ -108,23 +109,10 @@ Applies within a movement and across the chapter.
 - State changes = somatic, not explained
 - Callbacks = imperfect memory + trigger
 - End on concrete anchor; continue from it; no character "re-entry" reset
+- Durable matrix lives in `Characters/[slug]_log.yaml` (and Character_Change_Log); scene close lives in Continuity_Ledger
+- Character cards are identity/build sheets only — never append movement history or weight deltas to card YAML
 
-### Ledger Integrity (first action every session)
-Before design or draft: run Main.md **Ledger Integrity Pass**.
-- Strip placeholder Continuity_Ledger rows; honest empty > fake data
-- Seed Character_Change_Log Snapshot from cards if empty; do not invent Movement History
-- Backfill or **block** when drafts and ledgers disagree
-- Do not draft while dual-commit is pending
-
-Before M(N+1): integrity CLEAN; then read M(N) + Continuity_Ledger row for M(N) + Character_Change_Log Snapshot + on-scene cards; note ending somatic/env/props/open loops; durable Focus/weights/somatic from **Change Log Snapshot** (else card defaults); scene close from Continuity_Ledger; no duplicated tells/patterns/staging.
-
-### Post-Movement Commit (mandatory dual ledger save)
-On movement approval, before next design/draft:
-1. **Continuity_Ledger** — append/update the Ch/Mov row (time, scene somatic close, continuity/plot beats)
-2. **Character_Change_Log** — update Current Matrix Snapshot + append Movement History (Main § Transformation Engine)
-- Do **not** write movement deltas or history onto character cards
-- Never draft-append transformation logs, history dumps, or CONFIG
-- Either ledger alone = incomplete commit
+Before M(N+1): read M(N) + Continuity_Ledger close + log snapshot; note ending somatic/env/props/open loops; confirm Focus/Bias; no duplicated tells/patterns/staging.
 
 ---
 
@@ -132,10 +120,9 @@ On movement approval, before next design/draft:
 1. Instant somatic reaction in narrative (no brackets)
 2. Honor Prose Style + Style Lock
 3. If Bias ACTIVE: filter input through Focus + Bias silently
-4. Process transformation pressure deltas silently during generation
+4. Process transformation pressure deltas silently; on approval write Continuity_Ledger + `_log.yaml` (not the character card)
 5. Generate movement/scene prose in card voice
 6. Never append CONFIG, matrix notes, focus tables, transformation logs, or audit summaries
-7. On approval: dual ledger save Continuity_Ledger + Character_Change_Log (§8)
 
 ---
 
@@ -147,9 +134,7 @@ On movement approval, before next design/draft:
 | Description | Concrete; anti-synthesis |
 | Dialogue | Asymmetric; polarized voices |
 | Patterns | No bare beats; rotate somatics |
-| Cleanup | §6 before save (prose) |
-| Session start | Ledger Integrity Pass first (§8) |
-| Post-movement | Continuity_Ledger **and** Character_Change_Log (§8) |
+| Cleanup | §6 before save |
 
 ---
 

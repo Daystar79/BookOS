@@ -9,5 +9,11 @@ snapshot:
   default_somatic: "Stillness; loose jaw"
   flexibility: 40
   as_of: "build"
+skills:
+  active: []
+  latent: []
+memories:
+  detailed: []
+  footnote: []
 history: []
 ...

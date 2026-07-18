@@ -9,6 +9,20 @@ snapshot:
   default_somatic: "Soft chest; open hands; proximity lean; hand withdraws when blocked"
   flexibility: 50
   as_of: "sample 1 M1"
+skills:
+  active:
+    - social_navigation
+    - caretaking
+  latent:
+    - forge_craft
+memories:
+  detailed:
+    - id: chapter_1_m1_tea
+      anchor: "chapter_1_m1"
+      location: "the forge shop"
+      somatic_trigger: "tensed shoulders / cold tea cup"
+      subjective_recall: "Reed refusing to accept my presence or the tea. He calculated it like a bill. He will have to eat Saturday."
+  footnote: []
 history:
   - movement: "1 M1 — Cold Tea"
     pressure: "Emotional/Social · Medium"

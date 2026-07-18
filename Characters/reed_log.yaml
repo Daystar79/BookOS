@@ -9,6 +9,20 @@ snapshot:
   default_somatic: "Throat tight; shoulders high; jaw lock; scar-rub under debt pressure"
   flexibility: 30
   as_of: "sample 1 M1"
+skills:
+  active:
+    - blacksmithing
+    - bracket_work
+  latent:
+    - gate_repair
+memories:
+  detailed:
+    - id: chapter_1_m1_tea
+      anchor: "chapter_1_m1"
+      location: "the forge shop"
+      somatic_trigger: "smell of cold tea / wet iron"
+      subjective_recall: "Helen bringing cold tea. Hand on arm was warm, felt like a transaction due."
+  footnote: []
 history:
   - movement: "1 M1 — Cold Tea"
     pressure: "Emotional/Social · Medium"

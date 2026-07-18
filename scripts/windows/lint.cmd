@@ -1,0 +1,5 @@
+@echo off
+REM CMD entry point for Windows (double-click / cmd.exe).
+setlocal
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0lint.ps1" %*
+exit /b %ERRORLEVEL%

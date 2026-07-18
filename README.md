@@ -1,22 +1,24 @@
-# BookOS — Cognitive Middleware & Writer's OS
+# CognitiveMiddleware
 
-**An invisible, token-optimized cognitive matrix for character-driven fiction drafting and somatic roleplay.**  
-Body-first psychology, bias distortion, and realm-aware somatics — running silently off-page.
+**The product: an invisible cognitive middle layer for AI-assisted long-form fiction.**  
+Body-first psychology, bias distortion, and realm-aware somatics — running silently **off-page** so drafts stay clean manuscript prose.
+
+Roleplay / chat drop-ins under `Simulator/` are optional side tools (card testing, private sessions). They are **not** the product surface.
 
 ---
 
 ## What It Is
 
-**BookOS** is a sophisticated runtime engine developed for character-driven long-form fiction. It enables consistent, psychologically rich characters through:
+**CognitiveMiddleware** is a file-native runtime for **character-driven novel drafting**. Load it with your cards and write movements; the matrix keeps characters consistent without leaking system jargon into the page.
 
 - **Body Before Insight** — Physical reactions and somatic tells always precede psychological explanation.
 - **Character-First** — Named characters from card files are the single source of truth.
 - **Tripartite Filtering** — Worldview filters split into background world-filters (Cultural Bias & Occupation) and a dynamic situational filter (Cognitive Bias / Wound) that remains dormant at rest.
 - **100% Off-Page** — The entire matrix stays invisible in the final prose. No realm numbers, bias names, or system terms appear on the page.
 - **Great Wheel Integration** — Somatic and bracing/release profiles for all 10 Realms.
-- **Transformation Engine** — Dynamic evolution or regression of character attributes based on narrative pressure and somatic tells.
+- **Transformation Engine** — Dynamic evolution or regression of character attributes based on narrative pressure and somatic tells (logs + ledgers, not mutated identity cards).
 
-The framework is designed to fight common AI writing problems: therapy-speak, perfect recall, symmetric dialogue, pattern repetition, and on-page system leakage.
+Built to fight common AI writing problems: therapy-speak, perfect recall, symmetric dialogue, pattern repetition, and on-page system leakage.
 
 ---
 
@@ -26,49 +28,65 @@ The framework is designed to fight common AI writing problems: therapy-speak, pe
 - Characters are not therapists, narrators, or helpful assistants.
 - Memory is imperfect and biased. Recall is triggered somatically, not on command.
 - Style, focus, and bias state are controllable but never visible in the output.
-- Adult/sexual content is strictly gated and never enabled by default.
+- Adult/sexual modules stay gated and off by default; drafting does not require them.
 
 ---
 
 ## Quick Start
 
 1. Clone or copy this framework into your book project folder.
-2. Run `deploy_framework.py` (optional but recommended) to set up the directories.
-3. **Read the sample (optional):** `Drafts/samples/draft_chapter_1_m1.md` — Reed + Helen demo movement with dual ledger commits already filled (`Continuity_Ledger` + `Character_Change_Log`). See `Drafts/samples/README.md`.
-4. For every drafting session, load:
-   - `Framework/Main.md`
-   - `Framework/Rules_Index.md`
-   - `Framework/Psychology/realm_data.yaml`
-   - Relevant character cards from `Characters/`
-   - Both ledgers (after **Ledger Integrity Pass**)
-5. Write movements/scenes using the brief + cards. The matrix runs silently.
-6. On approval: dual ledger save. Run the linter:
+2. Deploy scaffolds (optional but recommended) — **pick by OS** (or use the auto launcher):
    ```bash
-   ./Framework/linter.py Drafts/
+   # Preferred (auto-detects Windows vs Unix):
+   python3 scripts/run.py deploy
+
+   # Unix / macOS / WSL:
+   scripts/unix/deploy.sh
+
+   # Windows PowerShell:
+   # powershell -NoProfile -ExecutionPolicy Bypass -File scripts/windows/deploy.ps1
+   ```
+3. For every drafting session, load the files according to the canonical load manifest in [Framework/Main.md](Framework/Main.md).
+4. Write movements/scenes using the brief + cards. The matrix runs silently.
+5. On approved movements: execute the Post-Movement State Commit (see [Framework/Main.md](Framework/Main.md)).
+6. Run the linter (again: auto launcher or OS-specific wrapper):
+   ```bash
+   python3 scripts/run.py lint Drafts/
+   # Unix:    scripts/unix/lint.sh Drafts/
+   # Windows: scripts/windows/lint.ps1 Drafts\
    ```
 
 ---
 
-## Key Files & Directories
+## Key Files
 
-| File/Folder | Purpose | Usage / Load |
+| File | Purpose | Usage / Load |
 |------|---------|--------------|
 | `Framework/Main.md` | Core engine, workflow, commands, and principles | **Always load** |
 | `Framework/Rules_Index.md` | Hard bans, cleanup protocol, dialogue rules | **Always load** |
-| `Framework/Psychology/realm_data.yaml` | Somatic profiles for all 10 Realms (optimized string format) | **Always load** |
-| `Framework/linter.py` | Automated prose linter to check for system leaks | Command-line utility |
-| `Characters/` | Active character cards and per-character change logs (`_log.yaml`) | Load per scene |
-| `Characters/Physical/`, `/Somatic/`, `/Aesthetics/` | Subfolders holding genre-specific physical, somatic, and visual templates | Loaded by Character Builder |
-| `Factions/` | Isolated cards for organisations, guilds, and political groups | Load per scene requirements |
-| `Templates/` | Global genre blueprints (Sci-Fi, High Fantasy, Dark Romance, etc.) | Loaded by World/Character Builder |
-| `Framework/Mechanics/` | Prose styles, voice templates, humanity details | Load as needed |
-| `Modules/` | Optional active modules (e.g. `sexuality.yaml` in YAML format) | Load when enabled |
-| `Framework/Prompts/` | Interactive novel initializer, world, and character builders | Reference only |
-| `RolePlaying/RoleplayEngine.md` | Self-contained somatic character RP engine. **Designed to be dropped directly into a chat window** (e.g., Gemini CLI, Web interface, or Claude session) to start a live interactive roleplay session. | Drop into Chat |
+| `Framework/Psychology/realm_data.yaml` | Somatic profiles for all 10 Realms | **Always load** |
+| `Framework/linter.py` | Automated prose linter (core) | Via `scripts/run.py lint` |
+| `scripts/run.py` | OS-aware launcher (deploy / lint / migrate) | **Agents: use this** |
+| `scripts/unix/*.sh` | Unix shell wrappers | Linux / macOS / WSL |
+| `scripts/windows/*` | Windows PowerShell / CMD wrappers | Windows |
+| `Characters/_template.md` | Public card scaffold (identity + build defaults only) | Copy for new characters |
+| `Characters/_log_template.yaml` | Public runtime log schema (snapshot + history) | Copy → `[slug]_log.yaml` |
+| `Framework/Continuity_Ledger.md` | Scene timeline / somatic close | Always load when drafting |
+| `Framework/Character_Change_Log.md` | Consolidated matrix snapshot (human-readable) | Optional / post-commit sync |
+| `Characters/` (named cards, `Relations.md`) | **Author-local only** — demo cast; not open-licensed; not deployed | Local testing |
+| `Framework/Mechanics/` | Prose styles, optional heat protocol, voice templates, humanity | Load as needed |
+| `Framework/Prompts/` | Character builder and improvement prompts | Reference only |
+| `Simulator/` | **Optional** — live card test / private RP drop-in (not core drafting) | See below |
 
 ---
 
-## Author Commands (Drafting & RP)
+## Optional: Character Simulator
+
+Side path for **stress-testing a card in chat** before drafting, or private live sessions. **Product core remains Framework/ + Characters/ + ledgers.**
+
+Paste `Simulator/CharacterRuntime.md` into a chat if you want the drop-in (storage boot, Character Pack, `/mode test` default). Companion/heat modes are optional and gated. For private adult RP sessions: load a canon-adult pack, then **`/adult on`** (one switch). Details in that file and `Simulator/README.md`.
+
+## Author Commands (drafting)
 
 | Command | Effect |
 |---------|--------|
@@ -88,52 +106,65 @@ The framework is designed to fight common AI writing problems: therapy-speak, pe
 ## Tripartite Filter System
 
 1. **Cultural Bias (Background):** Metaphysical frame, ethical defaults, and **temporal awareness** (how they track time/destiny, e.g., cyclic liturgy vs. linear progress).
-2. **Occupation & Species (Background):** Technical lexicon, prop/tool familiarity, and somatic/physical defaults (species defaults to `human` but maps to custom configurations like Elves, Dwarves, or aliens).
+2. **Occupation (Background):** Technical lexicon, prop/tool familiarity, and immediate staging focus.
 3. **Cognitive Bias (Triggered):** Wound-based perception warp. Stays **DORMANT** during casual beats, intercepting inputs only when emotional pressure activates it.
 
 ---
 
 ## Transformation & Evolution
 
-Character cards hold **build defaults** (`transformation_weights`: active_focus dominance, latent anchors, bias_strength, somatic_flexibility).  
-**Runtime evolution** is tracked separately in `Framework/Character_Change_Log.md` (Current Matrix Snapshot + Movement History) — not on the card.
-
-**Session boot:** **Ledger Integrity Pass** first (Main.md) — honest empty ledgers are fine; placeholder rows and dual-commit lag are fixed or block drafting.
-
-**Post-Movement Commit (mandatory dual ledger save):** On each approved movement, update:
-1. `Framework/Continuity_Ledger.md` — timeline, scene somatic close, plot beats  
-2. `Characters/[slug]_log.yaml` — the individual YAML change log for each on-scene character who experienced matrix pressure or durable shifts (for data loading).
-3. `Framework/Character_Change_Log.md` — the consolidated, human-readable change log (for quick reference).
-
-Cards stay identity/load sheets. Neither ledger alone is enough.
+- **Cards** hold build-default `transformation_weights` (active focus, latent anchors, bias strength, somatic flexibility).
+- **Runtime evolution** lives in `Characters/[slug]_log.yaml` (snapshot + history) and is mirrored in `Framework/Character_Change_Log.md`.
+- **Scene close** (day/time, temporary body state, plot beats) lives in `Framework/Continuity_Ledger.md`.
+- Do not append movement history to character cards.
 
 ---
 
-## Historical & Safety Gates (Roleplaying)
+## Historical & Safety Gates
 
-- **Safety Gating:** Strict prohibition of Lolicon/Shotacon tropes. Canon verification is required for 18+ Anime/Hentai imports.
-- **Historical Figures:** Lifespan/active era must be specified. Character cards prioritize their **own writings/primary documentation**, falling back to the cultural and temporal bias of their era only when documentation is lacking. Modern or post-era concepts are strictly banned from their awareness. Under no circumstances may the AI engine break character or use external search/lookup tools to resolve historical gaps during active roleplay.
+- **Age / content:** Strict prohibition of Lolicon/Shotacon. Canon adult verification required before any 18+ paths (simulator or drafting heat protocol).
+- **Historical figures:** Lifespan/era on the card; prefer primary documentation; no post-era bleed; no live web lookups mid-scene to “fix” history.
 
 ---
 
 ## Automated Prose Linter (`linter.py`)
 
-Run `Framework/linter.py` on your drafts to scan for:
+Run via the OS-aware launcher (or platform wrappers under `scripts/`):
+
+```bash
+python3 scripts/run.py lint Drafts/
+```
+
+Scans drafts for:
 - **System Leaks:** On-page mentions of Realms, biases, and matrix weights.
 - **Therapy-Speak:** Jargon like *wound*, *trauma*, *trigger*, or *reframe*.
 - **Dialogue Tags/Fillers:** Banned markers like *whispered*, *Are you okay*, and *said quietly*.
 - **Formatting Breaks:** Excessive horizontal rules (`---`) separating real-time actions.
 
----
+See [scripts/README.md](scripts/README.md) for Windows vs Unix command tables (for humans and AI agents).
 
-*Install once. Load for every session. Let the matrix run silently. Write clean prose.*
+## Scripts (Windows & Unix)
+
+| Tool | Auto (any OS) | Unix | Windows |
+|:---|:---|:---|:---|
+| Deploy | `python3 scripts/run.py deploy [target]` | `scripts/unix/deploy.sh` | `scripts/windows/deploy.ps1` |
+| Lint | `python3 scripts/run.py lint <path>` | `scripts/unix/lint.sh` | `scripts/windows/lint.ps1` |
+| Migrate | `python3 scripts/run.py migrate` | `scripts/unix/migrate.sh` | `scripts/windows/migrate.ps1` |
+
+**AI agents:** detect the host OS, then either call `scripts/run.py` (preferred) or the matching `scripts/unix/` / `scripts/windows/` wrapper. Do not run `.sh` on native Windows or `.ps1` on Unix unless a compatible shell is confirmed.
 
 ---
 
 ## License
 
-BookOS uses a hybrid open-source license model:
-* Software components (such as [linter.py](file:///mnt/Book/BookOS/Framework/linter.py)) are licensed under the **MIT License**.
-* Creative content, manuals, character card formats, and YAML schemas are licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**.
+Cognitive Middleware uses a hybrid open-source license model:
 
-See [LICENSE.md](file:///mnt/Book/BookOS/LICENSE.md) for full license details.
+* Software components (such as `Framework/linter.py` and `deploy_framework.py`) are licensed under the **MIT License**.
+* Creative content, manuals, the public character **template**, prompts, YAML schemas under `Framework/`, and optional **`Simulator/`** are licensed under the **Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)**.
+* **Author-local materials are not open-sourced:** named cards under `Characters/` (except `_template.md` / `README.md`) and `Characters/Relations.md`. All rights reserved; not distributed by `deploy_framework.py`.
+
+Copyright (c) 2026 Cian Didymos. See [LICENSE.md](LICENSE.md) for full license details.
+
+---
+
+*Install once. Load the middle layer for every draft session. Let the matrix run silently. Write clean prose.*

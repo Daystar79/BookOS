@@ -16,12 +16,21 @@ UPSTREAM_NAME = "Authors_Framework"
 FRAMEWORK_FILES = [
     "Framework/Main.md",
     "Framework/Rules_Index.md",
+    "Framework/Psychology/realm_data.yaml",
     "Framework/natural_prose.md",
+    "Framework/psyche_framework.md",      # stub → Main
+    "Framework/Drafting_Workflow.md",     # stub → Main
     "Framework/formatting_rules.md",
     "Framework/Design_QA_Protocol.md",
     "Framework/Drafting_Prompt.md",
     "Framework/Modules.md",
+    "Framework/linter.py",
+    "Framework/Continuity_Ledger.md",
+    "Framework/Character_Change_Log.md",
+    "Framework/source_changes.md",
+    "Framework/degradation_protocol.md",
     "Characters/_template.md",
+    "Characters/_log_template.yaml",
     "Characters/README.md",
     "Characters/Relations.md",
     # Demo cast cards (YAML-only format; optional for novels)
@@ -39,7 +48,7 @@ FRAMEWORK_DIRS = [
     "Framework/Mechanics",
     "Framework/Psychology",
     "Framework/Prompts",
-    "RolePlaying",
+    "Simulator",
 ]
 
 def get_project_root():
@@ -53,7 +62,7 @@ def get_upstream_dir(root):
 def copy_file(src, dst):
     dst_dir = os.path.dirname(dst)
     os.makedirs(dst_dir, exist_ok=True)
-    shutil.copy2(src, dst)
+    shutil.copyfile(src, dst)
     print(f"  Pulled: {os.path.relpath(dst, get_project_root())}")
 
 def copy_directory(src_dir, dst_dir):
@@ -68,22 +77,20 @@ def copy_directory(src_dir, dst_dir):
         for file in files:
             src_file = os.path.join(root, file)
             dst_file = os.path.join(target_root, file)
-            shutil.copy2(src_file, dst_file)
+            shutil.copyfile(src_file, dst_file)
     print(f"  Pulled directory: {os.path.relpath(dst_dir, get_project_root())}")
 
 def update_file_list(root):
     """Automatically rebuild file_list.txt based on tracked files in the repo."""
     print("  Updating file_list.txt...")
     # List files ignoring .git, .venv, etc.
-    ignored_prefixes = ['.git', '.venv', '__pycache__', 'Releases', 'Archives']
+    ignored_prefixes = ['.git', '.venv', '__pycache__', 'Releases', 'Archives', 'scripts']
     files_found = []
     
     for dirpath, dirnames, filenames in os.walk(root):
-        rel_dirpath = os.path.relpath(dirpath, root)
-        # Skip ignored directories
-        if rel_dirpath != '.':
-            if any(ignored in rel_dirpath.split(os.path.sep) for ignored in ignored_prefixes) or rel_dirpath.startswith('.'):
-                continue
+        # Prune ignored directories in-place to prevent walking into them
+        dirnames[:] = [d for d in dirnames if d not in ignored_prefixes and not d.startswith('.')]
+        
         for f in filenames:
             # Skip hidden files except .gitignore and .gitkeep
             if f.startswith('.') and f not in ['.gitignore', '.gitkeep']:
