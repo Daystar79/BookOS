@@ -42,4 +42,8 @@ scene_seeds:
   - "Quiet room, two cups, one still full"
 ---
 
+## Relationships
+- [[Nora]]: **Insulated Sanctuary vs. Quiet Reflection** — [[Nora]] bends the environment to physically wall off outside threats to protect [[Wren]]; [[Wren]] reflects [[Nora]]'s protective vigilance but suppresses all active personal desires.
+- [[Lior]]: **Shared Liminality** — Both operate at the edges. They sit in silence, [[Wren]] reflecting [[Lior]]'s fragile state without pressure, allowing [[Lior]]'s trembling to settle naturally.
+
 *Load: Fast Load YAML. Copy matrix, voice, somatic, adult-gate to silent state. Overlay Characters/[slug]_log.yaml snapshot when present. 18+ OFF. Enable only if brief/request AND Canon Adult YES. Run Focus brace/release from realm_data.yaml. Never name system terms in speech.*

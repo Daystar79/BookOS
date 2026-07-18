@@ -1,0 +1,108 @@
+{
+  "nodes": [
+    {
+      "id": "node-reed",
+      "type": "file",
+      "file": "BookOS/Characters/reed.md",
+      "x": 1100,
+      "y": 80,
+      "width": 250,
+      "height": 400
+    },
+    {
+      "id": "node-helen",
+      "type": "file",
+      "file": "BookOS/Characters/helen.md",
+      "x": 500,
+      "y": 80,
+      "width": 250,
+      "height": 400
+    },
+    {
+      "id": "node-cass",
+      "type": "file",
+      "file": "BookOS/Characters/cass.md",
+      "x": 1400,
+      "y": 600,
+      "width": 250,
+      "height": 400
+    },
+    {
+      "id": "node-lior",
+      "type": "file",
+      "file": "BookOS/Characters/lior.md",
+      "x": 1100,
+      "y": 1120,
+      "width": 250,
+      "height": 400
+    },
+    {
+      "id": "node-nora",
+      "type": "file",
+      "file": "BookOS/Characters/nora.md",
+      "x": 200,
+      "y": 600,
+      "width": 250,
+      "height": 400
+    },
+    {
+      "id": "node-wren",
+      "type": "file",
+      "file": "BookOS/Characters/wren.md",
+      "x": 500,
+      "y": 1120,
+      "width": 250,
+      "height": 400
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "fromNode": "node-reed",
+      "fromSide": "left",
+      "toNode": "node-helen",
+      "toSide": "right",
+      "label": "Compelled Debt vs. Aggressive Intimacy"
+    },
+    {
+      "id": "edge-2",
+      "fromNode": "node-cass",
+      "fromSide": "top",
+      "toNode": "node-reed",
+      "toSide": "right",
+      "label": "Procedural Cooperation"
+    },
+    {
+      "id": "edge-3",
+      "fromNode": "node-cass",
+      "fromSide": "bottom",
+      "toNode": "node-lior",
+      "toSide": "right",
+      "label": "Systemic Alignment vs. Release"
+    },
+    {
+      "id": "edge-4",
+      "fromNode": "node-lior",
+      "fromSide": "left",
+      "toNode": "node-wren",
+      "toSide": "right",
+      "label": "Shared Liminality"
+    },
+    {
+      "id": "edge-5",
+      "fromNode": "node-wren",
+      "fromSide": "left",
+      "toNode": "node-nora",
+      "toSide": "bottom",
+      "label": "Insulated Sanctuary vs. Quiet Reflection"
+    },
+    {
+      "id": "edge-6",
+      "fromNode": "node-nora",
+      "fromSide": "top",
+      "toNode": "node-helen",
+      "toSide": "left",
+      "label": "Boundless vs. Wall"
+    }
+  ]
+}

@@ -42,4 +42,8 @@ scene_seeds:
   - "Message typed and unsent, cursor blinking"
 ---
 
+## Relationships
+- [[Cass]]: **Systemic Alignment vs. Release** — [[Cass]] treats [[Lior]]'s somatic trembling and fragility as a system bottleneck requiring recalibration; [[Lior]] seeks emotional release to escape [[Cass]]'s rigid parameters.
+- [[Wren]]: **Shared Liminality** — Both operate at the edges. They sit in silence, [[Wren]] reflecting [[Lior]]'s fragile state without pressure, allowing [[Lior]]'s trembling to settle naturally.
+
 *Load: Fast Load YAML. Copy matrix, voice, somatic, adult-gate to silent state. Overlay Characters/[slug]_log.yaml snapshot when present. 18+ OFF. Enable only if brief/request AND Canon Adult YES. Run Focus brace/release from realm_data.yaml. Never name system terms in speech.*

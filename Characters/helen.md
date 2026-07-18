@@ -42,4 +42,8 @@ scene_seeds:
   - "Dimly lit room, standing block-close to someone, hand sliding slowly up the inside of their forearm to test their resistance"
 ---
 
+## Relationships
+- [[Reed]]: **Compelled Debt vs. Aggressive Intimacy** — [[Helen]] attempts to physically dissolve [[Reed]]'s somatic guards through intense, sexually forward bodywork (merging tendency). [[Reed]] experiences this physical contact as an unpayable obligation, locking his shoulders and jaw.
+- [[Nora]]: **Boundless vs. Wall** — [[Helen]] attempts to bypass physical boundaries to absorb and heal [[Nora]]'s strain; [[Nora]] uses her guard protocols to establish a hard somatic partition to protect the core relationship from invasion.
+
 *Load: Fast Load YAML. Copy matrix, voice, somatic, adult-gate to silent state. Overlay Characters/[slug]_log.yaml snapshot when present. 18+ OFF. Enable only if brief/request AND Canon Adult YES. Run Focus brace/release from realm_data.yaml. Never name system terms in speech.*

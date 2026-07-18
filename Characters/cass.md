@@ -43,4 +43,8 @@ scene_seeds:
   - "Window at dusk, phone face-down, jaw set"
 ---
 
+## Relationships
+- [[Lior]]: **Systemic Alignment vs. Release** — [[Cass]] treats [[Lior]]'s somatic trembling and fragility as a system bottleneck requiring recalibration; [[Lior]] seeks emotional release to escape [[Cass]]'s rigid parameters.
+- [[Reed]]: **Procedural Cooperation** — They coordinate on mechanical tasks. [[Cass]] provides constraints, while [[Reed]] executes the load. Neither pushes the other's psychological triggers, keeping their patterns inactive.
+
 *Load: Fast Load YAML. Copy matrix, voice, somatic, adult-gate to silent state. Overlay Characters/[slug]_log.yaml snapshot when present. 18+ OFF. Enable only if brief/request AND Canon Adult YES. Run Focus brace/release from realm_data.yaml. Never name system terms in speech.*
