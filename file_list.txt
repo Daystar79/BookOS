@@ -1,4 +1,4 @@
-Total files: 148
+Total files: 147
 .gitignore
 Build/book.tex
 Build/build.sh
@@ -83,7 +83,6 @@ Characters/wren.md
 Characters/wren_log.yaml
 Drafts/.gitkeep
 Drafts/Completed/.gitkeep
-Drafts/draft_chapter_1_m1.md
 Drafts/master_manuscript.md
 Drafts/samples/README.md
 Drafts/samples/draft_chapter_1_m1.md
@@ -94,9 +93,9 @@ Framework/Design_QA_Protocol.md
 Framework/Drafting_Prompt.md
 Framework/Drafting_Workflow.md
 Framework/Main.md
+Framework/Mechanics/erotica.md
 Framework/Mechanics/humanity.md
 Framework/Mechanics/prose.md
-Framework/Mechanics/sexuality.md
 Framework/Mechanics/voices.md
 Framework/Modules.md
 Framework/Prompts/FullBookAudit.md

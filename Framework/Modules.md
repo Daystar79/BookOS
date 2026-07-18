@@ -14,7 +14,7 @@ Module files are loaded according to status. Registry entries below indicate loc
 
 | Module Name | Path | Status | Compatibility Constraints |
 |:---|:---|:---|:---|
-| **Sexuality Protocol** | `Framework/Mechanics/sexuality.md` | `DISABLED` | Requires Canon Adult: YES on cards |
+| **Erotica Protocol** | `Framework/Mechanics/erotica.md` | `DISABLED` | Requires Canon Adult: YES on cards |
 
 To enable a module: document compatibility in the file, set **Status** to `ENABLED` in this table, then re-run verification on the next session load.
 
