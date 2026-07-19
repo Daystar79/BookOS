@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-OS-aware tool launcher for Cognitive Middleware.
+OS-aware tool launcher for Cognitive Middleware / Midlayer.
 
 Detects Windows vs Unix-like hosts and runs the matching platform wrapper
 (or falls back to the shared Python cores). Prefer this entry point for agents.
@@ -9,6 +9,7 @@ Usage:
   python scripts/run.py deploy [target]
   python scripts/run.py lint <path> [--ext .md,.txt]
   python scripts/run.py migrate
+  python scripts/run.py midlayer status|pack|commit|gate|…
 
 Environment:
   CM_FORCE_OS=windows|unix   Override auto-detection (for testing).
@@ -26,7 +27,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS = Path(__file__).resolve().parent
 
-TOOLS = ("deploy", "lint", "migrate")
+TOOLS = ("deploy", "lint", "migrate", "midlayer")
 
 
 def detect_family() -> str:
@@ -79,6 +80,8 @@ def python_core(tool: str) -> Path:
         return ROOT / "Framework" / "linter.py"
     if tool == "migrate":
         return ROOT / "migrate_optimized.py"
+    if tool == "midlayer":
+        return ROOT / "Framework" / "midlayer" / "cli.py"
     raise KeyError(tool)
 
 
@@ -120,6 +123,11 @@ def run_python_core(tool: str, args: list[str]) -> int:
             print(f"Error: missing core script {core}", file=sys.stderr)
         return 2
     py = find_python()
+    if tool == "midlayer":
+        # Prefer module form so package imports resolve
+        cmd = [*py, "-m", "Framework.midlayer", *args]
+        print("[run] python -m Framework.midlayer", flush=True)
+        return subprocess.call(cmd, cwd=str(ROOT))
     cmd = [*py, str(core), *args]
     print(f"[run] python core → {core.relative_to(ROOT)}", flush=True)
     return subprocess.call(cmd, cwd=str(ROOT))
@@ -128,17 +136,25 @@ def run_python_core(tool: str, args: list[str]) -> int:
 def usage() -> None:
     family = detect_family()
     print(
-        f"""Cognitive Middleware — OS-aware launcher
+        f"""Cognitive Middleware / Midlayer — OS-aware launcher
 Detected OS family: {family}
 
 Usage:
   python scripts/run.py deploy [book_name_or_path]
   python scripts/run.py lint <path> [linter args...]
   python scripts/run.py migrate
+  python scripts/run.py midlayer status|gate|pack|commit|seed-log|rebuild-log …
 
 Platform wrappers (AI: pick by OS if not using this launcher):
-  Unix:    scripts/unix/deploy.sh | lint.sh | migrate.sh
-  Windows: scripts/windows/deploy.ps1 | lint.ps1 | migrate.ps1
+  Unix:    scripts/unix/deploy.sh | lint.sh | migrate.sh | midlayer.sh
+  Windows: scripts/windows/deploy.ps1 | lint.ps1 | migrate.ps1 | midlayer.ps1
+
+Midlayer runtime examples:
+  python scripts/run.py midlayer status
+  python scripts/run.py midlayer gate
+  python scripts/run.py midlayer pack --slugs reed,helen --tier yellow
+  python scripts/run.py midlayer commit --movement "1 M1" --draft Drafts/... --slugs reed,helen \\
+      --day "…" --somatic "…" --beats "…"
 """
     )
 
@@ -155,6 +171,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Unknown tool: {tool}", file=sys.stderr)
         usage()
         return 2
+
+    # midlayer always uses Python core (cross-platform); wrappers optional passthrough
+    if tool == "midlayer":
+        return run_python_core(tool, args)
 
     family = detect_family()
     wrapper = wrapper_path(family, tool)

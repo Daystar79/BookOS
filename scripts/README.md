@@ -27,6 +27,21 @@ CM_FORCE_OS=unix    python3 scripts/run.py lint Drafts/
 | `deploy` | Push framework scaffolds to a sibling book folder | `… deploy MyNovel` |
 | `lint` | Scan drafts for system leaks / banned fillers | `… lint Drafts/` |
 | `migrate` | One-time `*_optimized` file promotion (no-op if none) | `… migrate` |
+| `midlayer` | Runtime: integrity, context pack, atomic commit | `… midlayer status` |
+
+### Midlayer subcommands
+
+```bash
+python3 scripts/run.py midlayer status
+python3 scripts/run.py midlayer gate
+python3 scripts/run.py midlayer pack --slugs reed,helen --brief "Job: …" --tier yellow
+python3 scripts/run.py midlayer commit --movement "1 M1" --draft Drafts/… \
+  --slugs reed,helen --day "…" --somatic "…" --beats "…"
+python3 scripts/run.py midlayer seed-log [--slugs …]
+python3 scripts/run.py midlayer rebuild-log
+```
+
+Implementation: `Framework/midlayer/` · Claims: `Framework/midlayer/CLAIMS.md`
 
 ## Layout
 
@@ -38,16 +53,19 @@ scripts/
     deploy.sh
     lint.sh
     migrate.sh
+    midlayer.sh
   windows/
     deploy.ps1  deploy.cmd
     lint.ps1    lint.cmd
     migrate.ps1 migrate.cmd
+    midlayer.ps1 midlayer.cmd
 ```
 
 Core implementations (cross-platform Python):
 
 - `deploy_framework.py`
 - `Framework/linter.py`
+- `Framework/midlayer/` (`python -m Framework.midlayer`)
 - `migrate_optimized.py`
 
 ## Humans

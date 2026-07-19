@@ -60,7 +60,7 @@ Corrections queue (`Framework/Corrections/`): apply → log in `source_changes.m
 Prefer the OS-aware launcher:
 
 ```bash
-python3 scripts/run.py deploy|lint|migrate …
+python3 scripts/run.py deploy|lint|migrate|midlayer …
 ```
 
 | Host | Prefer | Alternate |
@@ -69,6 +69,17 @@ python3 scripts/run.py deploy|lint|migrate …
 | Windows | `python scripts/run.py …` | `scripts/windows/<tool>.ps1` or `.cmd` |
 
 Do not run `.sh` on native Windows or `.ps1` on Unix unless a compatible shell is confirmed. Details: [`scripts/README.md`](./scripts/README.md).
+
+### Midlayer runtime (draft bookkeeping — mandatory for agents)
+
+| Command | When |
+|:---|:---|
+| `python3 scripts/run.py midlayer status` / `gate` | Before design or draft; **do not draft if BLOCKED** |
+| `python3 scripts/run.py midlayer pack --slugs …` | Before drafting a movement (preferred context load) |
+| `python3 scripts/run.py midlayer commit …` | On **approved** movement — not freehand ledger/YAML edits |
+| `python3 scripts/run.py lint Drafts/` | After draft; critical system leaks fail the linter |
+
+Claims vs enforcement: [`Framework/midlayer/CLAIMS.md`](./Framework/midlayer/CLAIMS.md).
 
 ---
 
@@ -86,7 +97,7 @@ Do not run `.sh` on native Windows or `.ps1` on Unix unless a compatible shell i
 - Matrix 100% off-page in manuscript prose (no realm numbers, bias labels, prism jargon on the page).
 - Body before insight; imperfect memory; no therapy-speak defaults.
 - Age / Canon Adult gates absolute for intimacy paths.
-- After approved movements: Post-Movement State Commit (Continuity_Ledger + `_log.yaml` + consolidated log) per Main.
+- After approved movements: `python3 scripts/run.py midlayer commit …` (not ad-hoc file edits).
 
 ---
 

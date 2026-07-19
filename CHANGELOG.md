@@ -15,13 +15,20 @@ Dates are **YYYY-MM-DD**. Newest entries first.
 
 ## [Unreleased]
 
+### Added
+
+- **Midlayer runtime CLI (P0 spine):** `python3 scripts/run.py midlayer` with `status`, `gate`, `pack`, `commit`, `seed-log`, `rebuild-log` (`Framework/midlayer/`). Integrity gates block dirty state; packs compile kernel + on-scene context; commits atomically write Continuity_Ledger, character logs (revision, bias deltas, temp-effect decay), and regenerate `Character_Change_Log.md`. Claims contract: `Framework/midlayer/CLAIMS.md`. Tests: `tests/test_midlayer.py`.
+- **Init asks writing scope first:** Novel initialization (`Framework/Prompts/initialize_novel_prompt.md`) opens with Step 1 — Short Story / Novelette / Novella / Novel / Epic / Other (plus target length). Scope is written into `Framework/Novel_Outline.md` and scales premise, arc, and structure suggestions. Plot designer reads and respects the locked scope.
+
 ### Changed
 
+- **Drafting path is CLI-first:** `Main.md`, `load_protocol.md`, `AGENTS.md`, and `README.md` require `midlayer status/pack/commit` instead of freehand ledger edits. README author controls use plain language (slash table removed from product surface).
+- **Linter:** flags bracketed somatics / CONFIG / Prism intercept debug leaks.
 - **Init and character builder remove demo cast:** Sample characters (`reed`, `helen`, `cass`, `wren`, `nora`, `lior` + logs) are deleted and `Relations.md` / `Relationships.canvas` cleared by novel init post-cleanup **and** by character builder Pre-Step (if init was skipped). Scaffolds/templates kept. Documented in `Characters/README.md`; reset restores demos when Git is available.
 - **Renamed project host from BookOS → Midlayer** (folder, docs, license, scripts, canvas paths, build helpers). Product remains Cognitive Middleware / Psyche Matrix; no longer branded as an “OS.”
 - Deploy script examples use a generic sibling book folder (`MyNovel`) instead of the project name.
 
-### Added
+### Added (earlier unreleased)
 
 - Root `CHANGELOG.md` as the project product changelog.
 - Root `AGENTS.md` with mandatory changelog maintenance and agent operating rules.

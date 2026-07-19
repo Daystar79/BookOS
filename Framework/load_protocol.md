@@ -6,28 +6,47 @@ load_priority: 0
 ---
 
 # Standard Load Protocol
-*Reference for all prompts and workflows. Always load in this order unless specified otherwise.*
+*Reference for all prompts and workflows. Prefer compiled packs for drafting.*
 
 ---
 
-## Core Framework (Always Load)
+## First action (always)
+0. **Integrity gate (CLI):**
+   ```bash
+   python3 scripts/run.py midlayer status
+   # or: python3 scripts/run.py midlayer gate
+   ```
+   If **BLOCKED**, fix ledger/logs or finish `midlayer commit` — do not draft.
+
+## Preferred draft load (token-efficient)
+1. Build pack:
+   ```bash
+   python3 scripts/run.py midlayer pack --slugs <on-scene> --brief "…" [--preceding Drafts/…] [--tier yellow]
+   ```
+2. Load `Build/.context/movement_pack.md` (kernel + on-scene state + compiled bias/realms).
+3. Preceding prose if not embedded via `--preceding`.
+4. ENABLED modules from `Modules.md` only if the brief needs them.
+
+## Full stack (design, audits, or pack unavailable)
 1. `Framework/Main.md` — Core engine, workflow, and principles
 2. `Framework/Rules_Index.md` — Hard bans, cleanup protocol, dialogue rules
 3. `Framework/Psychology/realm_data.yaml` — Somatic profiles for all 10 Realms
-
-## Character Data
 4. On-scene character cards from `Characters/` directory
-5. `Characters/[slug]_log.yaml` — individual character logs for on-scene characters (overrides card Focus/weights/baseline somatic when present)
-6. `Framework/Continuity_Ledger.md` — latest scene close / timeline (design & draft)
-
-## First action after load
-7. **Ledger Integrity Pass** (`Main.md`) — clean empty/placeholder ledgers before design or draft
+5. `Characters/[slug]_log.yaml` — individual character logs (overrides card Focus/weights/baseline somatic when present)
+6. `Framework/Continuity_Ledger.md` — latest scene close / timeline
 
 ## Optional Modules (Load as Needed)
 - `Framework/Mechanics/humanity.md` — Extra body-pacing detail
 - `Framework/Mechanics/prose.md` — Full style catalog
 - `Framework/Mechanics/voices.md` — Building new cards
 - `Framework/natural_prose.md` — Style = `natural` only
+
+## After approval
+```bash
+python3 scripts/run.py midlayer commit --movement "N M#" --draft … --slugs … --day … --somatic … --beats …
+python3 scripts/run.py lint Drafts/
+python3 scripts/run.py midlayer status
+```
 
 ## Never Load for Generation
 - `CHANGELOG.md` (product history — agents update on maintenance; not runtime)
@@ -37,6 +56,7 @@ load_priority: 0
 - `Framework/Drafting_Workflow.md` (stub, archived)
 - `Framework/psyche_framework.md` (stub, archived)
 - `Framework/Prompts/*` (reference only, not runtime)
+- `Framework/midlayer/CLAIMS.md` (product contract — not draft context)
 
 ---
 

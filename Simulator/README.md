@@ -13,7 +13,7 @@ Self-contained drop-in. Paste the whole file into a chat (no git required).
 | **TEST** (default) | Author fidelity — “how would this card act?” |
 | **COMPANION** / **HEAT** | Optional live session modes (adult paths gated) |
 
-**Private adult RP (one switch):** after loading a canon-adult pack, say **enable adult mode** (or “turn adult on”). That sets adult authorization + HEAT mode. Toggle off with **disable adult mode**. Age gates stay absolute (no minors, no age-up). Optional: set bond values in plain language (e.g. “set trust 70, attraction 60”) if the relationship is already established.
+**Private adult RP (one switch):** after loading a canon-adult pack, send **`/adult on`**. That sets adult authorization + HEAT mode. Toggle off with `/adult off`. Age gates stay absolute (no minors, no age-up). Optional: `/bond set trust:70 attraction:60` if the relationship is already established.
 
 Persistence: Character Pack (CARD + MEMORY) via Drive/local/paste — see the runtime file.
 
@@ -22,8 +22,8 @@ Persistence: Character Pack (CARD + MEMORY) via Drive/local/paste — see the ru
 | Goal | Use |
 |:---|:---|
 | Write a novel / movement | `Framework/Main.md` + Rules + realm_data + cards + logs |
-| Check a card in chat | This simulator, TEST mode |
-| Private live RP | This simulator · enable adult mode when both are adults · keep packs private |
+| Check a card in chat | This simulator, `/mode test` |
+| Private live RP | This simulator · `/adult on` when both are adults · keep packs private |
 
 ## License
 

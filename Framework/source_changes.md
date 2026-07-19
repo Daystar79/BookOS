@@ -1,36 +1,12 @@
 # Source Changes — Psyche Framework
 *Changes made from original source material during this chat*
 
-**Product changelog:** root [`CHANGELOG.md`](../CHANGELOG.md) — agents must update it on every product/framework/docs/tooling change ([AGENTS.md](../AGENTS.md)). This file is the detailed session/design-lock log; **never load for draft generation**.
+## 2026-07-19 — Midlayer runtime CLI (status/pack/commit) — **applied** (agent)
 
-## 2026-07-18 — Demo cast deleted on novel init — **applied** (agent)
-
-- **Policy:** Sample cards (`reed`, `helen`, `cass`, `wren`, `nora`, `lior`) ship for local framework testing only. Novel initialization **and** character builder must delete them (and matching `*_log.yaml`), empty `Relations.md` / `Relationships.canvas`, and leave `_template` / `_log_template` / genre folders.
-- **Prompts:** `initialize_novel_prompt.md` post-cleanup steps 1–2; `character_builder_prompt.md` **Pre-Step** (idempotent, before Step 0) plus post-session confirm so skip-init authors still lose demos before voice polarization.
-- **Docs:** `Characters/README.md` and `reset_project_prompt.md` describe init/builder wipe vs reset restore of demos.
-
-## 2026-07-18 — Rename BookOS → Midlayer — **applied** (agent)
-
-- Project host/folder/docs rebranded **Midlayer** (not an OS). Cognitive Middleware product name unchanged.
-- Updated Main host line, LICENSE, prompts, Modules, erotica label, AGENTS/CHANGELOG, Relationships.canvas paths, Build helpers, .gitignore header.
-- Deploy examples use `MyNovel` as target folder name.
-
-## 2026-07-18 — Add CHANGELOG.md + AGENTS.md — **applied** (agent)
-
-- **Created** root `CHANGELOG.md` (Keep a Changelog style; seeded recent history).
-- **Created** root `AGENTS.md` — mandatory changelog updates, scripts OS rules, draft vs maintenance load split.
-- **Created** root `CLAUDE.md` thin pointer for Claude-style agents.
-- **Wired** README, `scripts/README.md`, Main load protocol, `load_protocol.md`, `formatting_rules.md` Corrections queue.
-
-## 2026-07-18 — Remove slash-style commands from documentation — **applied** (agent)
-
-- **Policy:** All author/simulator controls use **plain language** only. No slash-command syntax in product docs.
-- **Root README:** Author Controls table rewritten with natural-language examples; simulator section updated.
-- **Simulator:** `CharacterRuntime.md` COMMANDS → AUTHOR CONTROLS (plain language); README one-switch adult mode wording updated.
-- **Mechanics:** `prose.md` style lock/unlock via plain language; `erotica.md` simulator path wording updated.
-- **Drafting_Prompt:** invoke with "draft the next movement" (no slash invoke).
-- **Prompts:** Removed leading slash invoke headers (`init-novel`, `build-world`, `build-character`, `design-plot`, `movement-qa`, `full-check`, `improvement-pass`, `reset-project`); pipeline cross-refs cleaned.
-- **source_changes.md:** Historical entries rephrased so they no longer teach slash syntax.
+- **Problem:** Claims of an “engine” depended on models improvising ledger/YAML commits; no deterministic integrity gate or compiled draft context.
+- **Added:** `Framework/midlayer/` package + `scripts/run.py midlayer` (`status`, `gate`, `pack`, `commit`, `seed-log`, `rebuild-log`); `CLAIMS.md` contract; `tests/test_midlayer.py`.
+- **Main / load_protocol / AGENTS / README:** Draft path is gate → pack → prose → lint → commit; freehand dual-ledger edits no longer the primary path.
+- **Out of scope this session:** novel-scale sample corpus (author); soft literary judges.
 
 ## 2026-07-17 — Rename Sexuality → Erotica module — **applied** (agent)
 
@@ -43,15 +19,15 @@
 - **Main.md (Psyche Matrix Core):** Added **Embodiment Baseline → Runtime Filters** pipeline. Body (card physical + sexed/hormonal capacity when established) sets silent baseline and low-amplitude ambient attraction/aversion; culture, occupation, Focus, belief/voice, memory, Bias, and scene pressure filter final output. No default eroticization; erotica/intimacy scene craft deferred to ENABLED modules. Explicitly bans generic sex-stereotype scripts.
 - **Execute on Movement:** Steps reordered — body baseline → filters → Focus/Bias → body-first prose → prism → modules → transform → bans → commit.
 
-## 2026-07-17 — Simulator enable adult mode one-switch for private RP — **applied** (agent)
+## 2026-07-17 — Simulator `/adult on` one-switch for private RP — **applied** (agent)
 
-- **Problem:** Private RP partners had to juggle enable 18+ + set mode to heat + bond friction; no single toggle.
-- **Simulator/CharacterRuntime.md:** Added enable/disable adult mode (aliases enable/disable heat; enable/disable 18+ still sets auth). Sets `adult_auth` + HEAT when canon adult. Softens HEAT decision-tree friction on clear mutual intent (still hard_bans / bias tripwires / age gates). Added set bond values for established-relationship setup. MEMORY field `adult_auth`. Boot + quick-start copy updated.
+- **Problem:** Private RP partners had to juggle `/18+ on` + `/mode heat` + bond friction; no single toggle.
+- **Simulator/CharacterRuntime.md:** Added `/adult on|off` (aliases `/heat on|off`; `/18+ on|off` still sets auth). Sets `adult_auth` + HEAT when canon adult. Softens HEAT decision-tree friction on clear mutual intent (still hard_bans / bias tripwires / age gates). Added `/bond set …` for established-relationship setup. MEMORY field `adult_auth`. Boot + quick-start copy updated.
 - **Simulator/README.md** + root **README.md:** Document the one-switch path for private live RP.
 
 ## 2026-07-13 — Finish Main entry path (post-refactor cleanup) — **applied** (agent)
 
-- **Main.md:** Honest load protocol (always Main + Rules_Index + realm_index + cards); strip RP opening beat / CONFIG / debug dump; add Prism §3c; de-B&L brief template; drafting-only execute loop; author commands cleaned.
+- **Main.md:** Honest load protocol (always Main + Rules_Index + realm_index + cards); strip RP opening beat / CONFIG / `/debug`; add Prism §3c; de-B&L brief template; drafting-only execute loop; author commands cleaned.
 - **Rules_Index.md:** Drafting-first; playground reduced to pointer; generic phrase watchlist; book-local watchlist optional.
 - **Stubs:** `psyche_framework.md`, `Drafting_Workflow.md` → point at Main (do not load for gen).
 - **Mechanics:** `humanity.md` / `voices.md` slimmed to optional supplements; prose.md marked optional detail.
@@ -90,7 +66,7 @@
 
 - **Wound activity and dormancy protocol:** Added `Wound Activity & Dormancy (Active vs. Dormant)` rules to `humanity.md` and its copy `Web/humanity.md` to prevent characters from being constantly defensive. Wounds (Cognitive Biases) and somatic tells remain dormant in casual or low-stakes situations, allowing characters to communicate normally.
 - **Bias State tracking:** Added `Bias State` (`ACTIVE` or `DORMANT`) to the live session configuration in `playground.md` and `Web/playground.md`. By default, wounds are dormant in mundane situations, activating only under specific triggers, emotional pressure, or manual command.
-- **Turn loop updates:** Updated the Turn Loop in the playground to bypass cognitive misconstrual, somatic bracing, and prism distortion when `Bias State = DORMANT`. Mapped set bias active and set bias dormant commands to toggle this state.
+- **Turn loop updates:** Updated the Turn Loop in the playground to bypass cognitive misconstrual, somatic bracing, and prism distortion when `Bias State = DORMANT`. Mapped `/bias active` and `/bias dormant` commands to toggle this state.
 
 ## 2026-07-12 — Dynamic Canon Character Synthesis — **applied** (agent)
 
@@ -101,7 +77,7 @@
 ## 2026-07-12 — Dynamic Focus Shifting — **applied** (agent)
 
 - **Dynamic Focus Shifting protocol:** Added rules to `psyche_framework.md` and its copy `Web/psyche_framework.md` to allow the AI to automatically shift the active Focus of a character based on the immediate scene context and emotional pressure, unless locked.
-- **Focus Lock state machine:** Introduced `Focus Lock` (`UNLOCKED` or `LOCKED`) to the live session configuration in `playground.md` and `Web/playground.md`. Manual commands like lock focus to N set `Focus Lock = LOCKED`, while unlock focus and reset session restore it to `UNLOCKED`.
+- **Focus Lock state machine:** Introduced `Focus Lock` (`UNLOCKED` or `LOCKED`) to the live session configuration in `playground.md` and `Web/playground.md`. Manual commands like `/focus N` set `Focus Lock = LOCKED`, while `/focus unlock` and `/reset` restore it to `UNLOCKED`.
 - **Turn loop updates:** Modified the Turn Loop to evaluate and update the active Focus on every turn if the lock is `UNLOCKED`.
 
 ## 2026-07-12 — Somatic Pacing and Decay — **applied** (agent)
@@ -128,7 +104,7 @@
 ## 2026-07-09 — Prose style lock-on-select — **applied** (agent)
 
 - **Style Lock field:** `UNLOCKED` at session start with default `llm`; first explicit style choice sets style and **LOCKED**.
-- **While locked:** no silent drift; refuse casual restyle; change only via unlock style then reselect, force style <id>, or reset session.
+- **While locked:** no silent drift; refuse casual restyle; change only via `/style unlock` then reselect, `/style force <id>`, or `/reset`.
 - **Session-level:** character swaps do not clear locked style.
 - **Brief = lock:** drafting `Prose Style: <id>` treated as locked for that pass.
 - Updated `prose.md`, `psyche_framework.md` §0a, playground CONFIG/commands/turn loop; Web synced.
@@ -139,7 +115,7 @@
 - **Default is model prose:** Sessions no longer auto-apply jagged natural_prose rules. User must choose `natural` (aliases: house, asymmetric, anthony, barker, anthony/barker, anti-ai).
 - **natural_prose.md:** Marked optional style pack; points to selector; not applied automatically.
 - **psyche_framework.md:** New §0a Prose Style.
-- **Playground POC:** Live field Prose Style; §5a catalog; plain-language style controls; hard ban on forcing house texture under `llm`; CONFIG CARD shows style; reset session restores `llm`.
+- **Playground POC:** Live field Prose Style; §5a catalog; `/style` commands; hard ban on forcing house texture under `llm`; CONFIG CARD shows style; `/reset` restores `llm`.
 - **Web sync:** `prose.md` + updated framework/playground.
 
 ## 2026-07-09 — Character-first load + Canon Adult 18+ gate — **applied** (agent)
@@ -147,20 +123,20 @@
 - **Character-first model:** Named characters are the unit of load. Naming a character pulls their card (matrix, voice, somatic, age, Canon Adult) and runs from that data. Archetypes A–F are build templates only.
 - **Characters directory:** Added `_template.md`, `README.md`, and demo cards `reed`, `helen`, `cass`, `wren`, `nora`, `lior` (all Canon Adult YES for demos).
 - **18+ gate:** Sexuality Protocol requires **Canon Adult: YES** on the character card **and** explicit enable. Canon Adult NO / under 18 / unclear → permanent lock; no age-up. Switching to a non-adult card forces 18+ OFF.
-- **Playground POC:** Rewrote single prompt for character load (load character by name, natural language names, list characters, create character with required adult field), embedded directory, eligibility on CONFIG CARD.
+- **Playground POC:** Rewrote single prompt for character load (`/character Name`, natural language names, `/list`, `/create` with required adult field), embedded directory, eligibility on CONFIG CARD.
 - **Protocols:** Updated `sexuality.md`, `psyche_framework.md` §0, `humanity.md` intimacy pairing rule; synced Web copies.
 
 ## 2026-07-09 — Single-prompt POC + archetype canon + realm fixes — **applied** (agent)
 
-- **Single-prompt playground:** Rebuilt `Web/psyche_playground_poc.md` as a fully self-contained pasteable system prompt (boot sequence, live config, matrix rules, bias catalog, 10-realm DB, A–F presets, deep focus, plain-language controls, hard bans, turn loop). No external files required for web LLM demos.
+- **Single-prompt playground:** Rebuilt `Web/psyche_playground_poc.md` as a fully self-contained pasteable system prompt (boot sequence, live config, matrix rules, bias catalog, 10-realm DB, A–F presets, deep focus, slash commands, hard bans, turn loop). No external files required for web LLM demos.
 - **Archetype A–F canon:** Unified defaults across `voices.md`, `humanity.md`, `psyche_framework.md`, and playground (A: Focus 8 Debt Ledger; B: 6 Saviour; C: 4 System Architect; D: 7 Mirror; E: 6 Insulation; F: 9 Dissolution). Added missing E voice profile; aligned Focus examples with playground.
-- **Bias catalog:** Formalized six core wounds with trigger/rewrite/hearing warpshow somatics tell/passage opposite in `psyche_framework.md` and the playground.
+- **Bias catalog:** Formalized six core wounds with trigger/rewrite/hearing warp/somatic tell/passage opposite in `psyche_framework.md` and the playground.
 - **Great Wheel:** Added sequence/zone load notes (Internal I–V / External VI–X) to framework + playground.
 - **Realm VIII:** Mapped Remnant Gate; de-novelized Remnant Lament (removed journalist/source/job bleed).
 - **Realm diagnostics:** Added fourth looping signs for Realms V and VI.
 - **Typos:** Fixed one's / everyone else's / another's in realm somatic lines (I, III, VI).
 - **Web sync:** Refreshed `Web/` copies of psyche_framework, voices, humanity, sexuality from Framework sources.
-- **Playground ergonomics:** Scene seed auto-boot, `set mode playground or prose`, deep focus N, scene seed, show latents, show somatics, show card, reset session; removed load character mara novel bleed; never-name-the-system rule.
+- **Playground ergonomics:** Scene seed auto-boot, `/mode playground|prose`, `/deep N`, `/seed`, `/latent`, `/somatic`, `/card`, `/reset`; removed `/character mara` novel bleed; never-name-the-system rule.
 
 ## 2026-07-09 — Imperfect Recall, Deflection, and Optional Sexuality Protocol — **applied** (agent)
 

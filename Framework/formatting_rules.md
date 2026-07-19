@@ -143,7 +143,7 @@ Character A steps outside, takes a breath, goes back in. The conversation begins
 
 ## 8. Scene transitions in prose *(Corrections queue)*
 
-One-off prose transition fixes are dropped in **`Framework/Corrections/`** as separate `*.md` files (not this file). On **load framework**: apply each correction → log in `source_changes.md` → if the fix is product/protocol-facing, also note it in root **`CHANGELOG.md`** → delete the file. **If any corrections were applied, run `Build/build.sh`** to rebuild all `Releases/` outputs (Print PDF, KDP DOCX, KDP Bleed DOCX, EPUB). Agent duty for product history: **[AGENTS.md](../AGENTS.md)**.
+One-off prose transition fixes are dropped in **`Framework/Corrections/`** as separate `*.md` files (not this file). On **load framework**: apply each correction → log in `source_changes.md` → delete the file. **If any corrections were applied, run `Build/build.sh`** to rebuild all `Releases/` outputs (Print PDF, KDP DOCX, KDP Bleed DOCX, EPUB).
 
 ### The Three T's *(after any `---` break)*
 
