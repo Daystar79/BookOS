@@ -17,6 +17,7 @@ Dates are **YYYY-MM-DD**. Newest entries first.
 
 ### Changed
 
+- **Init and character builder remove demo cast:** Sample characters (`reed`, `helen`, `cass`, `wren`, `nora`, `lior` + logs) are deleted and `Relations.md` / `Relationships.canvas` cleared by novel init post-cleanup **and** by character builder Pre-Step (if init was skipped). Scaffolds/templates kept. Documented in `Characters/README.md`; reset restores demos when Git is available.
 - **Renamed project host from BookOS → Midlayer** (folder, docs, license, scripts, canvas paths, build helpers). Product remains Cognitive Middleware / Psyche Matrix; no longer branded as an “OS.”
 - Deploy script examples use a generic sibling book folder (`MyNovel`) instead of the project name.
 

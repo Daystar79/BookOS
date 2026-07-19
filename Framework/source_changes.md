@@ -3,6 +3,12 @@
 
 **Product changelog:** root [`CHANGELOG.md`](../CHANGELOG.md) — agents must update it on every product/framework/docs/tooling change ([AGENTS.md](../AGENTS.md)). This file is the detailed session/design-lock log; **never load for draft generation**.
 
+## 2026-07-18 — Demo cast deleted on novel init — **applied** (agent)
+
+- **Policy:** Sample cards (`reed`, `helen`, `cass`, `wren`, `nora`, `lior`) ship for local framework testing only. Novel initialization **and** character builder must delete them (and matching `*_log.yaml`), empty `Relations.md` / `Relationships.canvas`, and leave `_template` / `_log_template` / genre folders.
+- **Prompts:** `initialize_novel_prompt.md` post-cleanup steps 1–2; `character_builder_prompt.md` **Pre-Step** (idempotent, before Step 0) plus post-session confirm so skip-init authors still lose demos before voice polarization.
+- **Docs:** `Characters/README.md` and `reset_project_prompt.md` describe init/builder wipe vs reset restore of demos.
+
 ## 2026-07-18 — Rename BookOS → Midlayer — **applied** (agent)
 
 - Project host/folder/docs rebranded **Midlayer** (not an OS). Cognitive Middleware product name unchanged.

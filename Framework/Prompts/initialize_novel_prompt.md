@@ -103,10 +103,29 @@ Once all four steps are complete, compile the answers into a structured markdown
 ```
 
 ## Post-Initialization Cleanup (Mandatory for Agents)
-Once you have successfully written the outline to `Framework/Novel_Outline.md`, perform the following cleanup:
-1. Move this initialization prompt file from `Framework/Prompts/initialize_novel_prompt.md` to `Framework/Setup/initialize_novel_prompt.md` (creating the `Framework/Setup/` directory if it does not exist). *(Note for Agents: Detect the host operating system. If it is Windows, execute directory creation and file movement via PowerShell rather than Unix commands).*
-2. Report to the author that the project has been successfully initialized, and that the prompt has been archived to the setup folder.
-3. **Automatically start the World Builder:** Immediately load the instructions from `Framework/Prompts/world_builder_prompt.md` and initiate the world-building pipeline, presenting its Step 0/Step 1 to the author without requiring them to manually trigger the next script.
+Once you have successfully written the outline to `Framework/Novel_Outline.md`, perform the following cleanup in order:
+
+1. **Remove demo cast (mandatory):** Delete the sample/demo character cards and logs shipped for framework testing. They are not part of the author's book.
+
+   Delete these files if they exist:
+   - `Characters/reed.md`, `Characters/reed_log.yaml`
+   - `Characters/helen.md`, `Characters/helen_log.yaml`
+   - `Characters/cass.md`, `Characters/cass_log.yaml`
+   - `Characters/wren.md`, `Characters/wren_log.yaml`
+   - `Characters/nora.md`, `Characters/nora_log.yaml`
+   - `Characters/lior.md`, `Characters/lior_log.yaml`
+
+   **Keep** scaffolds and tooling: `Characters/_template.md`, `Characters/_log_template.yaml`, `Characters/README.md`, and the `Physical/`, `Somatic/`, and `Aesthetics/` template folders.
+
+2. **Reset relationship maps to empty scaffolds:**
+   - Rewrite `Characters/Relations.md` to headers only (empty Relationship Dynamics Index table; note that rows are added when the author builds their cast). Do not leave Reed/Helen/Cass/Wren/Nora/Lior rows.
+   - Rewrite `Characters/Relationships.canvas` to an empty canvas (`{"nodes": [], "edges": []}`) so demo graph nodes do not linger in Obsidian.
+
+3. Move this initialization prompt file from `Framework/Prompts/initialize_novel_prompt.md` to `Framework/Setup/initialize_novel_prompt.md` (creating the `Framework/Setup/` directory if it does not exist). *(Note for Agents: Detect the host operating system. If it is Windows, execute directory creation and file movement via PowerShell rather than Unix commands).*
+
+4. Report to the author that the project has been successfully initialized: outline written, **demo cast removed**, relationship maps cleared, and this prompt archived to the setup folder.
+
+5. **Automatically start the World Builder:** Immediately load the instructions from `Framework/Prompts/world_builder_prompt.md` and initiate the world-building pipeline, presenting its Step 0/Step 1 to the author without requiring them to manually trigger the next script.
 
 Begin by welcoming the author, explaining the initialization workflow, and asking **Step 1: Genre & Tone Configuration** to start the process.
 ```
