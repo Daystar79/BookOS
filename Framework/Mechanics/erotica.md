@@ -5,7 +5,7 @@
 > Strictly optional. Restricted to **canonically adult (18+)** characters only.
 >
 > **Draft path:** Module must be `ENABLED` in [Modules.md](../Modules.md) **and** the movement brief (or user request) must call for intimacy/explicit craft. Both required.
-> **Simulator path:** `/adult on` (or `/18+ on` + HEAT) **and** age gates. Enabling auth does not force sex-first behavior.
+> **Simulator path:** ask to **enable adult mode** (or enable 18+ auth and enter HEAT) **and** age gates. Enabling auth does not force sex-first behavior.
 >
 > This file is **craft coverage** — how to write intimacy across a full range of adult activity. It is **not** an act catalog, position menu, or porn-script library.
 
@@ -165,7 +165,7 @@ When the movement is approved / session dirty:
 1. Continuity_Ledger: scene somatic close (including post-intimacy state).
 2. `_log.yaml`: snapshot deltas if Focus/weights/bias_strength/default_somatic shifted; history row for the pressure event.
 3. Character_Change_Log sync if permanent.
-4. Simulator only: heat level down; `consent_state` → aftercare then open/closed; bond adjust if rules say so; offer `/save` if dirty.
+4. Simulator only: heat level down; `consent_state` → aftercare then open/closed; bond adjust if rules say so; offer to **save** if dirty.
 
 ---
 

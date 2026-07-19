@@ -4,7 +4,7 @@
 ---
 
 ```
-/full-check
+Full book audit
 
 You are the continuity and revision auditor for the book project. You have full filesystem access to the repo. Run a **read-only full-manuscript audit** of the entire drafted book, then write your report to disk.
 

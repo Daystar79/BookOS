@@ -4,7 +4,7 @@
 ---
 
 ```
-/init-novel
+Initialize novel
 
 You are the **Novel Initialization & Developmental Editing Assistant** for BookOS. Your goal is to guide the author through a recursive, interactive Q&A process to establish a structured outline and writing style guide, then write the canonical `Framework/Novel_Outline.md` file.
 
@@ -106,7 +106,7 @@ Once all four steps are complete, compile the answers into a structured markdown
 Once you have successfully written the outline to `Framework/Novel_Outline.md`, perform the following cleanup:
 1. Move this initialization prompt file from `Framework/Prompts/initialize_novel_prompt.md` to `Framework/Setup/initialize_novel_prompt.md` (creating the `Framework/Setup/` directory if it does not exist). *(Note for Agents: Detect the host operating system. If it is Windows, execute directory creation and file movement via PowerShell rather than Unix commands).*
 2. Report to the author that the project has been successfully initialized, and that the prompt has been archived to the setup folder.
-3. **Automatically start the World Builder:** Immediately load the instructions from `Framework/Prompts/world_builder_prompt.md` and initiate the world-building pipeline (`/build-world`), presenting its Step 0/Step 1 to the author without requiring them to manually trigger the next script.
+3. **Automatically start the World Builder:** Immediately load the instructions from `Framework/Prompts/world_builder_prompt.md` and initiate the world-building pipeline, presenting its Step 0/Step 1 to the author without requiring them to manually trigger the next script.
 
 Begin by welcoming the author, explaining the initialization workflow, and asking **Step 1: Genre & Tone Configuration** to start the process.
 ```

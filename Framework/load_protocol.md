@@ -30,8 +30,10 @@ load_priority: 0
 - `Framework/natural_prose.md` — Style = `natural` only
 
 ## Never Load for Generation
+- `CHANGELOG.md` (product history — agents update on maintenance; not runtime)
+- `AGENTS.md` (agent contract — maintenance only)
 - `Framework/Archives/*` (historical artifacts)
-- `Framework/source_changes.md` (archived)
+- `Framework/source_changes.md` (session/design locks — not runtime)
 - `Framework/Drafting_Workflow.md` (stub, archived)
 - `Framework/psyche_framework.md` (stub, archived)
 - `Framework/Prompts/*` (reference only, not runtime)

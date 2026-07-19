@@ -4,7 +4,7 @@
 ---
 
 ```
-/reset-project
+Reset project
 
 You are the **Workspace Reset Assistant** for BookOS. Your goal is to guide the author through resetting this repository back to its clean default state.
 

@@ -62,9 +62,12 @@ Built to fight common AI writing problems: therapy-speak, perfect recall, symmet
 
 | File | Purpose | Usage / Load |
 |------|---------|--------------|
-| `Framework/Main.md` | Core engine, workflow, commands, and principles | **Always load** |
-| `Framework/Rules_Index.md` | Hard bans, cleanup protocol, dialogue rules | **Always load** |
-| `Framework/Psychology/realm_data.yaml` | Somatic profiles for all 10 Realms | **Always load** |
+| `Framework/Main.md` | Core engine, workflow, author controls, and principles | **Always load** (drafting) |
+| `Framework/Rules_Index.md` | Hard bans, cleanup protocol, dialogue rules | **Always load** (drafting) |
+| `Framework/Psychology/realm_data.yaml` | Somatic profiles for all 10 Realms | **Always load** (drafting) |
+| `CHANGELOG.md` | Project product / repo history | **Agents: update on every change** — do not load for draft gen |
+| `AGENTS.md` | Standing agent contract (changelog duty, scripts, hygiene) | **Agents: read on maintenance sessions** |
+| `CLAUDE.md` | Thin pointer to `AGENTS.md` / `CHANGELOG.md` | Agent entry stub |
 | `Framework/linter.py` | Automated prose linter (core) | Via `scripts/run.py lint` |
 | `scripts/run.py` | OS-aware launcher (deploy / lint / migrate) | **Agents: use this** |
 | `scripts/unix/*.sh` | Unix shell wrappers | Linux / macOS / WSL |
@@ -84,22 +87,24 @@ Built to fight common AI writing problems: therapy-speak, perfect recall, symmet
 
 Side path for **stress-testing a card in chat** before drafting, or private live sessions. **Product core remains Framework/ + Characters/ + ledgers.**
 
-Paste `Simulator/CharacterRuntime.md` into a chat if you want the drop-in (storage boot, Character Pack, `/mode test` default). Companion/heat modes are optional and gated. For private adult RP sessions: load a canon-adult pack, then **`/adult on`** (one switch). Details in that file and `Simulator/README.md`.
+Paste `Simulator/CharacterRuntime.md` into a chat if you want the drop-in (storage boot, Character Pack, **TEST** mode by default). Companion and heat modes are optional and gated. For private adult RP sessions: load a canon-adult pack, then ask to **enable adult mode** (one plain-language switch). Details in that file and `Simulator/README.md`.
 
-## Author Commands (drafting)
+## Author Controls (drafting)
 
-| Command | Effect |
+Use plain language in chat (or set fields on the movement brief). No slash-command syntax.
+
+| Request (examples) | Effect |
 |---------|--------|
-| Load character card | Silent state load (name + card) |
-| `/create …` | Build minimal new card |
-| `/focus N` | Lock active Focus to Realm N |
-| `/focus unlock` | Allow dynamic Focus shifts |
-| `/bias active` / `dormant` | Force bias state (Active distorts perception, Dormant acts normally) |
-| `/style <id>` | Lock prose style |
-| `/style unlock` | Allow style change |
-| `/18+ on` / `off` | Enable/disable heat (only if Canon Adult = YES) |
-| `/transform event: <desc> strength: <level>` | Force a transformation pressure calculation |
-| `/reset` | Clear session state |
+| Load character card / name the card | Silent state load (name + card) |
+| Create a new character card… | Build minimal new card |
+| Lock focus to Realm N | Lock active Focus to Realm N |
+| Unlock focus | Allow dynamic Focus shifts |
+| Set bias active / dormant | Force bias state (Active distorts perception, Dormant acts normally) |
+| Use prose style *id* / lock style to *id* | Lock prose style |
+| Unlock style | Allow style change |
+| Enable 18+ / disable 18+ | Enable/disable heat (only if Canon Adult = YES) |
+| Transform: *event* at *strength* | Force a transformation pressure calculation |
+| Reset session | Clear session state |
 
 ---
 
@@ -152,6 +157,12 @@ See [scripts/README.md](scripts/README.md) for Windows vs Unix command tables (f
 | Migrate | `python3 scripts/run.py migrate` | `scripts/unix/migrate.sh` | `scripts/windows/migrate.ps1` |
 
 **AI agents:** detect the host OS, then either call `scripts/run.py` (preferred) or the matching `scripts/unix/` / `scripts/windows/` wrapper. Do not run `.sh` on native Windows or `.ps1` on Unix unless a compatible shell is confirmed.
+
+---
+
+## Changelog
+
+Project history lives in **[CHANGELOG.md](CHANGELOG.md)**. AI agents must update it whenever they change the product, framework, docs, or tooling — see **[AGENTS.md](AGENTS.md)** (also linked from [CLAUDE.md](CLAUDE.md)).
 
 ---
 

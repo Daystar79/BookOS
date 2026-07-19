@@ -2,6 +2,8 @@
 
 Cross-platform launchers for deploy, lint, and migrate. Shared logic lives in Python; OS-specific wrappers only choose the right shell and Python binary.
 
+**Full agent contract:** [AGENTS.md](../AGENTS.md) (includes **mandatory `CHANGELOG.md` updates** on any substantive repo change).
+
 ## AI / agent rule (pick by OS)
 
 | Host OS | Prefer | Alternate |

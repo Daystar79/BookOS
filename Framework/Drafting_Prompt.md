@@ -1,7 +1,7 @@
 # Drafting Prompt
 *Active session parameters and status tracker.*
 
-Invoke in chat: **`/draft`** — or say "draft the next movement" / "continue Chapter N."
+Invoke in chat with plain language: say **"draft the next movement"**, **"continue Chapter N"**, or **"start drafting"**.
 
 ---
 

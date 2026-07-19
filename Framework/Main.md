@@ -6,7 +6,7 @@
 ## LOAD PROTOCOL
 - **Always (draft/design/cleanup):** `Main.md`, `Rules_Index.md`, `realm_data.yaml`, on-scene character cards (`Characters/`), per-character logs (`[slug]_log.yaml`), `Continuity_Ledger.md`, `Modules.md`.
 - **Optional (as needed):** `Character_Change_Log.md`, `natural_prose.md` (Style = `natural` only), `Mechanics/prose.md`, `Mechanics/voices.md`, `Mechanics/humanity.md`.
-- **Never load in context:** `source_changes.md`, `formatting_rules.md`, `Framework/Prompts/*`, stubs (`psyche_framework.md`, `Drafting_Workflow.md`), unneeded demo cards.
+- **Never load in context:** `CHANGELOG.md`, `AGENTS.md`, `source_changes.md`, `formatting_rules.md`, `Framework/Prompts/*`, stubs (`psyche_framework.md`, `Drafting_Workflow.md`), unneeded demo cards.
 
 ---
 
