@@ -1,4 +1,4 @@
-# Sample movement (ships with BookOS)
+# Sample movement (ships with Midlayer)
 
 Worked example of the full drafting loop using the **demo cast** (Reed + Helen).
 

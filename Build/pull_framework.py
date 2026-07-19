@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Framework Pull Script — BookOS
+Framework Pull Script — Midlayer
 ------------------------------
 Pulls the latest core framework files and writing mechanics from the upstream 
 CognitiveMiddleware (Authors_Framework) to keep this project in sync.

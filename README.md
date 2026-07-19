@@ -1,9 +1,9 @@
-# CognitiveMiddleware
+# Midlayer
 
-**The product: an invisible cognitive middle layer for AI-assisted long-form fiction.**  
+**Cognitive Middleware** — an invisible cognitive middle layer for AI-assisted long-form fiction.  
 Body-first psychology, bias distortion, and realm-aware somatics — running silently **off-page** so drafts stay clean manuscript prose.
 
-Roleplay / chat drop-ins under `Simulator/` are optional side tools (card testing, private sessions). They are **not** the product surface.
+This repository is the **Midlayer** project host (not an operating system). Roleplay / chat drop-ins under `Simulator/` are optional side tools (card testing, private sessions). They are **not** the product surface.
 
 ---
 

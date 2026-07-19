@@ -1,5 +1,5 @@
 # Erotica Protocol (Optional — 18+ Only)
-*Location: `Framework/Mechanics/erotica.md` · BookOS module: intimacy/sex **scene craft** only. Ambient desire/body baseline lives in [Main.md](../Main.md). Live session HEAT ladder lives in `Simulator/CharacterRuntime.md`.*
+*Location: `Framework/Mechanics/erotica.md` · Midlayer module: intimacy/sex **scene craft** only. Ambient desire/body baseline lives in [Main.md](../Main.md). Live session HEAT ladder lives in `Simulator/CharacterRuntime.md`.*
 
 > [!IMPORTANT]
 > Strictly optional. Restricted to **canonically adult (18+)** characters only.

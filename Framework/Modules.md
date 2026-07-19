@@ -1,4 +1,4 @@
-# Modules Index — CognitiveMiddleware (BookOS)
+# Modules Index — CognitiveMiddleware (Midlayer)
 *Canonical index of optional active modules. Load with [Main.md](./Main.md).*
 
 ---

@@ -1,4 +1,4 @@
-# Agent instructions — CognitiveMiddleware / BookOS
+# Agent instructions — CognitiveMiddleware / Midlayer
 
 This file is the **standing contract for AI agents** (and humans using agent tools) working in this repository. Read it at session start when making code, docs, framework, or tooling changes. Thin entry points (`CLAUDE.md`, and any future tool-specific stubs) should point here.
 

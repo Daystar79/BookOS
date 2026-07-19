@@ -3,6 +3,12 @@
 
 **Product changelog:** root [`CHANGELOG.md`](../CHANGELOG.md) — agents must update it on every product/framework/docs/tooling change ([AGENTS.md](../AGENTS.md)). This file is the detailed session/design-lock log; **never load for draft generation**.
 
+## 2026-07-18 — Rename BookOS → Midlayer — **applied** (agent)
+
+- Project host/folder/docs rebranded **Midlayer** (not an OS). Cognitive Middleware product name unchanged.
+- Updated Main host line, LICENSE, prompts, Modules, erotica label, AGENTS/CHANGELOG, Relationships.canvas paths, Build helpers, .gitignore header.
+- Deploy examples use `MyNovel` as target folder name.
+
 ## 2026-07-18 — Add CHANGELOG.md + AGENTS.md — **applied** (agent)
 
 - **Created** root `CHANGELOG.md` (Keep a Changelog style; seeded recent history).

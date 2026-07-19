@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# BookOS Build & Sync Script
+# Midlayer Build & Sync Script
 # --------------------------
 # 1. Pulls the latest core framework files from the CognitiveMiddleware.
 # 2. Assembles draft chapters into Drafts/master_manuscript.md.

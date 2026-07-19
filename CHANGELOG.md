@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to **CognitiveMiddleware / BookOS** are recorded here.
+All notable changes to **CognitiveMiddleware / Midlayer** are recorded here.
 
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).  
 Dates are **YYYY-MM-DD**. Newest entries first.
@@ -14,6 +14,11 @@ Dates are **YYYY-MM-DD**. Newest entries first.
 ---
 
 ## [Unreleased]
+
+### Changed
+
+- **Renamed project host from BookOS → Midlayer** (folder, docs, license, scripts, canvas paths, build helpers). Product remains Cognitive Middleware / Psyche Matrix; no longer branded as an “OS.”
+- Deploy script examples use a generic sibling book folder (`MyNovel`) instead of the project name.
 
 ### Added
 

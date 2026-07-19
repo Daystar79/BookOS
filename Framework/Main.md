@@ -1,5 +1,5 @@
 # MAIN — CognitiveMiddleware (Psyche Matrix)
-*System: CognitiveMiddleware · Runtime: Psyche Matrix · Host: BookOS · Apps: Roleplay Engine & Character Simulator*
+*System: CognitiveMiddleware · Runtime: Psyche Matrix · Host: Midlayer · Apps: Roleplay Engine & Character Simulator*
 
 ---
 

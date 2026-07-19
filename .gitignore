@@ -1,4 +1,4 @@
-# BookOS Git Ignore Configuration
+# Midlayer Git Ignore Configuration
 
 # System Files
 .DS_Store
@@ -14,7 +14,7 @@ Thumbs.db
 *.njsproj
 *.sln
 
-# BookOS Output & Build folders
+# Midlayer Output & Build folders
 # Ignore built files and releases, track only source drafts and framework configs
 Releases/
 Build/

@@ -57,14 +57,14 @@ Core implementations (cross-platform Python):
 ```bash
 chmod +x scripts/unix/*.sh scripts/run.py   # once
 python3 scripts/run.py lint path/to/Drafts
-scripts/unix/deploy.sh BookOS
+scripts/unix/deploy.sh MyNovel
 ```
 
 **Windows (PowerShell):**
 
 ```powershell
 python scripts/run.py lint .\Drafts
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts\windows\deploy.ps1 BookOS
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\windows\deploy.ps1 MyNovel
 ```
 
 **Windows (CMD):**
