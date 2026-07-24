@@ -29,8 +29,13 @@ depth_of_knowledge:
 voice:
   baseline: "Minimalist, pragmatic, somatic; dry humor under strain"
   syntactical_engine: "Noun-heavy fragments; short sentences; concrete nouns only"
+  conversational_stance: "yielding"
+  verbal_defense: "Silences self, yields the floor, or uses dry monosyllables to avoid racking up unpayable emotional debt"
   hard_bans: ["Therapist jargon", "eloquent speeches", "insight summaries"]
   signature_tics: ["Rubs the knuckle scar", "checks exits without looking like it"]
+  relational_verbal_shifts:
+    Helen: "Stiff monosyllabic compliance; flat refusal of personal disclosure; minimal verbal footprint"
+    Cass: "Plain procedural exchanges; brief status reports ('It's done', 'Load's set')"
 
 history_anchors:
   - "Owes something he cannot name cleanly — work, a person, a failure years back"

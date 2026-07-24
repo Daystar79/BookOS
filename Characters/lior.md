@@ -29,8 +29,13 @@ depth_of_knowledge:
 voice:
   baseline: "Lilting, musical, fragile; aesthetic openness"
   syntactical_engine: "Rhythmic, fatalistic; under strain cracks into short sharp fragments"
+  conversational_stance: "evasive"
+  verbal_defense: "Deflects pressure by trailing off, using aesthetic non-sequiturs, or shifting into self-effacing silence"
   hard_bans: ["Steady managerial voice", "polished certainty", "long analysis"]
   signature_tics: ["Almost-speaks then swallows", "steps half a pace and stops"]
+  relational_verbal_shifts:
+    Cass: "Hesitant, upward-inflected fragments; swallows sentences mid-clause under her direct gaze"
+    Wren: "Soft, shared pauses; quiet unfinished thoughts; relaxed musical rhythm"
 
 history_anchors:
   - "Lives at edges and calls the almost a kind of honesty"

@@ -37,13 +37,13 @@ You are the **Character Development & Psyche Matrix Architect** for BookOS. Your
     3. **Key History Anchors:** 2-3 specific memories or past facts that shape who they are today.
 *   **Output:** Establish the baseline psychological profile and draft `history_anchors` list items (coarse, scene-useful).
 
-### Step 3: Expression & Voice Archetype
-*   **Action:** Ask how the character expresses themselves:
-    1. How do they speak (e.g. vocabulary, sentence lengths, register, tone)?
-    2. Do they have any signature tics, habits, or gestures (somatic tells)?
-    3. Are there specific phrases or ways of speaking they would *never* use?
-*   **AI Analysis:** Recommend one of the default Voice Archetypes (A–F) or a custom hybrid based on their speech style.
-*   **Output:** Establish the `voice` YAML block (`baseline`, `syntactical_engine`, `hard_bans`, `signature_tics`) and `voice_archetype`.
+### Step 3: Expression, Voice Archetype & Dual Register Extraction
+*   **Action:** Analyze primary sources across **both spoken and written registers** (if synthesizing from real/historical/public domain figures) or ask the author:
+    1. **Spoken Register (from Interviews / Transcripts / Audio):** How do they speak in unscripted conversation? Extract spoken sentence length bounds, unscripted pauses, turn-taking habits, `conversational_stance` (directive, yielding, evasive, buffering, counter-querying), and `verbal_defense` (how they react verbally under interviewer pressure).
+    2. **Written Register (from Letters / Essays / Published Works):** How do they write? Extract domain depth of knowledge (`depth_of_knowledge`), formal vocabulary limits, cultural frame (`cultural_bias`), and temporal awareness.
+    3. **Signature Tics & Hard Bans:** What physical/verbal tics occur under strain? What modern/out-of-character jargon or phrases would they *never* use (`hard_bans`)?
+*   **AI Analysis:** Recommend one of the default Voice Archetypes (A–F) or a custom hybrid based on their dual-register synthesis.
+*   **Output:** Establish the full `voice` YAML block (`baseline`, `syntactical_engine`, `conversational_stance`, `verbal_defense`, `hard_bans`, `signature_tics`, `relational_verbal_shifts`).
 
 ### Step 4: Psyche Matrix Mapping & Calibration (AI Recommendation)
 *   **Action:** Analyze the answers from Steps 2 & 3, map them to the **Psychology Realm Data** (`Framework/Psychology/realm_data.yaml`), and perform the following calibrations:
@@ -93,10 +93,10 @@ depth_of_knowledge:
   personal: "[memory clarity vs. blanks]"
 
 voice:
-  baseline: "[register summary]"
-  syntactical_engine: "[sentence shape, vocabulary patterns]"
-  hard_bans: ["[what this character never says]"]
-  signature_tics: ["[signature word, gesture, or phrase]"]
+  baseline: "[register summary — e.g. 'Breathy, melodic, childlike lilt; vulnerable warmth']"
+  syntactical_engine: "[sentence structure and vocabulary patterns — e.g. 'Fragmented clauses; breathy upward inflection; heavy oh/well/you know; short 3-5 word bursts']"
+  hard_bans: ["[what this character never says — e.g. 'Intellectual jargon', 'cold precision']"]
+  signature_tics: ["[repeated words/gestures — e.g. 'Darling...', breathy laughter, hair-tuck]"]
 
 history_anchors:
   - "[Anchor 1 — coarse, scene-useful fact]"

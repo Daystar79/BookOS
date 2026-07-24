@@ -29,8 +29,13 @@ depth_of_knowledge:
 voice:
   baseline: "Warm protective nearness; us/we logistics"
   syntactical_engine: "Practical shields; schedules, doors, who gets in; gentle deflection of outside pressure"
+  conversational_stance: "buffering"
+  verbal_defense: "Interposes 'we/us' logistics and practical shelter plans to deflect external interrogation"
   hard_bans: ["Clinical coldness", "pure merge with no residual self"]
   signature_tics: ["Touches a sleeve", "invents a reason to close a door"]
+  relational_verbal_shifts:
+    Wren: "Soft, protective 'we' framing; steady domestic pacing; verbal shielding from outsiders"
+    Helen: "Firm verbal boundary setting; polite refusal of Helen's intrusive care probes"
 
 history_anchors:
   - "Loves by building walls around the soft part"

@@ -9,7 +9,7 @@ Roleplay / chat drop-ins under `Simulator/` are optional side tools (card testin
 
 ## What It Is
 
-**CognitiveMiddleware** is a file-native **runtime + drafting workflow** for character-driven fiction. Cards and YAML logs hold state; the **`midlayer` CLI** gates integrity, compiles movement packs, and commits approved scenes. Instructions shape prose; **code owns bookkeeping**.
+**CognitiveMiddleware** is a file-native runtime for **character-driven novel drafting**. Load it with your cards and write movements; the matrix keeps characters consistent without leaking system jargon into the page.
 
 - **Body Before Insight** — Physical reactions and somatic tells always precede psychological explanation.
 - **Character-First** — Named characters from card files are the single source of truth.
@@ -46,23 +46,15 @@ Built to fight common AI writing problems: therapy-speak, perfect recall, symmet
    # Windows PowerShell:
    # powershell -NoProfile -ExecutionPolicy Bypass -File scripts/windows/deploy.ps1
    ```
-3. Before drafting, gate integrity and compile a movement pack:
-   ```bash
-   python3 scripts/run.py midlayer status
-   python3 scripts/run.py midlayer pack --slugs your_cast --brief "Job: …"
-   ```
-   Load `Build/.context/movement_pack.md` (or the full stack in [Framework/Main.md](Framework/Main.md) when designing).
-4. Write one movement from the pack + brief. Matrix math stays off-page.
-5. On approval, **commit** (atomic ledger + character logs + consolidated log):
-   ```bash
-   python3 scripts/run.py midlayer commit --movement "1 M1" --draft Drafts/draft_chapter_1_m1.md \
-     --slugs your_cast --day "…" --somatic "…" --beats "…"
-   ```
-6. Lint drafts:
+3. For every drafting session, load the files according to the canonical load manifest in [Framework/Main.md](Framework/Main.md).
+4. Write movements/scenes using the brief + cards. The matrix runs silently.
+5. On approved movements: execute the Post-Movement State Commit (see [Framework/Main.md](Framework/Main.md)).
+6. Run the linter (again: auto launcher or OS-specific wrapper):
    ```bash
    python3 scripts/run.py lint Drafts/
+   # Unix:    scripts/unix/lint.sh Drafts/
+   # Windows: scripts/windows/lint.ps1 Drafts\
    ```
-   Claims vs what is actually enforced: [Framework/midlayer/CLAIMS.md](Framework/midlayer/CLAIMS.md).
 
 ---
 
@@ -74,8 +66,7 @@ Built to fight common AI writing problems: therapy-speak, perfect recall, symmet
 | `Framework/Rules_Index.md` | Hard bans, cleanup protocol, dialogue rules | **Always load** |
 | `Framework/Psychology/realm_data.yaml` | Somatic profiles for all 10 Realms | **Always load** |
 | `Framework/linter.py` | Automated prose linter (core) | Via `scripts/run.py lint` |
-| `Framework/midlayer/` | Integrity, pack, commit runtime | Via `scripts/run.py midlayer …` |
-| `scripts/run.py` | OS-aware launcher (deploy / lint / migrate / midlayer) | **Agents: use this** |
+| `scripts/run.py` | OS-aware launcher (deploy / lint / migrate) | **Agents: use this** |
 | `scripts/unix/*.sh` | Unix shell wrappers | Linux / macOS / WSL |
 | `scripts/windows/*` | Windows PowerShell / CMD wrappers | Windows |
 | `Characters/_template.md` | Public card scaffold (identity + build defaults only) | Copy for new characters |
@@ -95,19 +86,20 @@ Side path for **stress-testing a card in chat** before drafting, or private live
 
 Paste `Simulator/CharacterRuntime.md` into a chat if you want the drop-in (storage boot, Character Pack, `/mode test` default). Companion/heat modes are optional and gated. For private adult RP sessions: load a canon-adult pack, then **`/adult on`** (one switch). Details in that file and `Simulator/README.md`.
 
-## Author controls (drafting — plain language)
+## Author Commands (drafting)
 
-| Ask / action | Effect |
+| Command | Effect |
 |---------|--------|
-| Load character card / pack | Silent state load from card + log |
-| Lock focus to realm N | Focus Lock while drafting |
-| Unlock focus | Allow dynamic Focus shifts |
-| Bias active / dormant | Force bias intercept on or off |
-| Lock style / unlock style | Prose style control |
-| Enable adult mode | Heat paths only if Canon Adult = YES |
-| Run midlayer status / pack / commit | Runtime gates and bookkeeping (see Quick Start) |
-
-Simulator-only chat toggles live in `Simulator/CharacterRuntime.md` and are **not** the product drafting surface.
+| Load character card | Silent state load (name + card) |
+| `/create …` | Build minimal new card |
+| `/focus N` | Lock active Focus to Realm N |
+| `/focus unlock` | Allow dynamic Focus shifts |
+| `/bias active` / `dormant` | Force bias state (Active distorts perception, Dormant acts normally) |
+| `/style <id>` | Lock prose style |
+| `/style unlock` | Allow style change |
+| `/18+ on` / `off` | Enable/disable heat (only if Canon Adult = YES) |
+| `/transform event: <desc> strength: <level>` | Force a transformation pressure calculation |
+| `/reset` | Clear session state |
 
 ---
 
@@ -158,7 +150,6 @@ See [scripts/README.md](scripts/README.md) for Windows vs Unix command tables (f
 | Deploy | `python3 scripts/run.py deploy [target]` | `scripts/unix/deploy.sh` | `scripts/windows/deploy.ps1` |
 | Lint | `python3 scripts/run.py lint <path>` | `scripts/unix/lint.sh` | `scripts/windows/lint.ps1` |
 | Migrate | `python3 scripts/run.py migrate` | `scripts/unix/migrate.sh` | `scripts/windows/migrate.ps1` |
-| Midlayer | `python3 scripts/run.py midlayer …` | `scripts/unix/midlayer.sh` | `scripts/windows/midlayer.ps1` |
 
 **AI agents:** detect the host OS, then either call `scripts/run.py` (preferred) or the matching `scripts/unix/` / `scripts/windows/` wrapper. Do not run `.sh` on native Windows or `.ps1` on Unix unless a compatible shell is confirmed.
 
@@ -176,4 +167,4 @@ Copyright (c) 2026 Cian Didymos. See [LICENSE.md](LICENSE.md) for full license d
 
 ---
 
-*Install once. Gate → pack → draft → lint → commit. Write clean prose; let code own the ledgers.*
+*Install once. Load the middle layer for every draft session. Let the matrix run silently. Write clean prose.*

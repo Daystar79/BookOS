@@ -26,10 +26,14 @@ depth_of_knowledge:
   personal: "[memory clarity vs. blanks]"
 
 voice:
-  baseline: "[register summary]"
-  syntactical_engine: "[sentence shape, vocabulary]"
-  hard_bans: ["[what this character never says]"]
-  signature_tics: ["[optional repeated words/gestures]"]
+  baseline: "[register summary — e.g. 'Breathy, melodic, childlike lilt; vulnerable warmth']"
+  syntactical_engine: "[concrete sentence structures and patterns — e.g. 'Fragmented clauses; breathy upward inflection; heavy oh/well/you know; short 3-5 word bursts']"
+  conversational_stance: "[dominant | yielding | evasive | counter-querying | directive | buffering]"
+  verbal_defense: "[verbal action under pressure — e.g. 'insulates with technical jargon', 'deflects with questions', 'over-explains', 'silences self', 'smothers with care']"
+  hard_bans: ["[what this character never says — e.g. 'Intellectual jargon', 'cold precision']"]
+  signature_tics: ["[repeated words/gestures — e.g. 'Darling...', breathy laughter, hair-tuck]"]
+  relational_verbal_shifts:
+    "[Target Character Name]": "[specific verbal posture towards this character — e.g. 'short directive bursts, cuts off emotional preambles']"
 
 history_anchors:
   - "[Anchor 1 — coarse, scene-useful; memories stay vague unless triggered]"

@@ -29,8 +29,13 @@ depth_of_knowledge:
 voice:
   baseline: "Weighted, unhurried, sparse"
   syntactical_engine: "Minimal lines; names breath, pulse, eye contact; long silence allowed"
+  conversational_stance: "counter-querying"
+  verbal_defense: "Reflects queries back to the speaker or absorbs tension through sparse, unhurried silence"
   hard_bans: ["Apologies", "flurry", "explanations", "performing empathy out loud"]
   signature_tics: ["Leaves space after every sentence", "looks at hands when wants rise"]
+  relational_verbal_shifts:
+    Nora: "Quiet, grounded brevity; acknowledges Nora's care without demanding explanations"
+    Lior: "Spacious verbal cadence; allows long pauses for Lior to settle; zero pressure questions"
 
 history_anchors:
   - "People call them a good listener; they call it safer"

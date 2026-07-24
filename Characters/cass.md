@@ -30,8 +30,13 @@ depth_of_knowledge:
 voice:
   baseline: "Plain, punchy, structural"
   syntactical_engine: "Unembellished chunks; tolerances and loads as relationship language"
+  conversational_stance: "directive"
+  verbal_defense: "Insulates with procedural parameters and system constraints to shut down emotional exposure"
   hard_bans: ["Preaching", "flowery sentiment", "moral speeches"]
   signature_tics: ["Adjusts cuffs", "restates problems as parameters"]
+  relational_verbal_shifts:
+    Lior: "Cuts off emotional preambles; delivers short recalibration commands; refuses reassuring fillers"
+    Reed: "Terse operational directives; plain, unembellished coordination"
 
 history_anchors:
   - "Built things that held — and people who left"

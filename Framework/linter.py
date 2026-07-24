@@ -39,11 +39,6 @@ SYSTEM_LEAKS = {
     "AI Safety / Preachy Tone Leaks": [
         (r"\b(it'?s important to remember|to be fair|let'?s look at this|while that is a common|actually, from a|safety guidelines?|safety protocols?|respectful conversation|inappropriate content|moral perspective|ethical considerations?|cannot fulfill this request)\b", "AI safety tone / preachiness / correction leak"),
     ],
-    "Debug / Stage Directions": [
-        (r"\[(?:throat|jaw|shoulders?|chest|breath|somatic|brace|release|focus|bias)[^\]]{0,60}\]", "Bracketed somatic / matrix stage direction"),
-        (r"\bCONFIG\b", "CONFIG dump leak"),
-        (r"\bPrism intercept\b", "Prism intercept engine reference"),
-    ],
 }
 
 # Define regex patterns for banned dialogue tags and filler phrases

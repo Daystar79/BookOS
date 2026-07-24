@@ -9,18 +9,10 @@ This ledger is the source of truth for **narrative timeline, locations, and scen
 
 ## Post-Movement State Commit
 
-On **every approved movement**, run the runtime commit (preferred — atomic):
-
-```bash
-python3 scripts/run.py midlayer commit \
-  --movement "N M#" --draft Drafts/draft_chapter_N_mM.md \
-  --slugs slug1,slug2 --day "…" --somatic "…" --beats "…"
-```
-
-That command:
-1. Writes story continuity (this file).
-2. Updates canonical per-character runtime state (`Characters/[slug]_log.yaml`).
-3. Regenerates the consolidated human-readable log (`Framework/Character_Change_Log.md`).
+On **every approved movement**, execute the Post-Movement State Commit:
+1. Write story continuity.
+2. Update canonical per-character runtime state (`Characters/[slug]_log.yaml`).
+3. Regenerate or synchronize the consolidated human-readable log (`Framework/Character_Change_Log.md`).
 
 | Save | Where | Owns |
 |:---|:---|:---|

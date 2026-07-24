@@ -1,13 +1,6 @@
 # Source Changes — Psyche Framework
 *Changes made from original source material during this chat*
 
-## 2026-07-19 — Midlayer runtime CLI (status/pack/commit) — **applied** (agent)
-
-- **Problem:** Claims of an “engine” depended on models improvising ledger/YAML commits; no deterministic integrity gate or compiled draft context.
-- **Added:** `Framework/midlayer/` package + `scripts/run.py midlayer` (`status`, `gate`, `pack`, `commit`, `seed-log`, `rebuild-log`); `CLAIMS.md` contract; `tests/test_midlayer.py`.
-- **Main / load_protocol / AGENTS / README:** Draft path is gate → pack → prose → lint → commit; freehand dual-ledger edits no longer the primary path.
-- **Out of scope this session:** novel-scale sample corpus (author); soft literary judges.
-
 ## 2026-07-17 — Rename Sexuality → Erotica module — **applied** (agent)
 
 - **Rename:** `Framework/Mechanics/sexuality.md` → `Framework/Mechanics/erotica.md`

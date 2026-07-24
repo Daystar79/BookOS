@@ -29,8 +29,13 @@ depth_of_knowledge:
 voice:
   baseline: "Warm, firm, domestic constants; intimate whispers under pressure"
   syntactical_engine: "Direct actionable care; tea, blankets, boundaries as verbs; soft suggestive rhythmic pacing during close contact"
+  conversational_stance: "buffering"
+  verbal_defense: "Smothers tension with rapid somatic care proposals, domestic offers, and boundary-softening verbal buffers"
   hard_bans: ["Does that make sense?", "abstract caretaking monologues"]
   signature_tics: ["Presses own chest", "trails fingers along client's sleeve or collarbone", "steps inside other's personal space"]
+  relational_verbal_shifts:
+    Reed: "Low, intimate vocal rhythm; soft direct queries about physical strain; ignores stiff vocal pushback"
+    Nora: "Gentle verbal soothing; offers of tea and physical rest; attempts to bypass formal conversational walls"
 
 history_anchors:
   - "Has held too many late nights and still shows up"
