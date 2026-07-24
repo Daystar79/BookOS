@@ -33,4 +33,9 @@ __pycache__/
 # Backup files
 backups_*/
 
+# Author-private simulator files (never commit to public git)
+Simulator/Private/
+Simulator/private/
+
+
 
